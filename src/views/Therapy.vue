@@ -1,5 +1,5 @@
 <template>
-  <h1>this is the sign-up page</h1>
+  <h1>this is the premiun therapy page</h1>
 </template>
 
 <script>

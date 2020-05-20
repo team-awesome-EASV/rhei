@@ -1,11 +1,10 @@
 <template>
-  <div class="home"></div>
+  <h1>this is the Main screen page</h1>
 </template>
 
 <script>
-// @ is an alias to /src
-
-export default {
-  name: "Home"
-};
+export default {};
 </script>
+
+<style>
+</style>
