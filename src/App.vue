@@ -20,7 +20,7 @@
   font-size: 10px;
   font-family: "Poppins", sans-serif;
   --main-accent-color: #0317ef;
-  --secondary-background-color: #eaebf3;
+  --secondary-background-color: #fcfbf0;
 }
 * {
   margin: 0;

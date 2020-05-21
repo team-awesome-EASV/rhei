@@ -39,9 +39,6 @@ export default {
 </script>
 
 <style lang="scss">
-ul {
-  list-style-type: none;
-}
 .top-nav {
   align-items: center;
 }
