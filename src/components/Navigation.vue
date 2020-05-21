@@ -1,7 +1,17 @@
 <template>
   <div class="nav-container">
-    <div class="clipped">
-      chuj
+      <div class="home-button">
+          <i class="las la-house-damage"></i>
+      </div>
+    <div class="nav-wrapper">
+        <div class="icons-row">
+            <i class="las la-wheelchair"></i>
+            <i class="las la-wheelchair"></i>
+        </div>
+        <div class="icons-row">
+            <i class="las la-wheelchair"></i>
+            <i class="las la-wheelchair"></i>
+        </div>
     </div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -49,9 +59,40 @@ export default {
   bottom: 0;
 }
 
-.clipped {
+
+.home-button{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background-color: var(--main-accent-color);
+    transform: translate(238%, -75%);
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+}
+
+.nav-wrapper {
   clip-path: url(#clipped);
   background:#fcfbf0;
   height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
 }
+
+    .icons-row{
+        width:40%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+
+    .las{
+        font-size:35px;
+        color: #fcfbf0;
+    }
 </style>
