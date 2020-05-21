@@ -3,7 +3,7 @@
     <div class="main-view">
       <router-view />
     </div>
-    <div id="nav">
+    <div id="nav" class="flex-space-around padding-sides">
       <Navigation></Navigation>
 <!--      <router-link class="margin-right" to="/moodtracker">Mood</router-link>-->
 <!--      <router-link class="margin-right" to="/breathing-exercise"-->
@@ -49,14 +49,9 @@ html {
   outline: none;
 }
 
-body{
-  margin: 0;
-  padding: 0;
-}
-
 #app {
   position: relative;
-  /*padding: 3rem;*/
+  padding: 3rem;
   overflow: hidden;
   width: 100vw;
   background-color: var(--secondary-background-color);
@@ -91,15 +86,17 @@ a {
   width: 100%;
 }
 
+.flex-space-around {
+  display: flex;
+  justify-content: space-around;
+}
 .flex-space-between {
   display: flex;
   justify-content: space-between;
 }
-
 .padding-sides {
   padding: 0 2rem;
 }
-
 .padding-all {
   padding: 2rem;
 }
@@ -107,7 +104,6 @@ a {
 .margin-right {
   margin-right: 1rem;
 }
-
 .vertical-allign-bottom {
   align-self: flex-end;
 }
