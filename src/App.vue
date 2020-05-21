@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="fullscreen">
-    <div class="main-view">
+    <div class="main-view main-padding">
       <router-view />
     </div>
     <!-- <div id="nav" class="flex-space-around padding-sides">
@@ -52,10 +52,14 @@ html {
 
 #app {
   position: relative;
-  padding: 3rem;
+
   overflow: hidden;
   width: 100vw;
   background-color: var(--secondary-background-color);
+}
+
+.main-padding {
+  padding: 3rem;
 }
 
 h1 {
