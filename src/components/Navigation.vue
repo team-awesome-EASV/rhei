@@ -42,16 +42,16 @@ export default {
 .nav-container {
   width: 100%;
   height: 13vh;
-  filter: drop-shadow(0px -9px 14px #000000);
-  -webkit-filter: drop-shadow(0px -9px 14px #000000);
-  -moz-filter: drop-shadow(0px -9px 14px #000000);
+  filter: drop-shadow(5px -4px 32px rgba(0, 0, 0, 0.5));
+  -webkit-filter: drop-shadow(5px -4px 32px rgba(0, 0, 0, 0.5));
+  -moz-filter: drop-shadow(5px -4px 32px rgba(0, 0, 0, 0.5));
   position: fixed;
   bottom: 0;
 }
 
 .clipped {
   clip-path: url(#clipped);
-  background: blueviolet;
+  background:#fcfbf0;
   height: 13vh;
 }
 </style>
