@@ -5,7 +5,9 @@
     </div>
     <div id="nav" class="flex-space-around padding-sides">
       <router-link class="margin-right" to="/moodtracker">Mood</router-link>
-      <router-link class="margin-right" to="/breathing-exercise">Breath</router-link>
+      <router-link class="margin-right" to="/breathing-exercise"
+        >Breath</router-link
+      >
       <router-link class="margin-right" to="/">Home</router-link>
       <router-link class="margin-right" to="/chat">Chat</router-link>
       <router-link class="margin-right" to="/therapy">Therapy</router-link>
@@ -22,10 +24,17 @@
   --main-accent-color: #0317ef;
   --secondary-background-color: #eaebf3;
 }
-* {
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   border: none;
   outline: none;
 }
