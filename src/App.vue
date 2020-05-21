@@ -3,26 +3,27 @@
     <div class="main-view">
       <router-view />
     </div>
-    <div id="nav" class="flex-space-around padding-sides">
-      <Navigation></Navigation>
-<!--      <router-link class="margin-right" to="/moodtracker">Mood</router-link>-->
-<!--      <router-link class="margin-right" to="/breathing-exercise"-->
-<!--        >Breath</router-link-->
-<!--      >-->
-<!--      <router-link class="margin-right" to="/">Home</router-link>-->
-<!--      <router-link class="margin-right" to="/chat">Chat</router-link>-->
-<!--      <router-link class="margin-right" to="/therapy">Therapy</router-link>-->
-    </div>
+    <!-- <div id="nav" class="flex-space-around padding-sides">
+      <router-link class="margin-right" to="/moodtracker">Mood</router-link>
+      <router-link class="margin-right" to="/breathing-exercise"
+        >Breath</router-link
+      >
+
+      <router-link class="margin-right" to="/">Home</router-link>
+      <router-link class="margin-right" to="/chat">Chat</router-link>
+      <router-link class="margin-right" to="/therapy">Therapy</router-link>
+    </div> -->
+    <Navigation></Navigation>
   </div>
 </template>
 
 <script>
-  import Navigation from "./components/Navigation.vue";
-  export default {
-    components: {
-      Navigation: Navigation
-    }
+import Navigation from "./components/Navigation.vue";
+export default {
+  components: {
+    Navigation: Navigation
   }
+};
 </script>
 
 <style lang="scss">
