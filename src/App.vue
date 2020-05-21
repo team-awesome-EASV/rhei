@@ -56,7 +56,7 @@ body{
 
 #app {
   position: relative;
-  padding: 3rem;
+  /*padding: 3rem;*/
   overflow: hidden;
   width: 100vw;
   background-color: var(--secondary-background-color);
@@ -91,10 +91,6 @@ a {
   width: 100%;
 }
 
-.flex-space-around {
-  display: flex;
-  justify-content: space-around;
-}
 .flex-space-between {
   display: flex;
   justify-content: space-between;
