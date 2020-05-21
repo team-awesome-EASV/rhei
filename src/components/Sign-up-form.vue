@@ -12,14 +12,10 @@
 <script>
 import inputelement from "../components/Input-field";
 import mainButton from "../components/Main-button";
-import { mapGetters } from "vuex";
 export default {
   components: {
     inputelement: inputelement,
     "main-button": mainButton
-  },
-  computed: {
-    ...mapGetters("allUsers")
   }
 };
 </script>
