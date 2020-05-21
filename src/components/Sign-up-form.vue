@@ -1,9 +1,21 @@
 <template>
   <div>
     <form class="form-style padding-all outer-shadow">
-      <inputelement name="Full name" place="your full name" type="text"></inputelement>
-      <inputelement name="Username" place="your username" type="text"></inputelement>
-      <inputelement name="Password" place="your password" type="password"></inputelement>
+      <inputelement
+        name="Full name"
+        place="your full name"
+        type="text"
+      ></inputelement>
+      <inputelement
+        name="Username"
+        place="your username"
+        type="text"
+      ></inputelement>
+      <inputelement
+        name="Password"
+        place="your password"
+        type="password"
+      ></inputelement>
       <main-button type="submit" text="Sign in"></main-button>
     </form>
   </div>
@@ -20,7 +32,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .form-style {
   width: 100%;
   display: flex;

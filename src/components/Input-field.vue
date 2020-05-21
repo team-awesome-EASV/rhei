@@ -1,6 +1,6 @@
 <template>
   <div class="form-element-style">
-    <label :for="name">{{name}}</label>
+    <label :for="name">{{ name }}</label>
     <input
       class="input-style inner-shadow"
       v-bind:type="type"
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss">
+<style lang="scss" scoped >
 .form-element-style {
   display: flex;
   flex-direction: column;
