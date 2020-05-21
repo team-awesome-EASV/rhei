@@ -25,7 +25,7 @@
     .clipped {
         clip-path: url(#clipped);
         background: green;
-        height:20vh;
+        height:13vh;
         width:300vh;
     }
 </style>

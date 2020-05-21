@@ -95,9 +95,11 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
 .padding-sides {
   padding: 0 2rem;
 }
+
 .padding-all {
   padding: 2rem;
 }
@@ -105,6 +107,7 @@ a {
 .margin-right {
   margin-right: 1rem;
 }
+
 .vertical-allign-bottom {
   align-self: flex-end;
 }
