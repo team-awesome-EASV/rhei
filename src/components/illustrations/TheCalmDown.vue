@@ -1,6 +1,5 @@
 <template>
   <div>
-    <p>{{ color1 }} {{ createShade("23", "5") }}</p>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 581.9 641.71">
       <g id="Layer_2" data-name="Layer 2">
         <g id="Layer_3" data-name="Layer 3">
