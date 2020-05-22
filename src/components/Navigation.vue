@@ -1,16 +1,17 @@
 <template>
   <div class="nav-container">
     <div class="home-button">
-      <router-link to="/"><i class="las la-house-damage"></i></router-link>
+<!--      <router-link to="/"><i class="las la-house-damage"></i></router-link>-->
+        <app-icon icon="premium"></app-icon>
     </div>
     <div class="nav-wrapper">
       <div class="icons-row">
-        <router-link to="/moodtracker"><img class="ico" src="../assets/Navigation/mood-ico.svg" alt=""></router-link>
-        <router-link to="/chat"><img class="ico" src="../assets/Navigation/chat-ico.svg" alt=""></router-link>
+<!--        <router-link to="/moodtracker"><img class="ico" src="../icons/icon-moodtracker.svg" alt=""></router-link>-->
+<!--        <router-link to="/chat"><img class="ico" src="../icons/icon-chat.svg" alt=""></router-link>-->
       </div>
       <div class="icons-row">
-        <router-link to="/connect-the-dots"><img class="ico" src="../assets/Navigation/calm-ico.svg" alt=""></router-link>
-        <router-link to="/therapy"><img class="ico" src="../assets/Navigation/premium-ico.svg" alt=""></router-link>
+<!--        <router-link to="/connect-the-dots"><img class="ico" src="../icons/icon-calm.svg" alt=""></router-link>-->
+<!--        <router-link to="/therapy"><img class="ico" src="../icons/icon-premium.svg" alt=""></router-link>-->
       </div>
     </div>
     <svg
@@ -43,9 +44,15 @@
 </template>
 
 <script>
-export default {
-  name: "Navigation"
-};
+  import AppIcon from '../components/AppIcon.vue';
+
+  export default {
+    components: {
+      AppIcon
+    }
+
+    // ... rest of component
+  };
 </script>
 
 <style lang="scss" scoped>
