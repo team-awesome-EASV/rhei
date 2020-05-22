@@ -28,9 +28,17 @@ export default {
 };
 </script>
 
+
 <style scoped>
+
+
+
 .app-icon {
   display: inline-block;
   width: 4rem;
+}
+
+.cls-1 {
+  fill: var(--main-accent-color);
 }
 </style>
