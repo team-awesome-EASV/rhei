@@ -5,7 +5,7 @@ export default {
   props: {
     icon: {
       type: String,
-      default: ""
+      default: " "
     }
   },
   render(createElement, { props }) {
@@ -31,11 +31,10 @@ export default {
 
 <style scoped>
 
-
-
 .app-icon {
   display: inline-block;
   width: 4rem;
+    fill: var(--main-accent-color);
 }
 
 .cls-1 {
