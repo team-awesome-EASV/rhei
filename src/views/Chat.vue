@@ -1,26 +1,23 @@
 <template>
   <div>
-    <h1>this is the Chat page</h1>
-    <TheChatContacts />
+    <router-view />
+    <!-- <TheChatContacts />
     <TheChatChat />
     <TheChatGroups />
-    <TheChatSettings />
-    <div class="fill"></div>
+    <TheChatSettings /> -->
   </div>
 </template>
 
 <script>
-import TheChatContacts from "../components/illustrations/TheChatContacts";
-import TheChatChat from "../components/illustrations/TheChatChat";
-import TheChatGroups from "../components/illustrations/TheChatGroups";
-import TheChatSettings from "../components/illustrations/TheChatSettings";
+// import TheChatContacts from "../components/illustrations/TheChatContacts";
+// import TheChatChat from "../components/illustrations/TheChatChat";
+// import TheChatGroups from "../components/illustrations/TheChatGroups";
+// import TheChatSettings from "../components/illustrations/TheChatSettings";
 export default {
-  components: { TheChatContacts, TheChatChat, TheChatGroups, TheChatSettings }
+  // components: { TheChatContacts, TheChatChat, TheChatGroups, TheChatSettings }
 };
 </script>
 
-<style>
-.fill {
-  height: 200px;
-}
-</style>
+
+
+<style lang="stylus" scoped></style>

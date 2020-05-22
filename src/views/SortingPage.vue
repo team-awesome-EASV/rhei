@@ -1,10 +1,12 @@
 <template>
-  <h1>this is the sorting game page</h1>
+  <div class="main-padding">
+    This is sorting animals page
+  </div>
 </template>
 
 <script>
 export default {};
 </script>
 
-<style>
+<style lang="scss" scoped>
 </style>

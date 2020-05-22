@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-padding">
     HEllo
   </div>
 </template>

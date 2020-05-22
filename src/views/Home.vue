@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-padding">
     <h1>this is the Main screen page</h1>
 
     <p :style="{ color: loadUser.hex }">this must have the accent color</p>

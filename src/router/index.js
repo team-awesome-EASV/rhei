@@ -2,6 +2,19 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
+import AppHomeComponent from '../components/AppHomeComponent';
+import AppNavigationComponent from '../components/AppNavigationComponent';
+import ChatContainer from '../lib/cometchat-components/components/ChatContainer';
+
+import ConversationScreen from '../lib/cometchat-components/components/ConversationScreen';
+import GroupScreen from '../lib/cometchat-components/components/GroupScreen';
+import ContactScreen from '../lib/cometchat-components/components/ContactScreen';
+
+
+import UserList from '../lib/cometchat-components/components/UserList';
+import ChatList from '../lib/cometchat-components/components/ChatList';
+import GroupList from '../lib/cometchat-components/components/GroupList'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -32,7 +45,21 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Chat.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Chat.vue'),
+    children: [
+      { path: '/', component: AppHomeComponent },
+      { path: '/menu', component: AppNavigationComponent },
+      { path: '/embeded-app', component: ChatContainer },
+
+      { path: '/conversation-screen', component: ConversationScreen },
+      { path: '/group-screen', component: GroupScreen },
+      { path: '/contact-screen', component: ContactScreen },
+
+
+      { path: '/contact-list', component: UserList },
+      { path: '/chat-list', component: ChatList },
+      { path: '/group-list', component: GroupList }
+    ]
   },
   {
     path: '/connect-the-dots',

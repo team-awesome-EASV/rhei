@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-padding">
     <div class="main-view">
       <section class="top-nav flex-space-between">
         <logo></logo>
@@ -9,7 +9,9 @@
             <div class="border-bottom"></div>
           </li>
           <li>
-            <router-link class="margin-right" to="/sign-up">sign-up</router-link>
+            <router-link class="margin-right" to="/sign-up"
+              >sign-up</router-link
+            >
           </li>
         </ul>
       </section>

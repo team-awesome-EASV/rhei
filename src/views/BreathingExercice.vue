@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-padding">
     <h1>this is the breathing page</h1>
     <TheCalmDown />
   </div>
@@ -14,5 +14,5 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 </style>

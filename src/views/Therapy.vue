@@ -1,5 +1,5 @@
 <template>
-  <div class="fullscreen">
+  <div class="fullscreen main-padding">
     <div class="main-view">
       <h1>this is the premiun therapy page</h1>
     </div>

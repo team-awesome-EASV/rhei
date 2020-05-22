@@ -1,10 +1,10 @@
 <template>
-  <h1>this is the connect the dots page</h1>
+  <div>CONNECT THE DOGS</div>
 </template>
 
 <script>
 export default {};
 </script>
 
-<style>
+<style lang="scss" scoped>
 </style>

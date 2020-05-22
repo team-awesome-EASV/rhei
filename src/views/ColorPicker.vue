@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-padding">
     <div class="main-view">
       <section class="top-nav flex-space-between">
         <router-link to="/">
@@ -11,7 +11,9 @@
             <div class="border-bottom"></div>
           </li>
           <li>
-            <router-link class="margin-right" to="/sign-up">sign-up</router-link>
+            <router-link class="margin-right" to="/sign-up"
+              >sign-up</router-link
+            >
           </li>
         </ul>
       </section>
@@ -25,7 +27,7 @@
         <div
           v-for="color in allColors"
           :key="color.hsl"
-          :style="{background:color.hex}"
+          :style="{ background: color.hex }"
           :title="color.hsl"
           class="color-element outer-shadow"
           @click="setAccentColor(color)"
@@ -51,7 +53,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .top-nav {
   align-items: center;
 }
