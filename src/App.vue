@@ -5,13 +5,15 @@
     </div>
     <div id="nav" class="flex-space-around padding-sides">
       <router-link class="margin-right" to="/moodtracker">Mood</router-link>
-      <router-link class="margin-right" to="/breathing-exercise">Breath</router-link>
+      <router-link class="margin-right" to="/breathing-exercise"
+        >Breath</router-link
+      >
 
       <router-link class="margin-right" to="/">Home</router-link>
       <router-link class="margin-right" to="/chat">Chat</router-link>
       <router-link class="margin-right" to="/therapy">Therapy</router-link>
     </div>
-    <Navigation></Navigation>
+    <Navigation v-show="show"></Navigation>
   </div>
 </template>
 
@@ -22,7 +24,9 @@ export default {
     Navigation: Navigation
   },
   data() {
-    return {};
+    return {
+      show: true
+    };
   },
   methods: {
     changeVariableColor() {
@@ -35,6 +39,12 @@ export default {
   },
   updated() {
     this.changeVariableColor();
+  },
+
+  watch: {
+    $route() {
+      this.show = !this.show;
+    }
   }
 };
 </script>
