@@ -106,6 +106,7 @@ export default {
   methods: {
     currentUser(data) {
       this.$root.$emit("selectedUser", data);
+      this.$root.$emit("hideNavigation");
     },
 
     getUserlist(data) {

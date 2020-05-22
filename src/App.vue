@@ -2,10 +2,10 @@
   <div id="app" class="fullscreen">
     <div class="main-view ">
       <!-- <router-link to="/color">Change color</router-link> -->
-      <router-view />
+      <router-view v-on:hideNavigation="this.show = false" />
     </div>
 
-    <Navigation v-show="show"></Navigation>
+    <Navigation v-show="show" id="theNavigation"></Navigation>
   </div>
 </template>
 
@@ -31,6 +31,15 @@ export default {
   },
   updated() {
     this.changeVariableColor();
+  },
+
+  mounted() {
+    this.$root.$on("hideNavigation", () => {
+      this.show = false;
+    });
+    this.$root.$on("showNavigation", () => {
+      this.show = true;
+    });
   },
 
   watch: {
