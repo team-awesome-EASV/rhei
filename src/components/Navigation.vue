@@ -10,14 +10,14 @@
           v-for="(link, index) in navLinksLeft"
           v-bind:key="index"
         >
-            <router-link :to="link.path">
-              <div class="links-center">
-                <app-icon :icon="link.icon"></app-icon>
-                <p>
-                  {{ link.name }}
-                </p>
-              </div>
-            </router-link>
+          <router-link :to="link.path">
+            <div class="links-center">
+              <app-icon :icon="link.icon"></app-icon>
+              <p>
+                {{ link.name }}
+              </p>
+            </div>
+          </router-link>
         </li>
         <!--          <app-icon icon="moodtracker"></app-icon>-->
         <!--          <app-icon icon="chat"></app-icon>-->
@@ -28,7 +28,6 @@
           v-for="(link, index) in navLinksRight"
           v-bind:key="index"
         >
-
           <router-link :to="link.path">
             <div class="links-center">
               <app-icon :icon="link.icon"></app-icon>
@@ -37,7 +36,6 @@
               </p>
             </div>
           </router-link>
-
         </li>
       </div>
     </div>
@@ -81,7 +79,7 @@ export default {
     return {
       navLinksLeft: [
         { name: "MOODTRACKER", path: "/moodtracker", icon: "moodtracker" },
-        { name: "CHAT", path: "/chat", icon: "chat" },
+        { name: "CHAT", path: "/chat", icon: "chat" }
       ],
       navLinksRight: [
         { name: "CALM DOWN", path: "/breathing-exercise", icon: "calm" },
@@ -95,15 +93,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
-
 .nav-container {
   width: 100%;
   height: 10%;
-  filter: drop-shadow(5px -4px 32px rgba(0, 0, 0, 0.5));
-  -webkit-filter: drop-shadow(5px -4px 32px rgba(0, 0, 0, 0.5));
-  -moz-filter: drop-shadow(5px -4px 32px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(5px -4px 32px #d6d5cc);
+  -webkit-filter: drop-shadow(5px -4px 15px #d6d5cc);
+  -moz-filter: drop-shadow(5px -4px 15px #d6d5cc);
   position: fixed;
   bottom: 0;
 }
@@ -134,9 +129,8 @@ export default {
   justify-content: space-between;
 }
 
-
 .icons-row {
-  margin-top:1rem;
+  margin-top: 1rem;
   width: 40%;
   height: 80%;
   display: flex;
@@ -144,22 +138,21 @@ export default {
   justify-content: space-around;
 }
 
-li{
+li {
   list-style: none;
   display: flex;
 }
 
-.links-center{
+.links-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
 
-p{
+p {
   font-size: 1.2rem;
 }
-
 
 .las {
   font-size: 35px;

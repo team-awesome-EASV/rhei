@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>this is the Main screen page</h1>
-    <router-link to="/color">Change color</router-link>
+
     <p :style="{ color: loadUser.hex }">this must have the accent color</p>
     <h2 class="accent-color">
       this must alose be in accents color but with css var

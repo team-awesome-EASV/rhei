@@ -7,34 +7,24 @@
         width="286"
         height="208"
         rx="22.19"
-        fill="#8a8bff"
-        opacity="0.12"
+        :fill="createShade('20', '80')"
+        opacity="0.7"
       />
       <g id="speech-modal-right">
-        <g id="speech-modal-right-background">
+        <g id="speech-modal-right-background" :fill="createShade('70', '90')">
           <g id="bubble">
-            <rect
-              x="180.14"
-              y="62"
-              width="298.14"
-              height="162.42"
-              rx="15.31"
-              fill="#d0d1ff"
-            />
-            <polygon
-              points="206 220 206 248.9 247.54 220 206 220"
-              fill="#d0d1ff"
-            />
+            <rect x="180.14" y="62" width="298.14" height="162.42" rx="15.31" />
+            <polygon points="206 220 206 248.9 247.54 220 206 220" />
           </g>
           <path
             id="lines-bcg"
             d="M305.79,224.42H463a15.35,15.35,0,0,0,15.32-15.32V77.32A15.36,15.36,0,0,0,463,62H305.79Z"
-            fill="#a1a2ff"
+            :fill="createShade('50', '80')"
           />
           <path
             id="top"
             d="M478.15,75.35A15.37,15.37,0,0,0,463,62H195.46a15.36,15.36,0,0,0-15.19,13.35Z"
-            fill="#6868bf"
+            :fill="createShade('80', '40')"
           />
         </g>
         <g id="lines-circle">
@@ -93,12 +83,11 @@
           />
         </g>
       </g>
-      <g id="speech-modal-left">
+      <g id="speech-modal-left" :stroke="createShade('100', '50')">
         <path
           id="circle"
           d="M36.42,61.73A14.17,14.17,0,1,1,50.58,75.9h0A14.16,14.16,0,0,1,36.42,61.73Z"
           fill="none"
-          stroke="#8a8bff"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="5"
@@ -107,7 +96,6 @@
           id="line2"
           d="M78.4,61.73H178"
           fill="none"
-          stroke="#8a8bff"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="5"
@@ -116,7 +104,6 @@
           id="line1"
           d="M49.58,97.25H197.06"
           fill="none"
-          stroke="#8a8bff"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="5"
@@ -126,7 +113,6 @@
           data-name="bubble"
           d="M40.92,27A18.39,18.39,0,0,0,22.53,45.39v93a18.39,18.39,0,0,0,18.39,18.39H169.67l34.16,43.14-.21-43.22h8a18.38,18.38,0,0,0,18.39-18.38v-93A18.39,18.39,0,0,0,211.66,27Z"
           fill="none"
-          stroke="#8a8bff"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="5"
@@ -136,8 +122,8 @@
         transform="translate(7.33 226.72) scale(0.99 1)"
         font-size="61.76"
         fill="#3d3d3d"
-        font-family="Poppins-SemiBold, Poppins"
-        font-weight="600"
+        font-family="Poppins, sans-serif"
+        font-weight="400"
       >
         Chat
       </text>

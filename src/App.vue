@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="fullscreen">
     <div class="main-view main-padding">
+      <router-link to="/color">Change color</router-link>
       <router-view />
     </div>
 

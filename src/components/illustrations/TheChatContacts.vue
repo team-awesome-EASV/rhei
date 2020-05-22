@@ -218,7 +218,7 @@
           font-size="61.76"
           fill="#3d3d3d"
           font-family="Poppins, sans-serif"
-          font-weight="200"
+          font-weight="400"
         >
           Contacts
         </text>
