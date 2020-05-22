@@ -5,26 +5,29 @@
     </div>
     <div class="nav-wrapper">
       <div class="icons-row">
-          <li
-                  class="shuffle"
-                  v-for="(link, index) in navLinks"
-                  v-bind:key="index"
-          >
-              <a :href="link.path">{{ link.name }}</a>
-          </li>
-<!--          <app-icon icon="moodtracker"></app-icon>-->
-<!--          <app-icon icon="chat"></app-icon>-->
+        <li
+          class="shuffle"
+          v-for="(link, index) in navLinks"
+          v-bind:key="index"
+        >
+          <a :href="link.path">{{ link.name }}</a>
+        </li>
+        <!--          <app-icon icon="moodtracker"></app-icon>-->
+        <!--          <app-icon icon="chat"></app-icon>-->
       </div>
       <div class="icons-row">
-          <li
-                  class="shuffle"
-                  v-for="(link, index) in navLinks"
-                  v-bind:key="index"
+        <li
+          class="shuffle"
+          v-for="(link, index) in navLinks"
+          v-bind:key="index"
+        >
+          <router-link :to="link.path">
+            <app-icon :icon="link.icon"></app-icon>
+            <p>
+              {{ link.name }}
+            </p></router-link
           >
-              <a :href="link.path">{{ link.name }}</a>
-          </li>
-<!--          <app-icon icon="calm"></app-icon>-->
-          <app-icon icon="premium"></app-icon>
+        </li>
       </div>
     </div>
     <svg
@@ -57,25 +60,25 @@
 </template>
 
 <script>
-  import AppIcon from '../components/AppIcon.vue';
+import AppIcon from "../components/AppIcon.vue";
 
-  export default {
-    components: {
-      AppIcon
-    },
-      data() {
-          return {
-              navLinks: [
-                  { name: "MOODTRACKER", path: "/moodtracker" },
-                  { name: "CHAT", path: "/chat" },
-                  { name: "CALM DOWN", path: "/breathing-exercise" },
-                  { name: "PREMIUM", path: "/therapy" },
-              ],
-          };
-      },
+export default {
+  components: {
+    AppIcon
+  },
+  data() {
+    return {
+      navLinks: [
+        { name: "MOODTRACKER", path: "/moodtracker", icon: "moodtracker" },
+        { name: "CHAT", path: "/chat", icon: "moodtracker" },
+        { name: "CALM DOWN", path: "/breathing-exercise", icon: "moodtracker" },
+        { name: "PREMIUM", path: "/therapy", icon: "moodtracker" }
+      ]
+    };
+  }
 
-    // ... rest of component
-  };
+  // ... rest of component
+};
 </script>
 
 <style lang="scss" scoped>
@@ -127,9 +130,9 @@
   align-items: center;
   justify-content: space-around;
 }
-.ico{
-  width:50%;
-  height:50%;
+.ico {
+  width: 50%;
+  height: 50%;
   fill: #444444;
 }
 

@@ -6,16 +6,16 @@
     <h2 class="accent-color">
       this must alose be in accents color but with css var
     </h2>
-    <TheMoodTrackerIllu />
+    <TheConnectIllu />
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
-import TheMoodTrackerIllu from "../components/illustrations/TheMoodTrackerIllu";
+import TheConnectIllu from "../components/illustrations/TheConnectIllu";
 export default {
   components: {
-    TheMoodTrackerIllu
+    TheConnectIllu
   },
   data() {
     return {};
