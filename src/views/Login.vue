@@ -29,7 +29,7 @@
 
 <script>
 import logo from "@/components/Logo";
-import loginform from "@/components/Login-form";
+import loginform from "@/components/LoginForm";
 export default {
   components: {
     logo: logo,
