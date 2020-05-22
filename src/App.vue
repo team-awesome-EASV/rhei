@@ -5,9 +5,7 @@
     </div>
     <div id="nav" class="flex-space-around padding-sides">
       <router-link class="margin-right" to="/moodtracker">Mood</router-link>
-      <router-link class="margin-right" to="/breathing-exercise"
-        >Breath</router-link
-      >
+      <router-link class="margin-right" to="/breathing-exercise">Breath</router-link>
 
       <router-link class="margin-right" to="/">Home</router-link>
       <router-link class="margin-right" to="/chat">Chat</router-link>
@@ -22,6 +20,21 @@ import Navigation from "./components/Navigation.vue";
 export default {
   components: {
     Navigation: Navigation
+  },
+  data() {
+    return {};
+  },
+  methods: {
+    changeVariableColor() {
+      let root = document.documentElement;
+      root.style.setProperty(
+        "--main-accent-color",
+        this.$store.state.accentColor.hex
+      );
+    }
+  },
+  updated() {
+    this.changeVariableColor();
   }
 };
 </script>
@@ -73,6 +86,10 @@ a {
   font-size: 1.4rem;
   text-decoration: none;
   margin-bottom: 5px;
+  color: var(--main-accent-color);
+}
+
+.accent-color {
   color: var(--main-accent-color);
 }
 
