@@ -1,11 +1,17 @@
 <template>
   <div>
+    <p>{{ color1 }} {{ createShade("23", "5") }}</p>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 581.9 641.71">
       <g id="Layer_2" data-name="Layer 2">
         <g id="Layer_3" data-name="Layer 3">
           <g id="background" opacity="0.12">
             <g id="Background-2" data-name="Background">
-              <circle cx="283.44" cy="358.26" r="283.44" fill="#6868bf" />
+              <circle
+                cx="283.44"
+                cy="358.26"
+                r="283.44"
+                :fill="createShade('46', '50')"
+              />
             </g>
           </g>
           <g id="chair">
@@ -23,12 +29,12 @@
             />
           </g>
           <g id="chart">
-            <g id="chart-circle" opacity="0.38">
+            <g id="chart-circle" opacity="1">
               <path
                 id="chart3"
                 d="M336.63,115.87a113.32,113.32,0,0,1,98.23-95"
                 fill="none"
-                stroke="#232340"
+                :stroke="createShade('45', '25')"
                 stroke-linecap="round"
                 stroke-miterlimit="10"
                 stroke-width="40"
@@ -37,7 +43,7 @@
                 id="chart2"
                 d="M374.33,47.73A113.3,113.3,0,1,1,363,207.57"
                 fill="none"
-                stroke="#454680"
+                :stroke="createShade('46', '50')"
                 stroke-linecap="round"
                 stroke-miterlimit="10"
                 stroke-width="40"
@@ -46,7 +52,7 @@
                 id="chart1"
                 d="M374.33,47.73a113.31,113.31,0,0,1,186.86,98.2"
                 fill="none"
-                stroke="#8a8bff"
+                :stroke="createShade('45', '90')"
                 stroke-linecap="round"
                 stroke-miterlimit="10"
                 stroke-width="40"
@@ -57,7 +63,7 @@
               cx="448.58"
               cy="133.31"
               r="61.63"
-              fill="#7c7de5"
+              :fill="createShade('100', '50')"
             />
           </g>
           <g id="character">
@@ -75,12 +81,12 @@
               <path
                 id="leg-back"
                 d="M249.91,299.65c0,54,17.18,65.34,34.27,65.34,43.29,0,99.61-34.72,102.79-36.06-1,5.68-7.31,149.66-7.31,150.49,1.5,1.17,13,2.18,16.87,1.17,1-3.5,31.41-174.75,31.41-179.26S425.32,290,415.41,289c-4.19-.42-62.48-2.84-62.48-2.84"
-                fill="#232340"
+                :fill="createShade('20', '30')"
               />
               <path
                 id="leg-front"
                 d="M396.84,261.36C410,280.36,468.6,413,468.08,416.09s-14,9.67-16.85,7.9c-12.09-7.45-86.32-132.63-89.21-134.52s-7.22-1.16-9.8-.64C345.51,277.68,360.53,264.44,396.84,261.36Z"
-                fill="#454680"
+                :fill="createShade('100', '30')"
               />
             </g>
             <path
@@ -292,7 +298,28 @@
 </template>
 
 <script>
-export default {};
+import { mapGetters } from "vuex";
+export default {
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapGetters(["accentColor"]),
+    loadColor() {
+      return this.accentColor;
+    },
+
+    color1() {
+      return `hsl(${this.loadColor.hsl}, 100%, 50%)`;
+    }
+  },
+
+  methods: {
+    createShade(saturation, lightness) {
+      return `hsl(${this.loadColor.hsl}, ${saturation}%, ${lightness}%)`;
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>

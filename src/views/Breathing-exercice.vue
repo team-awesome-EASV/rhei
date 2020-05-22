@@ -1,9 +1,17 @@
 <template>
-  <h1>this is the breathing page</h1>
+  <div>
+    <h1>this is the breathing page</h1>
+    <TheCalmDown />
+  </div>
 </template>
 
 <script>
-export default {};
+import TheCalmDown from "../components/illustrations/TheCalmDown";
+export default {
+  components: {
+    TheCalmDown
+  }
+};
 </script>
 
 <style>
