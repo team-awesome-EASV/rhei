@@ -5,15 +5,25 @@
     </div>
     <div class="nav-wrapper">
       <div class="icons-row">
-          <app-icon icon="moodtracker"></app-icon>
-          <app-icon icon="chat"></app-icon>
-<!--        <router-link to="/moodtracker"><img class="ico" src="../icons/icon-moodtracker.svg" alt=""></router-link>-->
-<!--        <router-link to="/chat"><img class="ico" src="../icons/icon-chat.svg" alt=""></router-link>-->
+          <li
+                  class="shuffle"
+                  v-for="(link, index) in navLinks"
+                  v-bind:key="index"
+          >
+              <a :href="link.path">{{ link.name }}</a>
+          </li>
+<!--          <app-icon icon="moodtracker"></app-icon>-->
+<!--          <app-icon icon="chat"></app-icon>-->
       </div>
       <div class="icons-row">
-<!--        <router-link to="/connect-the-dots"><img class="ico" src="../icons/icon-calm.svg" alt=""></router-link>-->
-<!--        <router-link to="/therapy"><img class="ico" src="../icons/icon-premium.svg" alt=""></router-link>-->
-          <app-icon icon="calm"></app-icon>
+          <li
+                  class="shuffle"
+                  v-for="(link, index) in navLinks"
+                  v-bind:key="index"
+          >
+              <a :href="link.path">{{ link.name }}</a>
+          </li>
+<!--          <app-icon icon="calm"></app-icon>-->
           <app-icon icon="premium"></app-icon>
       </div>
     </div>
