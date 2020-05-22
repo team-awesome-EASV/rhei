@@ -27,6 +27,7 @@
 <script>
 import logo from "@/components/Logo";
 import signupform from "../components/Sign-up-form";
+
 export default {
   components: {
     logo: logo,

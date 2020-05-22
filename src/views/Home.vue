@@ -1,9 +1,24 @@
 <template>
-  <h1>this is the Main screen page</h1>
+  <div>
+    <h1>this is the Main screen page</h1>
+
+    <p :style="{color : loadUser.hex}">this must have the accent color</p>
+  </div>
 </template>
 
 <script>
-export default {};
+import { mapGetters } from "vuex";
+export default {
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapGetters(["accentColor"]),
+    loadUser() {
+      return this.accentColor;
+    }
+  }
+};
 </script>
 
 <style>

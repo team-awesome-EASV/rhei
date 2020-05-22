@@ -15,6 +15,8 @@ const state = {
 
   ],
   accentColor: {
+    hex: "#FFEA8D",
+    hsl: "48.95"
   },
   colors: [
     {
