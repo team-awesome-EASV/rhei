@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="fullscreen">
     <div class="main-view main-padding">
+      <p>{{ this.$route }}</p>
       <router-view />
     </div>
     <div id="nav" class="flex-space-around padding-sides">
@@ -43,7 +44,9 @@ export default {
 
   watch: {
     $route() {
-      this.show = !this.show;
+      if (this.$route.name == "Login") {
+        this.show = !this.show;
+      }
     }
   }
 };
