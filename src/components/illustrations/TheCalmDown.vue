@@ -63,7 +63,7 @@
               cx="448.58"
               cy="133.31"
               r="61.63"
-              :fill="createShade('100', '50')"
+              :fill="createShade('90', '50')"
             />
           </g>
           <g id="character">
@@ -92,7 +92,7 @@
             <path
               id="torso"
               d="M338.06,154.92c19.58,0,25.21,18.54,26.83,25.54,5.18,22.35-9.24,107.28-10.91,109.62-14.17,19.81-95.17,21.57-103.07,13S284.56,154.92,338.06,154.92Z"
-              fill="#8a8bff"
+              :fill="createShade('90', '50')"
             />
             <g id="head">
               <path
@@ -182,7 +182,7 @@
               <path
                 id="arm-fill"
                 d="M317.77,202.48c-1,6.26-4.24,65.37,3.52,71.12,16.62,12.31,93.37-2.75,105-7.06,1.26-4.12,0-17.21,0-17.21-4.48-.18-61-.72-64.37-5s-3.77-39.27-3.23-43.22"
-                fill="#8a8bff"
+                :fill="createShade('90', '50')"
               />
               <path
                 id="arm-contour-2"
@@ -205,12 +205,13 @@
           <g id="phone-2" data-name="phone">
             <g id="phone-bcg">
               <rect
+                id="phone-bcg-frame"
                 x="40.46"
                 y="25.6"
                 width="161.19"
                 height="326.51"
                 rx="17.77"
-                fill="#454680"
+                :fill="createShade('90', '20')"
               />
               <rect
                 x="50.35"
@@ -226,15 +227,15 @@
                 width="79.57"
                 height="19.38"
                 rx="7.78"
-                fill="#454680"
+                :fill="createShade('90', '20')"
               />
               <line
                 x1="87.46"
                 y1="337.48"
                 x2="155.89"
                 y2="337.48"
-                fill="#8a8bff"
-                stroke="#8a8bff"
+                :fill="createShade('90', '20')"
+                :stroke="createShade('95', '40')"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="6.79"
@@ -245,12 +246,12 @@
               cx="121.67"
               cy="104.34"
               r="41.43"
-              fill="#8a8bff"
+              :fill="createShade('90', '80')"
             />
             <g id="ui-group1">
               <polyline
                 points="67.05 175.46 67.05 158.14 213.61 158.14 213.61 175.46 67.05 175.46"
-                fill="#6868bf"
+                :fill="createShade('90', '39')"
               />
               <polyline
                 points="141.83 205.14 67.05 205.14 67.05 196.48"
@@ -287,7 +288,7 @@
                 y="217.5"
                 width="146.56"
                 height="17.31"
-                fill="#6868bf"
+                :fill="createShade('90', '39')"
               />
             </g>
           </g>
