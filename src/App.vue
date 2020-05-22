@@ -44,7 +44,11 @@ export default {
 
   watch: {
     $route() {
-      if (this.$route.name == "Login") {
+      if (
+        this.$route.name == "Login" ||
+        this.$route.name == "SingUp" ||
+        this.$route.name == "Color"
+      ) {
         this.show = false;
       } else this.show = true;
     }
