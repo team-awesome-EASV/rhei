@@ -1,16 +1,16 @@
 <template>
   <div class="nav-container">
     <div class="home-button">
-      <i class="las la-house-damage"></i>
+      <router-link to="/"><i class="las la-house-damage"></i></router-link>
     </div>
     <div class="nav-wrapper">
       <div class="icons-row">
-        <img class="ico" src="../assets/Navigation/mood-ico.svg" alt="">
-        <img class="ico" src="../assets/Navigation/chat-ico.svg" alt="">
+        <router-link to="/moodtracker"><img class="ico" src="../assets/Navigation/mood-ico.svg" alt=""></router-link>
+        <router-link to="/chat"><img class="ico" src="../assets/Navigation/chat-ico.svg" alt=""></router-link>
       </div>
       <div class="icons-row">
-        <img class="ico" src="../assets/Navigation/calm-ico.svg" alt="">
-        <img class="ico" src="../assets/Navigation/premium-ico.svg" alt="">
+        <router-link to="/connect-the-dots"><img class="ico" src="../assets/Navigation/calm-ico.svg" alt=""></router-link>
+        <router-link to="/therapy"><img class="ico" src="../assets/Navigation/premium-ico.svg" alt=""></router-link>
       </div>
     </div>
     <svg
