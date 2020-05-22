@@ -10,12 +10,14 @@
           v-for="(link, index) in navLinksLeft"
           v-bind:key="index"
         >
-          <router-link :to="link.path">
-            <app-icon :icon="link.icon"></app-icon>
-            <p>
-              {{ link.name }}
-            </p>
-          </router-link>
+            <router-link :to="link.path">
+              <div class="links-center">
+                <app-icon :icon="link.icon"></app-icon>
+                <p>
+                  {{ link.name }}
+                </p>
+              </div>
+            </router-link>
         </li>
         <!--          <app-icon icon="moodtracker"></app-icon>-->
         <!--          <app-icon icon="chat"></app-icon>-->
@@ -26,12 +28,16 @@
           v-for="(link, index) in navLinksRight"
           v-bind:key="index"
         >
+
           <router-link :to="link.path">
-            <app-icon :icon="link.icon"></app-icon>
-            <p>
-              {{ link.name }}
-            </p>
+            <div class="links-center">
+              <app-icon :icon="link.icon"></app-icon>
+              <p>
+                {{ link.name }}
+              </p>
+            </div>
           </router-link>
+
         </li>
       </div>
     </div>
@@ -89,6 +95,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
+
 .nav-container {
   width: 100%;
   height: 10%;
@@ -122,12 +131,17 @@ export default {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+}
 
-  .las {
-    font-size: 35px;
-    color: var(--main-accent-color);
-  }
+
+.icons-row {
+  margin-top:1rem;
+  width: 40%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 li{
@@ -135,16 +149,15 @@ li{
   display: flex;
 }
 
-p{
-  font-size: 10px;
+.links-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
 }
 
-.icons-row {
-  width: 40%;
-  height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+p{
+  font-size: 1.2rem;
 }
 
 
