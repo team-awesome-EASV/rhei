@@ -5,12 +5,12 @@
     </div>
     <div class="nav-wrapper">
       <div class="icons-row">
-        <i class="las la-wheelchair"></i>
-        <i class="las la-wheelchair"></i>
+        <img class="ico" src="../assets/Navigation/mood-ico.svg" alt="">
+        <img class="ico" src="../assets/Navigation/chat-ico.svg" alt="">
       </div>
       <div class="icons-row">
-        <i class="las la-wheelchair"></i>
-        <i class="las la-wheelchair"></i>
+        <img class="ico" src="../assets/Navigation/calm-ico.svg" alt="">
+        <img class="ico" src="../assets/Navigation/premium-ico.svg" alt="">
       </div>
     </div>
     <svg
@@ -67,9 +67,9 @@ export default {
   position: absolute;
   top: 0%;
   left: 50%;
-  -webkit-transform: translate(-50%, -75%);
-  -ms-transform: translate(-50%, -75%);
-  transform: translate(-50%, -75%);
+  -webkit-transform: translate(-50%, -80%);
+  -ms-transform: translate(-50%, -80%);
+  transform: translate(-50%, -80%);
   z-index: 99;
   display: flex;
   justify-content: center;
@@ -96,6 +96,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.ico{
+  width:50%;
+  height:50%;
+  fill: #444444;
 }
 
 .las {
