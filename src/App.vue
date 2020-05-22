@@ -53,7 +53,7 @@ export default {
 :root {
   font-size: 10px;
   font-family: "Poppins", sans-serif;
-  --main-accent-color: #0317ef;
+  --main-accent-color: #ffea8d;
   --secondary-background-color: #fcfbf0;
 }
 

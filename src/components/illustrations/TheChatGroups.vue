@@ -9,14 +9,14 @@
             width="286"
             height="208"
             rx="22.19"
-            fill="#8a8bff"
-            opacity="0.12"
+            :fill="createShade('20', '80')"
+            opacity="0.22"
           />
           <g id="groups-right-module">
             <path
               id="groups-right-module-bcg"
               d="M444.18,225.8H217.42c-17.71,0-32.07-10.07-32.07-22.49V34.3c0-12.43,14.36-22.5,32.07-22.5H444.18c17.71,0,32.07,10.07,32.07,22.5v169C476.25,215.73,461.89,225.8,444.18,225.8Z"
-              fill="#c3c3e5"
+              :fill="createShade('60', '80')"
             />
             <g id="lines-top">
               <circle
@@ -24,7 +24,7 @@
                 cx="436.94"
                 cy="70.25"
                 r="14.18"
-                fill="#8a8bff"
+                :fill="createShade('100', '70')"
                 stroke="#f2f2f2"
                 stroke-miterlimit="10"
                 stroke-width="3"
@@ -54,7 +54,7 @@
                 cx="436.94"
                 cy="119.05"
                 r="14.18"
-                fill="#8a8bff"
+                :fill="createShade('100', '70')"
                 stroke="#f2f2f2"
                 stroke-miterlimit="10"
                 stroke-width="3"
@@ -114,7 +114,7 @@
                 cx="273.54"
                 cy="214.05"
                 r="22.57"
-                fill="#8a8bff"
+                :fill="createShade('100', '70')"
               />
               <path
                 id="plus"
@@ -124,19 +124,11 @@
             </g>
           </g>
           <g id="groups-chat-bubble">
-            <g id="groups-chat-bubble-bcg">
+            <g id="groups-chat-bubble-bcg" :fill="createShade('100', '60')">
               <polygon
                 points="149.69 106.71 131.02 90.22 150.06 90.22 149.69 106.71"
-                fill="#8a8bff"
               />
-              <rect
-                x="24"
-                y="28.63"
-                width="144.35"
-                height="63.46"
-                rx="25.73"
-                fill="#8a8bff"
-              />
+              <rect x="24" y="28.63" width="144.35" height="63.46" rx="25.73" />
             </g>
             <g id="groups-chat-bubble-docs">
               <circle cx="115.46" cy="60.36" r="5.6" fill="#fff" />
@@ -148,8 +140,8 @@
             transform="translate(3.11 168.59) scale(0.99 1)"
             font-size="61.76"
             fill="#3d3d3d"
-            font-family="Poppins-SemiBold, Poppins"
-            font-weight="600"
+            font-family="Poppins, sans-serif"
+            font-weight="400"
           >
             Groups
           </text>
