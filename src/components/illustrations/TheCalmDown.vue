@@ -28,7 +28,7 @@
             />
           </g>
           <g id="chart">
-            <g id="chart-circle" opacity="1">
+            <g id="chart-circle" opacity="0.5">
               <path
                 id="chart3"
                 d="M336.63,115.87a113.32,113.32,0,0,1,98.23-95"
@@ -56,14 +56,14 @@
                 stroke-miterlimit="10"
                 stroke-width="40"
               />
+              <circle
+                id="chart-center"
+                cx="448.58"
+                cy="133.31"
+                r="61.63"
+                :fill="createShade('90', '50')"
+              />
             </g>
-            <circle
-              id="chart-center"
-              cx="448.58"
-              cy="133.31"
-              r="61.63"
-              :fill="createShade('90', '50')"
-            />
           </g>
           <g id="character">
             <g id="legs">
