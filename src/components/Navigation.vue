@@ -52,7 +52,17 @@
   export default {
     components: {
       AppIcon
-    }
+    },
+      data() {
+          return {
+              navLinks: [
+                  { name: "MOODTRACKER", path: "/moodtracker" },
+                  { name: "CHAT", path: "/chat" },
+                  { name: "CALM DOWN", path: "/breathing-exercise" },
+                  { name: "PREMIUM", path: "/therapy" },
+              ],
+          };
+      },
 
     // ... rest of component
   };
