@@ -1,6 +1,4 @@
 
-
-
 <script>
 export default {
   functional: true,
@@ -30,9 +28,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .app-icon {
   display: inline-block;
-  width: 3rem;
+  width: 4rem;
 }
 </style>

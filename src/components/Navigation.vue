@@ -1,17 +1,20 @@
 <template>
   <div class="nav-container">
     <div class="home-button">
-<!--      <router-link to="/"><i class="las la-house-damage"></i></router-link>-->
-        <app-icon icon="premium"></app-icon>
+      <router-link to="/"><i class="las la-house-damage"></i></router-link>
     </div>
     <div class="nav-wrapper">
       <div class="icons-row">
+          <app-icon icon="moodtracker"></app-icon>
+          <app-icon icon="chat"></app-icon>
 <!--        <router-link to="/moodtracker"><img class="ico" src="../icons/icon-moodtracker.svg" alt=""></router-link>-->
 <!--        <router-link to="/chat"><img class="ico" src="../icons/icon-chat.svg" alt=""></router-link>-->
       </div>
       <div class="icons-row">
 <!--        <router-link to="/connect-the-dots"><img class="ico" src="../icons/icon-calm.svg" alt=""></router-link>-->
 <!--        <router-link to="/therapy"><img class="ico" src="../icons/icon-premium.svg" alt=""></router-link>-->
+          <app-icon icon="calm"></app-icon>
+          <app-icon icon="premium"></app-icon>
       </div>
     </div>
     <svg
