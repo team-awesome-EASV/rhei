@@ -45,8 +45,8 @@ export default {
   watch: {
     $route() {
       if (this.$route.name == "Login") {
-        this.show = !this.show;
-      }
+        this.show = false;
+      } else this.show = true;
     }
   }
 };
