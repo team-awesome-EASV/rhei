@@ -2,7 +2,9 @@
   <div>
     <div class="main-view">
       <section class="top-nav flex-space-between">
-        <logo></logo>
+        <router-link to="/">
+          <logo></logo>
+        </router-link>
         <ul class="flex-space-around">
           <li>
             <router-link class="margin-right" to="/login">login</router-link>
@@ -35,7 +37,7 @@
 
 <script>
 import logo from "@/components/Logo";
-import { mapGetters, mapMutations } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 export default {
   components: {
     logo: logo
@@ -44,7 +46,7 @@ export default {
     ...mapGetters(["allColors", "accentColor"])
   },
   methods: {
-    ...mapMutations(["setAccentColor"])
+    ...mapActions(["setAccentColor"])
   }
 };
 </script>

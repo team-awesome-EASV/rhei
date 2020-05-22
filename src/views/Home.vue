@@ -15,9 +15,10 @@ export default {
   computed: {
     ...mapGetters(["accentColor"]),
     loadUser() {
-      return this.accentColor;
+      return this.$store.state.accentColor;
     }
-  }
+  },
+  created() {}
 };
 </script>
 

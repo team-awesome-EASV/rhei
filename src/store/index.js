@@ -77,13 +77,14 @@ const getters = {
 }
 
 const actions = {
+  setAccentColor({ commit }, color) {
+    const response = color;
+    commit('setAccentColor', response)
+  }
 
 }
 const mutations = {
-  setAccentColor(state, color) {
-    state.accentColor = color
-
-  }
+  setAccentColor: (state, response) => (state.accentColor = response),
 }
 export default new Vuex.Store({
   state,
