@@ -7,10 +7,15 @@
       <div class="icons-row">
         <li
           class="shuffle"
-          v-for="(link, index) in navLinks"
+          v-for="(link, index) in navLinksLeft"
           v-bind:key="index"
         >
-          <a :href="link.path">{{ link.name }}</a>
+          <router-link :to="link.path">
+            <app-icon :icon="link.icon"></app-icon>
+            <p>
+              {{ link.name }}
+            </p>
+          </router-link>
         </li>
         <!--          <app-icon icon="moodtracker"></app-icon>-->
         <!--          <app-icon icon="chat"></app-icon>-->
@@ -18,15 +23,15 @@
       <div class="icons-row">
         <li
           class="shuffle"
-          v-for="(link, index) in navLinks"
+          v-for="(link, index) in navLinksRight"
           v-bind:key="index"
         >
           <router-link :to="link.path">
             <app-icon :icon="link.icon"></app-icon>
             <p>
               {{ link.name }}
-            </p></router-link
-          >
+            </p>
+          </router-link>
         </li>
       </div>
     </div>
@@ -68,11 +73,13 @@ export default {
   },
   data() {
     return {
-      navLinks: [
+      navLinksLeft: [
         { name: "MOODTRACKER", path: "/moodtracker", icon: "moodtracker" },
-        { name: "CHAT", path: "/chat", icon: "moodtracker" },
-        { name: "CALM DOWN", path: "/breathing-exercise", icon: "moodtracker" },
-        { name: "PREMIUM", path: "/therapy", icon: "moodtracker" }
+        { name: "CHAT", path: "/chat", icon: "chat" },
+      ],
+      navLinksRight: [
+        { name: "CALM DOWN", path: "/breathing-exercise", icon: "calm" },
+        { name: "PREMIUM", path: "/therapy", icon: "premium" }
       ]
     };
   }
@@ -123,6 +130,15 @@ export default {
   }
 }
 
+li{
+  list-style: none;
+  display: flex;
+}
+
+p{
+  font-size: 10px;
+}
+
 .icons-row {
   width: 40%;
   height: 80%;
@@ -130,11 +146,7 @@ export default {
   align-items: center;
   justify-content: space-around;
 }
-.ico {
-  width: 50%;
-  height: 50%;
-  fill: #444444;
-}
+
 
 .las {
   font-size: 35px;
