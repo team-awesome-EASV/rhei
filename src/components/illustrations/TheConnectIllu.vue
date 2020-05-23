@@ -388,7 +388,7 @@
 import { createShadeAccentColor } from "../mixins/createShadeAccentColor";
 import { gsap } from "gsap";
 export default {
-  name: "TheMoodTrackerIllu",
+  name: "TheConnectIllu",
   mixins: [createShadeAccentColor],
   data() {
     return {};

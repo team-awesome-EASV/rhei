@@ -155,7 +155,7 @@
 import { createShadeAccentColor } from "../mixins/createShadeAccentColor";
 
 export default {
-  name: "TheCalmDownIllu",
+  name: "TheChatGroups",
   mixins: [createShadeAccentColor],
   data() {
     return {};
