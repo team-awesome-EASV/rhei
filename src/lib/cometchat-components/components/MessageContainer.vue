@@ -295,9 +295,15 @@ export default {
   bottom: 15%;
   background-color: var(--secondary-background-color);
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cc1-chat-win-inpt-int-wrap {
+  width: 90%;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cc1-chat-win-inpt-attach {
   width: 60px;
@@ -306,7 +312,11 @@ export default {
 .cc1-chat-win-inpt-wrap {
   flex: 1 1 0;
   position: relative;
-  margin: 0 0.5em 0 2em;
+  margin: 0 0.5em 0 0.5em;
+
+  border-radius: 11px;
+  background: #fcfbf0;
+  box-shadow: inset 5px 5px 10px #d6d5cc, inset -5px -5px 10px #ffffff;
 }
 .cc1-chat-win-inpt-send {
   width: 60px;
@@ -354,9 +364,9 @@ a.cc1-chat-win-inpt-voice-btn {
   letter-spacing: -0.1px;
   line-height: 20px;
   padding: 6px 36px 6px 12px;
+  box-shadow: rgba(20, 20, 20, 0.04) 0 0 0 1px inset;
   border-radius: 11px;
-  background: #fcfbf0;
-  box-shadow: inset 5px 5px 10px #d6d5cc, inset -5px -5px 10px #ffffff;
+  background-color: rgba(20, 20, 20, 0.04);
 }
 .smile-button {
   width: 20px;
@@ -616,7 +626,7 @@ a.cc1-chat-win-inpt-voice-btn {
 
 @media (min-width: 320px) and (max-width: 767px) {
   .cc1-chat-win-inpt-ext-wrap {
-    bottom: 0px;
+    bottom: 15px;
   }
   .cc1-chat-win-conver-wrap {
     height: calc(100vh - 130px);

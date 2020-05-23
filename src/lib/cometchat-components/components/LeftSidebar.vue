@@ -147,49 +147,27 @@ bottom property to move chat navigation up or down */
 }
 .ccl-left-panel-nav-link {
   display: inherit;
-  padding: 32px 20px;
+  padding: 1.3rem 1rem;
 }
 .ccl-left-panel-nav-link.people {
-  background: url(./../assets/images/svg/people-grey-icon.svg) no-repeat center;
-  background-size: 18px 19px;
 }
 .ccl-left-panel-nav-link.call {
-  background: url(./../assets/images/svg/call-grey-icon.svg) no-repeat center;
-  background-size: 18px 19px;
 }
 .ccl-left-panel-nav-link.chat {
-  background: url(./../assets/images/svg/chat-grey-icon.svg) no-repeat center;
-  background-size: 20px 21px;
 }
 .ccl-left-panel-nav-link.grp-chat {
-  background: url(./../assets/images/svg/group-chat-grey-icon.svg) no-repeat
-    center;
-  background-size: 20px 21px;
 }
 .ccl-left-panel-nav-link.more {
-  background: url(./../assets/images/svg/more-grey-icon.svg) no-repeat center;
-  background-size: 20px 21px;
 }
 .ccl-left-panel-nav-link.people.active {
-  background: url(./../assets/images/svg/people-blue-icon.svg) no-repeat center;
-  background-size: 18px 19px;
 }
 .ccl-left-panel-nav-link.chat.active {
-  background: url(./../assets/images/svg/chat-blue-icon.svg) no-repeat center;
-  background-size: 20px 21px;
 }
 .ccl-left-panel-nav-link.grp-chat.active {
-  background: url(./../assets/images/svg/group-chat-blue-icon.svg) no-repeat
-    center;
-  background-size: 20px 21px;
 }
 .ccl-left-panel-nav-link.more.active {
-  background: url(./../assets/images/svg/more-blue-icon.svg) no-repeat center;
-  background-size: 20px 21px;
 }
 .ccl-left-panel-nav-link.call.active {
-  background: url(./../assets/images/svg/call-blue-icon.svg) no-repeat center;
-  background-size: 18px 19px;
 }
 /* .chat-contact-list-ext-wrap{padding:16px;} */
 .scroll-container {

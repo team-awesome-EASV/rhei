@@ -30,11 +30,10 @@ export default {
 
 
 <style scoped>
-
 .app-icon {
   display: inline-block;
-  width: 4rem;
-    fill: var(--main-accent-color);
+  width: 3rem;
+  fill: var(--main-accent-color);
 }
 
 .cls-1 {

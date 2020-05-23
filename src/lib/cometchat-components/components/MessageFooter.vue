@@ -54,7 +54,7 @@
         <div id="smileButton" type="button" class="smile-button" />
       </div>
 
-      <div class="cc1-chat-win-inpt-send">
+      <!-- <div class="cc1-chat-win-inpt-send">
         <a
           href="javascript:void(0);"
           class="cc1-chat-win-inpt-send-btn"
@@ -65,7 +65,7 @@
         <a href="javascript:void(0);" class="cc1-chat-win-inpt-voice-btn">
           <img src="./../assets/images/svg/voice-record-frey-icon.svg" />
         </a>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -280,6 +280,9 @@ export default {
 <style scoped>
 .cc1-chat-win-inpt-ext-wrap {
   background-color: #fcfbf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .cc1-chat-win-inpt-attach {
   width: 300px;

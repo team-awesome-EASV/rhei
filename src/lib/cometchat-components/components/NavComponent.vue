@@ -5,23 +5,20 @@
         id="contactlist"
         href="javascript:void(0);"
         v-on:click="tabClickHandler($event)"
-        class="ccl-left-panel-nav-link people active"
-      ></a>
+        class="ccl-left-panel-nav-link active people "
+      >
+        <app-icon icon="people-grey-icon"></app-icon>
+      </a>
     </div>
-    <!-- <div class="ccl-left-panel-nav-listitem">
-      <a
-        id="calllist"
-        href="javascript:void(0);"
-        v-on:click="tabClickHandler($event)"
-        class="ccl-left-panel-nav-link call"
-      ></a>
-    </div> -->
-    <div class="ccl-left-panel-nav-listitem">
+
+    <div class="ccl-left-panel-nav-listitem chat">
       <a
         id="chatlist"
         href="javascript:void(0);"
         v-on:click="tabClickHandler($event)"
-        class="ccl-left-panel-nav-link chat"
+        class="ccl-left-panel-nav-link chat "
+      >
+        <app-icon icon="chat-grey-icon"></app-icon
       ></a>
     </div>
     <div class="ccl-left-panel-nav-listitem">
@@ -30,6 +27,7 @@
         href="javascript:void(0);"
         v-on:click="tabClickHandler($event)"
         class="ccl-left-panel-nav-link grp-chat"
+        ><app-icon icon="group-chat-grey-icon"></app-icon
       ></a>
     </div>
     <div class="ccl-left-panel-nav-listitem">
@@ -38,14 +36,17 @@
         href="javascript:void(0);"
         v-on:click="tabClickHandler($event)"
         class="ccl-left-panel-nav-link more"
+        ><app-icon icon="more-grey-icon"></app-icon
       ></a>
     </div>
   </div>
 </template>
 
 <script>
+import AppIcon from "@/components/AppIcon.vue";
 export default {
   name: "Nav",
+  components: { AppIcon },
   methods: {
     tabClickHandler(e) {
       e.preventDefault();
@@ -82,5 +83,9 @@ export default {
 </script>
 
 
-<style  scoped>
+<style  lang="scss" scoped>
+.active {
+  filter: saturate(200%) drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+  transform: scale(1.2);
+}
 </style>
