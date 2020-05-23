@@ -1,11 +1,16 @@
 <template>
   <div class="main-padding">
-    <h1>This is moodtracker page</h1>
+    <autocomplete></autocomplete>
   </div>
 </template>
 
 <script>
-export default {};
+import autocomplete from "../components/Autocomplete";
+export default {
+  components: {
+    autocomplete: autocomplete
+  }
+};
 </script>
 
 <style lang="scss" scoped>

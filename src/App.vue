@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="fullscreen">
-    <div class="main-view ">
+    <div class="main-view">
       <!-- <router-link to="/color">Change color</router-link> -->
       <router-view v-on:hideNavigation="this.show = false" />
     </div>
@@ -64,6 +64,7 @@ export default {
   font-family: "Poppins", sans-serif;
   --main-accent-color: #ffea8d;
   --secondary-background-color: #fcfbf0;
+  --background-element-color: #6cccff;
 }
 
 html {
