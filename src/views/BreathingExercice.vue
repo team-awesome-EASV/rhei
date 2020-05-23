@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import { TimelineLite, Back, Elastic, Expo } from "gsap"
+  // import { TimelineLite, Back, Elastic, Expo } from "gsap"
   // import mainButton from "../components/MainButton";
 
   export default {
@@ -34,42 +34,42 @@
     },
 
 
-    mounted() {
-      const { bubble, bubblePulse } = this.$refs
-      const timeline = new TimelineLite()
-
-      timeline.to(bubble, 1, {
-        scale: 5,
-        ease: Back.easeOut.config(1),
-
-      })
-      timeline.to(
-              bubblePulse,
-              0.1,
-              {
-                scale: 1,
-                opacity: 1.5,
-              },
-              '-=0.6'
-      )
-
-      this.timeline = new TimelineLite({
-        onComplete: () => this.timeline.restart()
-
-      })
-
-      this.timeline.to(bubble, 8, {
-        scale: 0.2,
-        ease: Elastic.easeOut.config(0.5, 0.5),
-      })
-      this.timeline.to(bubblePulse, 1.5,{
-                scale: 10,
-                opacity: 0,
-                ease: Expo.easeOut,
-              },
-              '-=1.2'
-      )
-    }
+    // // mounted() {
+    // //   const { bubble, bubblePulse } = this.$refs
+    // //   const timeline = new TimelineLite()
+    // //
+    // //   timeline.to(bubble, 1, {
+    // //     scale: 5,
+    // //     ease: Back.easeOut.config(1),
+    // //
+    // //   })
+    // //   timeline.to(
+    // //           bubblePulse,
+    // //           0.1,
+    // //           {
+    // //             scale: 1,
+    // //             opacity: 1.5,
+    // //           },
+    // //           '-=0.6'
+    // //   )
+    // //
+    // //   this.timeline = new TimelineLite({
+    // //     onComplete: () => this.timeline.restart()
+    // //
+    // //   })
+    // //
+    // //   this.timeline.to(bubble, 8, {
+    // //     scale: 0.2,
+    // //     ease: Elastic.easeOut.config(0.5, 0.5),
+    // //   })
+    // //   this.timeline.to(bubblePulse, 1.5,{
+    // //             scale: 10,
+    // //             opacity: 0,
+    // //             ease: Expo.easeOut,
+    // //           },
+    // //           '-=1.2'
+    // //   )
+    // }
   };
 
 </script>
