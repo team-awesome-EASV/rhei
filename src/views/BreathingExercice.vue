@@ -12,10 +12,10 @@
     <h3>{{ animIteration }}</h3>
     <h3>{{ this.breatheAnim.isActive() }}</h3>
     <h3>{{ isPlaying }}</h3>
-    <!--    <main-button   text="Start"></main-button>-->
+    <!-- <main-button text="Start"></main-button> -->
     <div class="controls-wrapper">
-      <button class="cycle-control" @click="++cycleCount">+</button>
-      <button class="cycle-control" @click="--cycleCount">-</button>
+      <button class="cycle-control" @click="incrementCycle()">+</button>
+      <button class="cycle-control" @click="decrementCycle()">-</button>
 
       <button @click="animStop()" v-if="isPlaying">
         STOP
@@ -39,11 +39,14 @@ export default {
 
   data() {
     return {
-      breatheAnim: new gsap.timeline({
-        paused: true
-      }),
-
-      cycleCount: 2
+      cycleCount: 2,
+      breatheAnim: gsap.timeline({
+        paused: true,
+        onRepeat: this.logthis,
+        onRepeatParams: ["repeat"],
+        onComplete: this.logthis,
+        onCompleteParams: ["complete"]
+      })
     };
   },
 
@@ -56,47 +59,74 @@ export default {
         return this.breatheAnim.isActive();
       }
     },
-
     animIteration: function() {
       return this.breatheAnim.iteration();
     }
   },
 
-  // watch: {
-  //   cycleCount: function(newValue, oldValue) {
-  //     console.log(newValue, oldValue);
-  //   }
-  // },
+  watch: {
+    cycleCount: function(newValue, oldValue) {
+      console.log(newValue, oldValue);
+    }
+  },
 
   methods: {
     breathIndicator() {
-      this.breatheAnim.restart();
+      // this.breatheAnim.restart();
       console.log("test");
-      this.breatheAnim
-        .to(".breath-indicator", {
-          scale: 0.1,
-          duration: 1,
-          yoyo: true,
-          repeat: this.cycleCount, // number of repeats (-1 for infinite),
-          onRepeat: console.log("breathe tween repeat")
-        })
-        .to(
-          ".bubble-pulse",
-          {
-            scale: 10,
-            duration: 1,
-            repeat: this.cycleCount
-          },
-          "<"
-        );
-
+      this.breatheAnim.repeat(this.cycleCount);
       this.breatheAnim.play();
+      this.breatheAnim.restart();
     },
 
     animStop() {
       this.breatheAnim.pause();
+      // this.breatheAnim.restart();
+    },
+
+    incrementCycle() {
+      // this.breatheAnim.invalidate();
+      ++this.cycleCount;
+      this.breatheAnim.repeat(this.cycleCount);
+      this.breatheAnim.play();
       this.breatheAnim.restart();
+    },
+
+    decrementCycle() {
+      // this.breatheAnim.invalidate();
+      if (this.cycleCount > 0) --this.cycleCount;
+      this.breatheAnim.repeat(this.cycleCount);
+      this.breatheAnim.play();
+      this.breatheAnim.restart();
+    },
+
+    logthis(param) {
+      console.log(param);
     }
+  },
+
+  mounted() {
+    this.breatheAnim
+      .to(".breath-indicator", {
+        scale: 0,
+        duration: 1,
+        yoyo: true,
+        repeat: 1, // number of repeats (-1 for infinite),
+        repeatRefresh: true
+      })
+      .to(
+        ".bubble-pulse",
+        {
+          scale: 10,
+          duration: 1,
+          repeat: 1,
+          repeatRefresh: true,
+          yoyo: true
+          // repeat: -1 // number of repeats (-1 for infinite),
+          // repeat: this.cycleCount
+        },
+        "<"
+      );
   }
 };
 </script>
