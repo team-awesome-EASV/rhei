@@ -100,13 +100,16 @@ export default {
       },
       userFetchNext() {
         return this.usersRequest.fetchNext();
-      }
+      },
+      windowWidth: window.matchMedia("(max-width: 767px)")
     };
   },
   methods: {
     currentUser(data) {
       this.$root.$emit("selectedUser", data);
-      this.$root.$emit("hideNavigation");
+      if (this.windowWidth.matches) {
+        this.$root.$emit("hideNavigation");
+      }
     },
 
     getUserlist(data) {

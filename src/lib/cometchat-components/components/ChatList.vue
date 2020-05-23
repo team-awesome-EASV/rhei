@@ -81,12 +81,16 @@ export default {
 
       chatFetchNext() {
         return this.chatRequest.fetchNext();
-      }
+      },
+      windowWidth: window.matchMedia("(max-width: 767px)")
     };
   },
   methods: {
     currentUser(data, index) {
       this.$root.$emit("selectedUser", data.conversationWith);
+      if (this.windowWidth.matches) {
+        this.$root.$emit("hideNavigation");
+      }
       this.chatList[index].unreadMessageCount = 0;
     },
 

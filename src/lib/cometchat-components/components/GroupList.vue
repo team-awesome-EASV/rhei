@@ -90,12 +90,16 @@ export default {
 
       groupFetchnext() {
         return this.groupRequest.fetchNext();
-      }
+      },
+      windowWidth: window.matchMedia("(max-width: 767px)")
     };
   },
   methods: {
     currentGroup(data) {
       this.$root.$emit("selectedUser", data);
+      if (this.windowWidth.matches) {
+        this.$root.$emit("hideNavigation");
+      }
     },
     getGroupList(data) {
       this.callGroup(data)
