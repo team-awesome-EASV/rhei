@@ -87,6 +87,7 @@
             }}
           </div>
         </div>
+
         <div class="cc1-chat-win-msg-time-wrap">
           <span class="cc1-chat-win-timestamp">
             {{ getDate(msg.sentAt) }}
@@ -539,14 +540,6 @@ export default {
   text-align: center;
   margin: 10px 0;
 }
-
-/* .cc1-chat-win-sndr-msg-wrap{
-    background-color:#FC9390;
-  }
-
-  .cc1-chat-win-rcvr-msg-wrap{
-    background-color: grey;
-  } */
 
 .dateSeperator {
   /* background-color: rgba(210, 213, 215, 0.92); */

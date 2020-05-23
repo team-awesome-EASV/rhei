@@ -192,7 +192,8 @@ export default {
 .cc1-chat-win-sndr-msg-wrap {
   display: inline-block;
   border-radius: 8px;
-  background: linear-gradient(145deg, #e1978d, #ffb4a8);
+  /* background: linear-gradient(145deg, #e1978d, #ffb4a8); */
+  background: var(--main-accent-color);
   box-shadow: 6px 6px 12px #d6d5cc, -6px -6px 12px #ffffff;
   /* border-radius: 12px;
   background-color: rgba(51, 153, 255, 0.92); */

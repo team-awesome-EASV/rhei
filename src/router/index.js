@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
 import AppHomeComponent from '../components/AppHomeComponent';
-import AppNavigationComponent from '../components/AppNavigationComponent';
+
 import ChatContainer from '../lib/cometchat-components/components/ChatContainer';
 
 import ConversationScreen from '../lib/cometchat-components/components/ConversationScreen';
@@ -48,7 +48,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Chat.vue'),
     children: [
       { path: '/', component: AppHomeComponent },
-      { path: '/menu', component: AppNavigationComponent },
+
       { path: '/embeded-app', component: ChatContainer },
 
       { path: '/conversation-screen', component: ConversationScreen },

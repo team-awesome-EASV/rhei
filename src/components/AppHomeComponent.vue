@@ -103,18 +103,36 @@ export default {
         this.uid = uid;
       }
 
-      CometChat.login(this.uid, COMETCHAT_CONSTANTS.API_KEY).then(user => {
-        console.log("current log : ", user);
-        location.href = "radek/menu";
-        this.showloader = false;
-      });
+      CometChat.login(this.uid, COMETCHAT_CONSTANTS.API_KEY).then(
+        () => {
+          this.$router.push({
+            path: "/embeded-app"
+          });
+          console.log("login succes");
+        },
+        error => {
+          this.showSpinner = false;
+          alert(
+            "Whops. Something went wrong. This commonly happens when you enter a username that doesn't exist. Check the console for more information"
+          );
+          console.log("Login failed with error:", error.code);
+        }
+      );
+
+      // CometChat.login(this.uid, COMETCHAT_CONSTANTS.API_KEY).then(user =>  {
+      //   console.log("current log : ", user);
+      //   // location.href = "/embeded-app";
+      //   this.showloader = false;
+      // });
     }
   },
   created() {
     CometChat.getLoggedinUser().then(
       user => {
         if (user) {
-          location.href = "/embeded-app";
+          this.$router.push({
+            path: "/embeded-app"
+          });
           this.uid = user.getUid();
         } else {
           this.showloader = false;
