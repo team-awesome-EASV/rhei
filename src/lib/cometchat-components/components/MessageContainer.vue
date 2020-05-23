@@ -143,7 +143,7 @@ export default {
 }
 .cc1-chat-win-conver-wrap {
   padding: 5px 16px;
-  height: calc(100vh - 132px);
+  height: calc(100vh - 320px);
   overflow-y: auto;
   background-color: #fff;
   z-index: 1;
@@ -619,7 +619,7 @@ a.cc1-chat-win-inpt-voice-btn {
     bottom: 0px;
   }
   .cc1-chat-win-conver-wrap {
-    height: calc(100vh - 185px);
+    height: calc(100vh - 130px);
   }
 }
 </style>
