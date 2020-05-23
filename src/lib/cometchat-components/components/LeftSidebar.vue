@@ -322,7 +322,7 @@ bottom property to move chat navigation up or down */
     top: 0;
     right: 0;
     z-index: 9;
-    background-color: #fff;
+    background-color: var(--secondary-background-color);
     box-shadow: 0 4px 8px rgba(20, 20, 20, 0.12),
       0 0 0 1px rgba(20, 20, 20, 0.08);
   }
@@ -355,7 +355,7 @@ bottom property to move chat navigation up or down */
     width: 100%;
     height: 100vh;
     z-index: 2;
-    background-color: #fff;
+    background-color: var(--secondary-background-color);
   }
   .dark-theme .ccl-center-panel {
     background-color: #141414;
@@ -389,7 +389,7 @@ bottom property to move chat navigation up or down */
     width: 100%;
     height: 100vh;
     z-index: 3;
-    background-color: #fff;
+    background-color: var(--secondary-background-color);
   }
   .dark-theme .ccl-right-panel {
     background-color: #141414;

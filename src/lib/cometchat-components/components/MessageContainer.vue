@@ -292,8 +292,8 @@ export default {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 5%;
-  background-color: #fff;
+  bottom: 15%;
+  background-color: var(--secondary-background-color);
   z-index: 1;
 }
 .cc1-chat-win-inpt-int-wrap {
@@ -616,7 +616,7 @@ a.cc1-chat-win-inpt-voice-btn {
 
 @media (min-width: 320px) and (max-width: 767px) {
   .cc1-chat-win-inpt-ext-wrap {
-    bottom: 60px;
+    bottom: 0px;
   }
   .cc1-chat-win-conver-wrap {
     height: calc(100vh - 185px);

@@ -5,23 +5,16 @@
     </div> -->
     <div class="cc1-left-panel-user">
       <div class="cc1-left-panel-user-thumb">
-        <img v-if="user.avatar" :src="user.avatar" />
-        <img v-else src="./../assets/images/people-2_2.jpg" />
+        <img v-if="user.avatar" :src="user.avatar" width="100%" />
+        <img v-else src="./../assets/images/people-2_2.jpg" width="100%" />
       </div>
       <div class="cc1-left-panel-user-name-wrap">
         <h6 class="cc1-left-panel-user-name">{{ user.name }}</h6>
         <button @click="logout()">Logout</button>
-        <!-- <span class="cc1-left-panel-user-status ccl-blue-color">Online</span> -->
       </div>
     </div>
 
     <div class="cc1-left-panel-myacc-opts-wrap">
-      <!-- <div class="cc1-left-panel-myacc-opts-list-ttl ccl-text-uppercase">Preferences</div>
-        <div class="cc1-left-panel-myacc-opts-list">
-            <a href="javascript:void(0);" class="cc1-left-panel-myacc-opt notifications ccl-semi-bold-text"><span class="cc1-left-panel-myacc-optname"></span>Notifications</a>
-            <a href="javascript:void(0);" class="cc1-left-panel-myacc-opt privacy ccl-semi-bold-text"><span class="cc1-left-panel-myacc-optname"></span>Privacy and Security</a>
-            <a href="javascript:void(0);" class="cc1-left-panel-myacc-opt chats ccl-semi-bold-text active"><span class="cc1-left-panel-myacc-optname"></span>Chats</a>
-        </div> -->
       <div class="cc1-left-panel-myacc-opts-list-ttl ccl-text-uppercase">
         Other
       </div>
@@ -69,7 +62,7 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style scoped lang='scss'>
 .ccl-semi-bold-text {
   font-weight: 600;
 }
