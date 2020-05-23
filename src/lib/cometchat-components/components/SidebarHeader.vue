@@ -1,13 +1,15 @@
 <template>
   <div>
     <div class="ccl-left-panel-head-wrap">
-      <h4 class="ccl-left-panel-head-ttl">
+      <!-- <h4 class="ccl-left-panel-head-ttl">
         {{ activeTab.charAt(0).toUpperCase() + activeTab.slice(1) }}
-      </h4>
-      <TheChatContacts v-if="activeTab === 'contacts'" />
-      <TheChatChat v-if="activeTab === 'chat'" />
-      <TheChatGroups v-if="activeTab === 'groups'" />
-      <TheChatSettings v-if="activeTab === 'more'" />
+      </h4> -->
+      <div class="illu-wrapper">
+        <TheChatContacts v-if="activeTab === 'contacts'" />
+        <TheChatChat v-if="activeTab === 'chat'" />
+        <TheChatGroups v-if="activeTab === 'groups'" />
+        <TheChatSettings v-if="activeTab === 'more'" />
+      </div>
     </div>
   </div>
 </template>
@@ -33,5 +35,11 @@ export default {
 <style>
 .headerContainer {
   width: 100%;
+}
+
+.illu-wrapper {
+  width: 60%;
+  /* display: flex;
+  justify-content: center; */
 }
 </style>
