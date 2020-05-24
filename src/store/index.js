@@ -16,56 +16,56 @@ const state = {
   ],
   accentColor: {
     hex: "#8A8BFF",
-    hsl: "239.49"
+    hsl: "239"
   },
   colors: [
     {
       hex: "#FFEA8D",
-      hsl: "48.95"
+      hsl: "48"
     },
     {
       hex: "#FED891",
-      hsl: "39.08"
+      hsl: "39"
     },
     {
       hex: "#FEB18D",
-      hsl: "19.12"
+      hsl: "19"
     },
     {
       hex: "#FC9390",
-      hsl: "1.67"
+      hsl: "1"
     },
     {
       hex: "#FF88F3",
-      hsl: "306.05"
+      hsl: "306"
     },
     {
       hex: "#DE8DFF",
-      hsl: "282.63"
+      hsl: "282"
     },
     {
       hex: "#8A8BFF",
-      hsl: "239.49"
+      hsl: "239"
     },
     {
       hex: "#6CCCFF",
-      hsl: "200.82"
+      hsl: "200"
     },
     {
       hex: "#21F8FD",
-      hsl: "181.36"
+      hsl: "181"
     },
     {
       hex: "#00FFAF",
-      hsl: "161.18"
+      hsl: "161"
     },
     {
       hex: "#00FF65",
-      hsl: "143.76"
+      hsl: "143"
     },
     {
       hex: "#F7C544",
-      hsl: "43.24"
+      hsl: "43"
     }
   ]
 }
