@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-      <div @click="showControls = true" class="profile-controls-wrapper">
+      <div @click="showControls = !showControls" class="profile-controls-wrapper">
         <i class="las la-cog picture-cog"></i>
       </div>
       <div v-if="showControls" class="profile-controls-popup">
