@@ -45,7 +45,7 @@ export default {
       .to(".picture-cog", {
         scale: 0,
         rotation: 360,
-        transformOrigin: "20% 50%",
+        transformOrigin: "10% 20%",
         ease: "back.in(3)"
       })
       .fromTo(
@@ -60,10 +60,12 @@ export default {
       )
       .fromTo(
         ".popup-cog",
-        { scale: 0, rotation: 0 },
+        { scale: 0, rotation: 0, opacity: 0 },
         {
           scale: 1,
           rotation: 360,
+          opacity: 1,
+          duration:0.5,
           transformOrigin: "50% 50%",
           ease: "back.out(3)"
         }
@@ -73,7 +75,7 @@ export default {
         { scale: 0 },
         {
           scale: 1,
-
+          delay:0.25,
           ease: "back.out(3)"
         },
         "<"
