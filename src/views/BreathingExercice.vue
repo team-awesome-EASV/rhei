@@ -87,17 +87,17 @@ export default {
     incrementCycle() {
       // this.breatheAnim.invalidate();
       ++this.cycleCount;
-      this.breatheAnim.repeat(this.cycleCount);
-      this.breatheAnim.play();
-      this.breatheAnim.restart();
+      // this.breatheAnim.repeat(this.cycleCount);
+      // this.breatheAnim.play();
+      // this.breatheAnim.restart();
     },
 
     decrementCycle() {
       // this.breatheAnim.invalidate();
-      if (this.cycleCount > 0) --this.cycleCount;
-      this.breatheAnim.repeat(this.cycleCount);
-      this.breatheAnim.play();
-      this.breatheAnim.restart();
+      if (this.cycleCount > 1) --this.cycleCount;
+      // this.breatheAnim.repeat(this.cycleCount);
+      // this.breatheAnim.play();
+      // this.breatheAnim.restart();
     },
 
     logthis(param) {
@@ -109,7 +109,7 @@ export default {
     this.breatheAnim
       .to(".breath-indicator", {
         scale: 0,
-        duration: 1,
+        duration: 3,
         yoyo: true,
         repeat: 1, // number of repeats (-1 for infinite),
         repeatRefresh: true
@@ -118,7 +118,8 @@ export default {
         ".bubble-pulse",
         {
           scale: 10,
-          duration: 1,
+          duration: 3.5,
+          opacity:0.1,
           repeat: 1,
           repeatRefresh: true,
           yoyo: true
@@ -126,7 +127,8 @@ export default {
           // repeat: this.cycleCount
         },
         "<"
-      );
+      )
+      
   }
 };
 </script>
@@ -146,7 +148,7 @@ export default {
   height: 250px;
   border-radius: 50%;
   z-index: 99;
-  background-color: #6cccff;
+  background-color: blue;
 }
 
 .bubble-pulse {
@@ -154,9 +156,9 @@ export default {
   z-index: 1;
   height: 20px;
   width: 20px;
-  background: royalblue;
+  background:blue;
   border-radius: 50%;
-  opacity: 0.2;
+  opacity: 0.4;
   transform: scale(0);
 }
 
