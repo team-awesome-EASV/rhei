@@ -118,20 +118,14 @@ export default {
     this.breatheAnim
       .to(".breath-indicator", {
         scale: 0,
-        duration: 3,
-        yoyo: true,
-        repeat: 1, // number of repeats (-1 for infinite),
-        repeatRefresh: true
+        duration: 1,
       })
       .to(
         ".bubble-pulse",
         {
           scale: 10,
-          duration: 3.5,
+          duration: 1,
           opacity: 0.1,
-          repeat: 1,
-          repeatRefresh: true,
-          yoyo: true
           // repeat: -1 // number of repeats (-1 for infinite),
           // repeat: this.cycleCount
         },
