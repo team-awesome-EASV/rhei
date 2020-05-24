@@ -30,7 +30,6 @@ export default {
   mixins: [createShadeAccentColor],
   data() {
     return {
-      showControls: false,
       controlsAnim: gsap.timeline({ paused: true })
     };
   },
@@ -46,7 +45,7 @@ export default {
       .to(".picture-cog", {
         scale: 0,
         rotation: 360,
-        transformOrigin: "50% 50%",
+        transformOrigin: "20% 50%",
         ease: "back.in(3)"
       })
       .fromTo(
@@ -55,7 +54,7 @@ export default {
         {
           height: "150px",
           scale: 1,
-          duration: 1
+          duration: 0.2
         }
       )
       .fromTo(
