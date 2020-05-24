@@ -8,7 +8,7 @@
       <div class="breath-indicator"></div>
       <div class="bubble-pulse"></div>
     </div>
-    <h3>{{ cycleCount }}</h3>
+    <h3>{{ cycleCount + 1 }}</h3>
     <h3>{{ animIteration }}</h3>
     <h3>{{ this.breatheAnim.isActive() }}</h3>
     <h3>{{ isPlaying }}</h3>
@@ -42,12 +42,12 @@ export default {
     return {
       cycleCount: 2,
       breatheAnim: gsap.timeline({
-        paused: true,
+      paused: true,
 
-        onRepeat: this.logthis,
-        onRepeatParams: ["repeat"],
-        onComplete: this.logthis,
-        onCompleteParams: ["complete"]
+      onRepeat: this.logthis,
+      onRepeatParams: ["repeat"],
+      onComplete: this.logthis,
+      onCompleteParams: ["complete"]
       })
     };
   },
@@ -103,7 +103,7 @@ export default {
 
     decrementCycle() {
       // this.breatheAnim.invalidate();
-      if (this.cycleCount > 1) --this.cycleCount;
+      if (this.cycleCount >= 1) --this.cycleCount;
       // this.breatheAnim.repeat(this.cycleCount);
       // this.breatheAnim.play();
       // this.breatheAnim.restart();
@@ -121,7 +121,7 @@ export default {
         { scale: 1 },
         {
           scale: 0,
-          duration: 1
+          duration: 1,
         }
       )
       .to(".breath-indicator", {
