@@ -44,7 +44,7 @@ export default {
 }
 
 .account-settings-banner {
-  margin-bottom: 140px;
+  margin-bottom: 160px;
   width: 100%;
   background: red;
   display: flex;

@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <div @click="showControls = !showControls" class="profile-controls-wrapper">
-      <i class="las la-cog picture-cog"></i>
+      <i  :style="{color: createShade('80','50')}"  class="las la-cog picture-cog"></i>
     </div>
-    <div :style="{background: createShade('80','50')}" v-if="showControls" class="profile-controls-popup">
+    <div  v-if="showControls" class="profile-controls-popup">
       <div class="controls-container">
-         <i class="las la-cog popup-cog"></i>
+         <i :style="{color: createShade('80','50')}" class="las la-cog popup-cog"></i>
          <i class="las la-power-off"></i>
       </div>
     </div>
@@ -58,6 +58,8 @@ export default {
   height: 21vh;
   width: 8.01vh;
   border-radius: 40px;
+  background-color:var(--main-accent-color);
+  opacity: 0.5;
   overflow: hidden;
   position: absolute;
   display: flex;
@@ -71,10 +73,10 @@ export default {
 
 .controls-container{
   width:100%;
-  height:55%;
+  height:50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items:center;
   margin-bottom:10px;
 }
