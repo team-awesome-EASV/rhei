@@ -50,7 +50,7 @@ export default {
   background: coral;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  /* position: relative; */
+  justify-content: flex-start;
+  position: relative;
 }
 </style>

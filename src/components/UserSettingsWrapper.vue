@@ -24,7 +24,6 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  position: relative;
 }
 
 .profile-controls-wrapper {
