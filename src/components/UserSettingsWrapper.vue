@@ -1,18 +1,24 @@
 <template>
   <div class="container">
-    
-    <div @click="showControls = !showControls" class="profile-controls-wrapper">
-      <i  :style="{color: createShade('80','40')}"  class="las la-cog picture-cog"></i>
+    <div @click="closeControls()" class="profile-controls-wrapper">
+      <i
+        :style="{ color: createShade('80', '40') }"
+        class="las la-cog picture-cog"
+      ></i>
     </div>
 
-  
-    <div :style="{background: createShade('80','90')}"  v-if="showControls" class="profile-controls-popup">
+    <div
+      :style="{ background: createShade('80', '90') }"
+      class="profile-controls-popup"
+    >
       <div class="controls-container">
-         <i :style="{color: createShade('80','40')}" class="las la-cog popup-cog"></i>
-         <i class="las la-power-off"></i>
+        <i
+          :style="{ color: createShade('80', '40') }"
+          class="las la-cog popup-cog"
+        ></i>
+        <i class="las la-power-off"></i>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -21,7 +27,7 @@ import { createShadeAccentColor } from "./mixins/createShadeAccentColor";
 import { gsap } from "gsap";
 
 export default {
-   mixins: [createShadeAccentColor],
+  mixins: [createShadeAccentColor],
   data() {
     return {
       showControls: false,
@@ -29,25 +35,51 @@ export default {
     };
   },
 
-
-  methods:{
-     closeControls: function() {
-      this.expandControls.reversed(!this.expandControls.reversed());
-    },
+  methods: {
+    closeControls: function() {
+      this.controlsAnim.reversed(!this.controlsAnim.reversed());
+    }
   },
 
-
-
   mounted() {
-    this.controlsAnim()
-      .to(
-        ".controls-container",
+    this.controlsAnim
+      .to(".picture-cog", {
+        scale: 0,
+        rotation: 360,
+        transformOrigin: "50% 50%",
+        ease: "back.in(3)"
+      })
+      .fromTo(
+        ".profile-controls-popup",
+        { height: 0, scale: 0 },
         {
-          scale: 3,
-          duration: 1,
+          height: "150px",
+          scale: 1,
+          duration: 1
         }
       )
-      .reverse()
+      .fromTo(
+        ".popup-cog",
+        { scale: 0, rotation: 0 },
+        {
+          scale: 1,
+          rotation: 360,
+          transformOrigin: "50% 50%",
+          ease: "back.out(3)"
+        }
+      )
+      .fromTo(
+        ".la-power-off",
+        { scale: 0 },
+        {
+          scale: 1,
+
+          ease: "back.out(3)"
+        },
+        "<"
+      )
+
+      .reverse();
   }
 };
 </script>
@@ -75,7 +107,7 @@ export default {
 }
 
 .picture-cog {
-  color:white;
+  color: white;
   font-size: 30px;
   margin-top: 42px;
   margin-left: 50px;
@@ -96,23 +128,23 @@ export default {
   z-index: 1;
 }
 
-.controls-container{
-  width:100%;
-  height:50%;
+.controls-container {
+  width: 100%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items:center;
-  margin-bottom:10px;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.popup-cog{
-  font-size:32px;
+.popup-cog {
+  font-size: 32px;
   color: whitesmoke;
 }
 
-.la-power-off{
-  font-size:32px;
-   color: red;
+.la-power-off {
+  font-size: 32px;
+  color: red;
 }
 </style>
