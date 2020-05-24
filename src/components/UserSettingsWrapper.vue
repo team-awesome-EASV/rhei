@@ -14,13 +14,37 @@
 
 <script>
 import { createShadeAccentColor } from "./mixins/createShadeAccentColor";
+import { gsap } from "gsap";
 
 export default {
    mixins: [createShadeAccentColor],
   data() {
     return {
-      showControls: false
+      showControls: false,
+      expandControls: gsap.timeline({ paused: true })
     };
+  },
+
+
+  methods:{
+     expandControls: function() {
+      this.expandControls.reversed(!this.expandControls.reversed());
+    },
+  },
+
+
+
+  mounted(){
+    this.expandControls(){
+      .to(
+        ".controls-container",
+        { scale: 1 },
+        {
+          scale: 0,
+          duration: 1,
+        }
+      )
+      .reverse();
   }
 };
 </script>
