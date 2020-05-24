@@ -1,60 +1,64 @@
 <template>
   <div class="container">
-      <div @click="showControls = !showControls" class="profile-controls-wrapper">
-        <i class="las la-cog picture-cog"></i>
-      </div>
-      <div v-if="showControls" class="profile-controls-popup">
-          <!-- <i class="las la-cog popup-cog"></i>
+    <div @click="showControls = !showControls" class="profile-controls-wrapper">
+      <i class="las la-cog picture-cog"></i>
+    </div>
+    <div v-if="showControls" class="profile-controls-popup">
+      <!-- <i class="las la-cog popup-cog"></i>
           <i class="las la-power-off"></i> -->
-      </div>
+    </div>
   </div>
 </template>
 
 <script>
-
 export default {
-  data () {
+  data() {
     return {
-          showControls: false
-    }
+      showControls: false
+    };
   }
-}
+};
 </script>
 
 
 
 <style lang="scss" scoped>
-
-.container{
-  position:static;
+.container {
+  position: relative;
 }
- 
-.profile-controls-wrapper{
-  width:10vh;
-  height:10vh;
+
+.profile-controls-wrapper {
+  width: 10vh;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius:50%;
-  background-color: var(--main-accent-color); 
-  background-image:url("../assets/photos/rick.png");
-  background-size:100% 100%;
-   position:absolute;
+  border-radius: 50%;
+  background-color: var(--main-accent-color);
+  background-image: url("../assets/photos/rick.png");
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
 
-.la-cog{
-  color:blue;
-  font-size:40px;
-  margin-top:40px;
-  margin-left:60px;
+.la-cog {
+  color: blue;
+  font-size: 40px;
+  margin-top: 40px;
+  margin-left: 60px;
 }
 
-.profile-controls-popup{
-  height:25vh;
-  width:10vh;
-  border-radius:40px;
+.profile-controls-popup {
+  height: 25vh;
+  width: 10vh;
+  border-radius: 40px;
   overflow: hidden;
   background-color: brown;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
-
 </style>

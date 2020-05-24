@@ -6,10 +6,10 @@
     <h2 class="accent-color">
       this must alose be in accents color but with css var
     </h2> -->
-  <div class="account-settings-banner">
-     <UserSettingsWrapper />
-  </div>
-  
+    <div class="account-settings-banner">
+      <UserSettingsWrapper />
+    </div>
+
     <div class="illuWrapper">
       <TheConnectIllu />
     </div>
@@ -19,7 +19,7 @@
 <script>
 import { mapGetters } from "vuex";
 import TheConnectIllu from "../components/illustrations/TheConnectIllu";
-import UserSettingsWrapper from "../components/UserSettingsWrapper"
+import UserSettingsWrapper from "../components/UserSettingsWrapper";
 export default {
   components: {
     TheConnectIllu,
@@ -43,13 +43,14 @@ export default {
   width: 100%;
 }
 
-.account-settings-banner{
-  margin-bottom:70px;
-  width:100%;
-  height:20vh;
-  background: coral ;
+.account-settings-banner {
+  margin-bottom: 70px;
+  width: 100%;
+  height: 20vh;
+  background: coral;
   display: flex;
-  align-items:center;
-  justify-content: flex-end ;
+  align-items: center;
+  justify-content: flex-end;
+  /* position: relative; */
 }
 </style>
