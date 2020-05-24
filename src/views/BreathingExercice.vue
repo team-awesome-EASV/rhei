@@ -116,20 +116,28 @@ export default {
 
   mounted() {
     this.breatheAnim
+      .fromTo(
+        ".breath-indicator",
+        { scale: 1 },
+        {
+          scale: 0,
+          duration: 1
+        }
+      )
       .to(".breath-indicator", {
-        scale: 0,
-        duration: 1,
+        scale: 1,
+        duration: 1
       })
       .to(
         ".bubble-pulse",
         {
           scale: 10,
           duration: 1,
-          opacity: 0.1,
+          opacity: 0.1
           // repeat: -1 // number of repeats (-1 for infinite),
           // repeat: this.cycleCount
         },
-        "<"
+        0
       );
   }
 };
