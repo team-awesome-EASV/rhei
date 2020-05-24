@@ -51,9 +51,10 @@ export default {
       })
       .fromTo(
         ".profile-controls-popup",
-        { height: 0, scale: 0 },
+        { transform: "scaleY(0)" },
         {
-          height: "150px",
+          transformOrigin: "0% 20%",
+          transform: "scaleY(8vh)",
           scale: 1,
           duration: 1
         }
