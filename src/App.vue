@@ -62,7 +62,7 @@ export default {
 :root {
   font-size: 10px;
   font-family: "Poppins", sans-serif;
-  --main-accent-color:#8A8BFF;
+  --main-accent-color: #ffea8d;
   --secondary-background-color: #fcfbf0;
   --background-element-color: #6cccff;
 }
@@ -83,7 +83,6 @@ html {
 
 #app {
   position: relative;
-
   overflow: hidden;
   width: 100vw;
   background-color: var(--secondary-background-color);
@@ -133,6 +132,13 @@ a {
 .flex-space-between {
   display: flex;
   justify-content: space-between;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
 }
 .padding-sides {
   padding: 0 2rem;

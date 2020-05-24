@@ -1,12 +1,17 @@
 <template>
   <section class="flex-space-around padding flex-col flex-space-between">
-    <input
-      type="text"
-      v-model="feeling"
-      class="autocomplete-style inner-shadow"
-      autocomplete="off"
-      @focus="modal = true"
-    />
+    <div class="flex-start">
+      <input
+        type="text"
+        v-model="feeling"
+        class="autocomplete-style inner-shadow"
+        autocomplete="off"
+        @focus="modal = true"
+        @input="filterFeelings"
+      />
+      <button @click="updateFelings(feeling)" class="rounded-corners-button">Add</button>
+    </div>
+
     <div v-if="filteredFeelings && modal" class="modal">
       <ul class="flex-space-around padding-sides wrap">
         <li
@@ -39,9 +44,6 @@ export default {
   computes: {},
   methods: {
     filterFeelings() {
-      if (this.feeling.length == 0) {
-        this.filteredFeelings = this.feelings;
-      }
       this.filteredFeelings = this.feelings.filter(feeling => {
         return feeling.toLowerCase().startsWith(this.feeling.toLowerCase());
       });
@@ -49,17 +51,18 @@ export default {
     setFeeling(feel) {
       this.feeling = feel;
       this.modal = false;
-      this.allFeelings.push(feel);
+      let newFeeling = feel[0].toUpperCase() + feel.slice(1).toLowerCase();
+      this.allFeelings.push(newFeeling);
+    },
+    updateFelings(feel) {
+      this.setFeeling(feel);
+      let newFeeling = feel[0].toUpperCase() + feel.slice(1).toLowerCase();
+      this.feelings.push(newFeeling);
     }
   },
 
   mounted() {
     this.filterFeelings();
-  },
-  watch: {
-    feeling() {
-      this.filterFeelings();
-    }
   }
 };
 </script>
@@ -92,7 +95,7 @@ section {
   font-size: 1.2rem;
   background-color: var(--main-accent-color);
   color: var(--secondary-background-color);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   border-radius: 1rem;
 }
 .flex-col {
