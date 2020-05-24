@@ -4,8 +4,10 @@
       <i class="las la-cog picture-cog"></i>
     </div>
     <div :style="{background: createShade('80','50')}" v-if="showControls" class="profile-controls-popup">
-      <!-- <i class="las la-cog popup-cog"></i>
-          <i class="las la-power-off"></i> -->
+      <div class="controls-container">
+         <i class="las la-cog popup-cog"></i>
+         <i class="las la-power-off"></i>
+      </div>
     </div>
   </div>
 </template>
@@ -30,8 +32,8 @@ export default {
 }
 
 .profile-controls-wrapper {
-  width: 10vh;
-  height: 10vh;
+  width: 8vh;
+  height: 8vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,21 +47,45 @@ export default {
   z-index: 2;
 }
 
-.la-cog {
-  color: whitesmoke;
-  font-size: 40px;
-  margin-top: 40px;
-  margin-left: 60px;
+.picture-cog {
+  color:white;
+  font-size: 30px;
+  margin-top: 42px;
+  margin-left: 50px;
 }
 
 .profile-controls-popup {
-  height: 25vh;
-  width: 10vh;
+  height: 21vh;
+  width: 8.01vh;
   border-radius: 40px;
   overflow: hidden;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   top: 0;
   right: 0;
   z-index: 1;
+}
+
+.controls-container{
+  width:100%;
+  height:55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+.popup-cog{
+  font-size:32px;
+  color: whitesmoke;
+}
+
+.la-power-off{
+  font-size:32px;
+   color: red;
 }
 </style>

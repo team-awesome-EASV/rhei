@@ -44,10 +44,9 @@ export default {
 }
 
 .account-settings-banner {
-  margin-bottom: 70px;
+  margin-bottom: 140px;
   width: 100%;
-  height: 20vh;
-  background: coral;
+  background: red;
   display: flex;
   align-items: center;
   justify-content: flex-start;
