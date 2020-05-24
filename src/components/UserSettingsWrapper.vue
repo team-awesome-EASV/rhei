@@ -3,7 +3,7 @@
     <div @click="showControls = !showControls" class="profile-controls-wrapper">
       <i class="las la-cog picture-cog"></i>
     </div>
-    <div :style="{color: createShade("twenty" "twenty")}" v-if="showControls" class="profile-controls-popup">
+    <div :style="{background: createShade('80','50')}" v-if="showControls" class="profile-controls-popup">
       <!-- <i class="las la-cog popup-cog"></i>
           <i class="las la-power-off"></i> -->
     </div>
@@ -57,7 +57,6 @@ export default {
   width: 10vh;
   border-radius: 40px;
   overflow: hidden;
-  background-color: brown;
   position: absolute;
   top: 0;
   right: 0;
