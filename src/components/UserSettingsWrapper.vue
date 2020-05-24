@@ -3,7 +3,7 @@
     <div @click="showControls = !showControls" class="profile-controls-wrapper">
       <i class="las la-cog picture-cog"></i>
     </div>
-    <div v-if="showControls" class="profile-controls-popup">
+    <div :style="{color: createShade("twenty" "twenty")}" v-if="showControls" class="profile-controls-popup">
       <!-- <i class="las la-cog popup-cog"></i>
           <i class="las la-power-off"></i> -->
     </div>
@@ -11,7 +11,10 @@
 </template>
 
 <script>
+import { createShadeAccentColor } from "./mixins/createShadeAccentColor";
+
 export default {
+   mixins: [createShadeAccentColor],
   data() {
     return {
       showControls: false
@@ -43,7 +46,7 @@ export default {
 }
 
 .la-cog {
-  color: blue;
+  color: whitesmoke;
   font-size: 40px;
   margin-top: 40px;
   margin-left: 60px;
