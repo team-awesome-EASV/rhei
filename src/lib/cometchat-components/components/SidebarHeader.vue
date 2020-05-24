@@ -5,10 +5,10 @@
         {{ activeTab.charAt(0).toUpperCase() + activeTab.slice(1) }}
       </h4> -->
       <div class="illu-wrapper">
-        <TheChatContacts v-if="activeTab === 'contacts'" />
-        <TheChatChat v-if="activeTab === 'chat'" />
-        <TheChatGroups v-if="activeTab === 'groups'" />
-        <TheChatSettings v-if="activeTab === 'more'" />
+        <TheChatContacts class="illustration" v-if="activeTab === 'contacts'" />
+        <TheChatChat class="illustration" v-if="activeTab === 'chat'" />
+        <TheChatGroups class="illustration" v-if="activeTab === 'groups'" />
+        <TheChatSettings class="illustration" v-if="activeTab === 'more'" />
       </div>
     </div>
   </div>
@@ -38,8 +38,14 @@ export default {
 }
 
 .illu-wrapper {
-  width: 60%;
-  /* display: flex;
-  justify-content: center; */
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustration {
+  width: 70%;
 }
 </style>

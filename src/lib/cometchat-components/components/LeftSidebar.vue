@@ -77,7 +77,7 @@ export default {
 }
 .ccl-left-panel-head-wrap,
 .ccl-right-panel-head-wrap {
-  padding: 20px 16px;
+  padding: 1rem 0.5rem;
   position: relative;
 }
 .ccl-left-panel-head-ttl,
