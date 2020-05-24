@@ -16,6 +16,7 @@
     <div class="controls-wrapper">
       <button class="cycle-control" @click="incrementCycle()">+</button>
       <button class="cycle-control" @click="decrementCycle()">-</button>
+      <button class="cycle-control" @click="timelineTime()">duration</button>
 
       <button @click="animStop()" v-if="isPlaying">
         STOP
@@ -42,6 +43,7 @@ export default {
       cycleCount: 2,
       breatheAnim: gsap.timeline({
         paused: true,
+
         onRepeat: this.logthis,
         onRepeatParams: ["repeat"],
         onComplete: this.logthis,
@@ -75,6 +77,13 @@ export default {
       // this.breatheAnim.restart();
       console.log("test");
       this.breatheAnim.repeat(this.cycleCount);
+      this.breatheAnim.play();
+      this.breatheAnim.restart();
+    },
+
+    timelineTime() {
+      this.breatheAnim.repeat(this.cycleCount);
+      this.breatheAnim.duration(1);
       this.breatheAnim.play();
       this.breatheAnim.restart();
     },
@@ -119,7 +128,7 @@ export default {
         {
           scale: 10,
           duration: 3.5,
-          opacity:0.1,
+          opacity: 0.1,
           repeat: 1,
           repeatRefresh: true,
           yoyo: true
@@ -127,8 +136,7 @@ export default {
           // repeat: this.cycleCount
         },
         "<"
-      )
-      
+      );
   }
 };
 </script>
@@ -156,7 +164,7 @@ export default {
   z-index: 1;
   height: 20px;
   width: 20px;
-  background:blue;
+  background: blue;
   border-radius: 50%;
   opacity: 0.4;
   transform: scale(0);
