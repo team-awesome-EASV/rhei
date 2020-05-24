@@ -1,14 +1,18 @@
 <template>
   <div class="container">
+    
     <div @click="showControls = !showControls" class="profile-controls-wrapper">
       <i  :style="{color: createShade('80','40')}"  class="las la-cog picture-cog"></i>
     </div>
+
+  
     <div :style="{background: createShade('80','90')}"  v-if="showControls" class="profile-controls-popup">
       <div class="controls-container">
          <i :style="{color: createShade('80','40')}" class="las la-cog popup-cog"></i>
          <i class="las la-power-off"></i>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -21,30 +25,29 @@ export default {
   data() {
     return {
       showControls: false,
-      expandControls: gsap.timeline({ paused: true })
+      controlsAnim: gsap.timeline({ paused: true })
     };
   },
 
 
   methods:{
-     expandControls: function() {
+     closeControls: function() {
       this.expandControls.reversed(!this.expandControls.reversed());
     },
   },
 
 
 
-  mounted(){
-    this.expandControls(){
+  mounted() {
+    this.controlsAnim()
       .to(
         ".controls-container",
-        { scale: 1 },
         {
-          scale: 0,
+          scale: 3,
           duration: 1,
         }
       )
-      .reverse();
+      .reverse()
   }
 };
 </script>
