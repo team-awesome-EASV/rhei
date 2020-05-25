@@ -9,7 +9,7 @@ const state = {
     name: '',
     email: '',
     password: '',
-    access: false,
+    access: true,
     userColor: {
       hex: '#8A8BFF',
       hsl: '239'
@@ -74,7 +74,7 @@ const state = {
 const getters = {
   allUser: state => state.users,
   allColors: state => state.colors,
-  accentColor: state => state.accentColor,
+  accentColor: state => state.accentColor
 }
 
 const actions = {

@@ -11,9 +11,7 @@
             <div class="border-bottom"></div>
           </li>
           <li>
-            <router-link class="margin-right" to="/sign-up"
-              >sign-up</router-link
-            >
+            <router-link class="margin-right" to="/sign-up">sign-up</router-link>
           </li>
         </ul>
       </section>
@@ -41,6 +39,11 @@
 import logo from "@/components/Logo";
 import { mapGetters, mapActions } from "vuex";
 export default {
+  data() {
+    return {
+      selected: false
+    };
+  },
   components: {
     logo: logo
   },
@@ -81,5 +84,8 @@ export default {
 .color-element {
   height: 70px;
   width: 70px;
+}
+.no-shadow {
+  box-shadow: 1px 1px 2px #d3d4db, -1px -1px 2px #ffffff;
 }
 </style>
