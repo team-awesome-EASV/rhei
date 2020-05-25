@@ -1,12 +1,11 @@
 <template>
   <div id="app" class="fullscreen">
-    <button @click="show = !show">KKK</button>
     <div class="main-view">
       <!-- <router-link to="/color">Change color</router-link> -->
       <router-view v-on:hideNavigation="this.show = false" />
     </div>
 
-    <transition @enter="showNav">
+    <transition @enter="showNav" @leave="hideNav">
       <Navigation v-show="show" id="theNavigation"></Navigation>
     </transition>
   </div>
@@ -25,7 +24,6 @@ export default {
     return {
       show: true,
       access: true
-      // navAnim: gsap.timeline({ paused: true })
     };
   },
   methods: {
@@ -53,6 +51,24 @@ export default {
           scale: 1,
           translateY: 0,
           opacity: 1,
+          ease: "power4.out"
+        });
+      navAnim.play();
+    },
+    hideNav: function(el, done) {
+      let navAnim = gsap.timeline({ paused: true, onComplete: done });
+      navAnim
+        .set(el, {
+          scale: 1,
+          translateY:0,
+          opacity: 1,
+          duration: 1,
+          ease: "power4.out"
+        })
+        .to(el, {
+          scale: 0.2,
+          translateY: 80,
+          opacity: 0,
           ease: "power4.out"
         });
       navAnim.play();
