@@ -71,16 +71,16 @@ const routes = [
   },
   {
     path: '/calm-down',
-    name: 'Calm-down',
+    // name: 'Calm-down',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ '../views/CalmDown.vue'),
     children: [
-      { path: '/', component: BreathingExercice },
-      { path: '/connect-dots', component: ConnectTheDots },
-      { path: '/animals-feature', component: AnimalsFeature },
+      { path: '', component: BreathingExercice, name: 'BreathingExercice' },
+      { path: 'connect-dots', component: ConnectTheDots, name: 'connectTheDots' },
+      { path: 'animals-feature', component: AnimalsFeature, name: 'AnimalsFeature' },
     ]
   },
   {

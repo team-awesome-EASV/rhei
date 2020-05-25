@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
-    <div class="arrow-controls">
+  <div class="container main-padding">
+    <!-- <div class="arrow-controls">
       <router-link to="connect-dots"> 
          <i class="fas fa-arrow-circle-right arrow-size"></i>
       </router-link>
-    </div>
+    </div> -->
     <div class="main-padding">
       <h1 class="anim-test">This is the breathing page</h1>
     </div>
@@ -12,7 +12,7 @@
     <div class="indicator-wrapper">
       <div class="breath-indicator"></div>
       <div class="bubble-pulse"></div>
-       <div class="bubble-pulse-umbe"></div>
+      <div class="bubble-pulse-umbe"></div>
     </div>
     <h3>{{ cycleCount + 1 }}</h3>
     <h3>{{ animIteration }}</h3>
@@ -48,12 +48,12 @@ export default {
     return {
       cycleCount: 2,
       breatheAnim: gsap.timeline({
-      paused: true,
+        paused: true,
 
-      onRepeat: this.logthis,
-      onRepeatParams: ["repeat"],
-      onComplete: this.logthis,
-      onCompleteParams: ["complete"]
+        onRepeat: this.logthis,
+        onRepeatParams: ["repeat"],
+        onComplete: this.logthis,
+        onCompleteParams: ["complete"]
       })
     };
   },
@@ -122,64 +122,57 @@ export default {
 
   mounted() {
     this.breatheAnim
-      .to(
-        ".breath-indicator",
-        {
-          duration: 2.5,
-          scale: 0.3,
-          yoyo: true,
-          rotation: 16,
-         ease: "power1.out"
-        }
-      )
       .to(".breath-indicator", {
-        scale:1.1,
+        duration: 2.5,
+        scale: 0.3,
+        yoyo: true,
+        rotation: 16,
+        ease: "power1.out"
+      })
+      .to(".breath-indicator", {
+        scale: 1.1,
         duration: 2.2,
         yoyo: true,
-        rotation: '-=16',
+        rotation: "-=16",
         ease: "back.out(2)"
       })
       .to(
         ".bubble-pulse",
         {
-        delay: 2,
-        scale: 30,
-        duration:1,
-        ease: "power3.out",
-        opacity:0.3
+          delay: 2,
+          scale: 30,
+          duration: 1,
+          ease: "power3.out",
+          opacity: 0.3
         },
         0
       )
       .to(
         ".bubble-pulse",
         {
-        scale: 30,
-        delay: 2,
-        duration:1,
-        ease: "power3.out",
-        opacity:0.0
+          scale: 30,
+          delay: 2,
+          duration: 1,
+          ease: "power3.out",
+          opacity: 0.0
         },
         0
       )
+      .to(".bubble-pulse-umbe", {
+        delay: 1.8,
+        scale: 12,
+        duration: 1.2,
+        ease: "power3.out",
+        opacity: 1
+      })
       .to(
         ".bubble-pulse-umbe",
         {
-        delay: 1.8,
-        scale: 12,
-        duration:1.2,
-        ease: "power3.out",
-        opacity:1
-        },
-      
-      )
-       .to(
-        ".bubble-pulse-umbe",
-        {
-         scale: 12,
-        delay: 1.6,
-        duration:1.2,
-        ease: "power3.out",
-        opacity:0.0
+          scale: 12,
+          delay: 1.6,
+          duration: 1.2,
+          ease: "power3.out",
+          opacity: 0.0
         },
         0
       );
@@ -216,8 +209,8 @@ export default {
   transform: scale(0);
 }
 
-.bubble-pulse-umbe{
-   position: absolute;
+.bubble-pulse-umbe {
+  position: absolute;
   z-index: 1;
   height: 20px;
   width: 20px;
@@ -243,5 +236,4 @@ button {
   color: #fcfbf0;
   font-size: 20px;
 }
-
 </style>
