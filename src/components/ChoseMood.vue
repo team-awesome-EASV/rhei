@@ -69,7 +69,6 @@ export default {
     }
   },
 
-
   computed: {
     // updateMoodPositions(allPositions)
   },
@@ -83,7 +82,6 @@ export default {
   // mounted() {
   //   this.boxLocation.left = this.$refs.moodArea.getBoundingClientRect().left;
   //   this.boxLocation.top = this.$refs.moodArea.getBoundingClientRect().top;
-
 };
 </script>
 
@@ -106,7 +104,7 @@ h1 {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background-color: #ff6532;
+  background-color: var(--main-accent-color);
   position: absolute;
 }
 </style>

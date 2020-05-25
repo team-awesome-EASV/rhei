@@ -9,29 +9,43 @@
         @focus="modal = true"
         @input="filterFeelings"
       />
-      <button @click="updateFelings(feeling)" class="rounded-corners-button">Add</button>
+      <button @click="updateFelings(feeling)" class="rounded-corners-button">
+        Add
+      </button>
     </div>
 
     <div v-if="filteredFeelings && modal" class="modal">
       <ul class="flex-space-around padding-sides wrap">
         <li
           class="modal-element"
+          :style="{ 'background-color': createShade('50', '60') }"
           v-for="feel in filteredFeelings"
           :key="feel"
           @click="setFeeling(feel)"
-        >{{feel}}</li>
+        >
+          {{ feel }}
+        </li>
       </ul>
     </div>
     <div v-if="allFeelings">
       <ul class="flex-start padding-sides wrap">
-        <li class="rounded-corners-button" v-for="feeling in allFeelings" :key="feeling">{{feeling}}</li>
+        <li
+          :style="{ 'background-color': createShade('100', '50') }"
+          class="rounded-corners-button"
+          v-for="feeling in allFeelings"
+          :key="feeling"
+        >
+          {{ feeling }}
+        </li>
       </ul>
     </div>
   </section>
 </template>
 
 <script>
+import { createShadeAccentColor } from "./mixins/createShadeAccentColor";
 export default {
+  mixins: [createShadeAccentColor],
   data() {
     return {
       modal: false,
@@ -90,7 +104,7 @@ section {
 .modal-element {
   margin: 0.5rem;
   font-size: 1.2rem;
-  background-color: var(--background-element-color);
+  // background-color: var(--background-element-color);
   color: var(--secondary-background-color);
   padding: 0.5rem 1rem;
 }
@@ -98,7 +112,7 @@ section {
 .rounded-corners-button {
   margin: 0.5rem;
   font-size: 1.2rem;
-  background-color: var(--main-accent-color);
+  // background-color: var(--main-accent-color);
   color: var(--secondary-background-color);
   padding: 0.5rem 2rem;
   border-radius: 1rem;
