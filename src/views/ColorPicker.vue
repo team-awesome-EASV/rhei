@@ -31,6 +31,11 @@
           @click="setAccentColor(color)"
         ></div>
       </section>
+      <div>
+        <router-link to="/login">
+          <button class="color-button padding-all" type="button">Go to login</button>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -87,5 +92,14 @@ export default {
 }
 .no-shadow {
   box-shadow: 1px 1px 2px #d3d4db, -1px -1px 2px #ffffff;
+}
+.color-button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 2rem 0;
+  background-color: var(--main-accent-color);
+  color: #ffffff;
+  width: 100%;
 }
 </style>

@@ -9,7 +9,7 @@ const state = {
     name: '',
     email: '',
     password: '',
-    access: true,
+    access: false,
     userColor: {
       hex: '#8A8BFF',
       hsl: '239'
@@ -81,11 +81,16 @@ const actions = {
   setAccentColor({ commit }, color) {
     const response = color
     commit('setAccentColor', response)
+  },
+  grantAccess({ commit }, value) {
+    const response = value
+    commit('grantAccess', response)
   }
 }
 const mutations = {
   setAccentColor: (state, response) => (state.accentColor = response),
-  setUserColor: (state, response) => (state.user.userColor = response)
+  setUserColor: (state, response) => (state.user.userColor = response),
+  grantAccess: (state, response) => (state.user.access = response),
 }
 export default new Vuex.Store({
   state,
