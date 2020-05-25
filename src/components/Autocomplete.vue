@@ -48,16 +48,21 @@ export default {
         return feeling.toLowerCase().startsWith(this.feeling.toLowerCase());
       });
     },
+    clearInput() {
+      this.feeling = "";
+    },
     setFeeling(feel) {
       this.feeling = feel;
       this.modal = false;
       let newFeeling = feel[0].toUpperCase() + feel.slice(1).toLowerCase();
       this.allFeelings.push(newFeeling);
+      this.clearInput();
     },
     updateFelings(feel) {
       this.setFeeling(feel);
       let newFeeling = feel[0].toUpperCase() + feel.slice(1).toLowerCase();
       this.feelings.push(newFeeling);
+      this.clearInput();
     }
   },
 
