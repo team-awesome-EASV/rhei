@@ -1,12 +1,13 @@
 <template>
   <div id="app" class="fullscreen">
+    <button @click="show = !show">KKK</button>
     <div class="main-view">
       <!-- <router-link to="/color">Change color</router-link> -->
       <router-view v-on:hideNavigation="this.show = false" />
     </div>
 
-    <transition @enter="showNav()">
-        <Navigation v-show="show" id="theNavigation"></Navigation>
+    <transition @enter="showNav">
+      <Navigation v-show="show" id="theNavigation"></Navigation>
     </transition>
   </div>
 </template>
@@ -23,8 +24,8 @@ export default {
   data() {
     return {
       show: true,
-      access: true,
-      navAnim: gsap.timeline({ paused: true })
+      access: true
+      // navAnim: gsap.timeline({ paused: true })
     };
   },
   methods: {
@@ -38,9 +39,24 @@ export default {
     checkAccess() {
       return this.access;
     },
-     showNav: function() {
-      this.navAnim.play();
-    },
+    showNav: function(el, done) {
+      let navAnim = gsap.timeline({ paused: true, onComplete: done });
+      navAnim
+        .set(el, {
+          scale: 0,
+          translateY: 170,
+          opacity: 0,
+          duration: 0.5,
+          ease: "power4.out"
+        })
+        .to(el, {
+          scale: 1,
+          translateY: 0,
+          opacity: 1,
+          ease: "power4.out"
+        });
+      navAnim.play();
+    }
   },
   updated() {
     this.changeVariableColor();
@@ -59,36 +75,37 @@ export default {
   },
 
   mounted() {
+    // this.navAnim
+    //   .to("#theNavigation", {
+    //     scale: 0,
+    //     translateY: 170,
+    //     opacity: 0,
+    //     duration: 0.5,
+    //     ease: "power4.out"
+    //   })
+    //   .to("#theNavigation", {
+    //     scale: 1,
+    //     translateY: 0,
+    //     opacity: 1,
+    //     ease: "power4.out"
+    //   });
+
     this.$root.$on("hideNavigation", () => {
       this.show = false;
-    })
+    });
+
     this.$root.$on("showNavigation", () => {
       this.show = true;
-    })
-     this.navAnim
-      .to("#theNavigation", {
-        scale: 0,
-        translateY:170,
-        opacity:0,
-        duration:0.5,
-        ease: "power4.out",
-      })
-       .to("#theNavigation", {
-        scale: 1,
-        translateY:0,
-        opacity:1,
-        ease: "power4.out",
-      })
-      .play();
+    });
   },
 
   watch: {
     $route() {
       if (
-        this.$route.name == "Login"  ||
+        this.$route.name == "Login" ||
         this.$route.name == "SingUp" ||
-        this.$route.name == "Color"  ||
-          this.$route.name == "Therapy"
+        this.$route.name == "Color" ||
+        this.$route.name == "Therapy"
       ) {
         this.show = false;
       } else this.show = true;

@@ -3,7 +3,10 @@
     <div class="clickArea" ref="moodArea" @click="this.clickRecorder">
       <div
         class="clickPoint"
-        v-bind:style="{ top : positionElement.top + 'px', left : positionElement.left + 'px'}"
+        v-bind:style="{
+          top: positionElement.top + 'px',
+          left: positionElement.left + 'px'
+        }"
       ></div>
     </div>
   </div>
@@ -59,13 +62,13 @@ export default {
     }
   },
   computed: {
-    updateMoodPositions(allPositions)
+    // updateMoodPositions(allPositions)
   },
   mounted() {
     this.boxLocation.left = this.$refs.moodArea.getBoundingClientRect().left;
     this.boxLocation.top = this.$refs.moodArea.getBoundingClientRect().top;
     this.$store.state.user.allMoodPositions = this.allPositions;
-  },
+  }
 };
 </script>
 
