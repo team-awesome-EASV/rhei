@@ -2,8 +2,9 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 
-import AppHomeComponent from '../components/AppHomeComponent';
 
+// Chat routes ----->
+import AppHomeComponent from '../components/AppHomeComponent';
 import ChatContainer from '../lib/cometchat-components/components/ChatContainer';
 
 import ConversationScreen from '../lib/cometchat-components/components/ConversationScreen';
@@ -14,6 +15,7 @@ import UserList from '../lib/cometchat-components/components/UserList';
 import ChatList from '../lib/cometchat-components/components/ChatList';
 import GroupList from '../lib/cometchat-components/components/GroupList';
 
+// Calm down features routes ------>
 import BreathingExercice from '../components/BreathingExercice.vue';
 import ConnectTheDots from '../components/ConnectTheDots.vue';
 import AnimalsFeature from '../components/AnimalsFeature.vue';
