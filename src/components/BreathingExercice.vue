@@ -1,5 +1,10 @@
 <template>
   <div class="container">
+    <div class="arrow-controls">
+      <router-link to="connect-dots"> 
+         <i class="fas fa-arrow-circle-right arrow-size"></i>
+      </router-link>
+    </div>
     <div class="main-padding">
       <h1 class="anim-test">This is the breathing page</h1>
     </div>
@@ -238,4 +243,5 @@ button {
   color: #fcfbf0;
   font-size: 20px;
 }
+
 </style>

@@ -14,6 +14,11 @@ import UserList from '../lib/cometchat-components/components/UserList';
 import ChatList from '../lib/cometchat-components/components/ChatList';
 import GroupList from '../lib/cometchat-components/components/GroupList';
 
+import BreathingExercice from '../components/BreathingExercice.vue';
+import ConnectTheDots from '../components/ConnectTheDots.vue';
+import AnimalsFeature from '../components/AnimalsFeature.vue';
+
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -30,15 +35,6 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ '../views/Moodtracker.vue')
-  },
-  {
-    path: '/breathing-exercise',
-    name: 'Breathing',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/BreathingExercice.vue')
   },
   {
     path: '/onboard-video',
@@ -72,13 +68,18 @@ const routes = [
     ]
   },
   {
-    path: '/connect-the-dots',
-    name: 'Connect',
+    path: '/calm-down',
+    name: 'Calm-down',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/ConnectTheDots.vue')
+      import(/* webpackChunkName: "about" */ '../views/CalmDown.vue'),
+    children: [
+      { path: '/', component: BreathingExercice },
+      { path: '/connect-dots', component: ConnectTheDots },
+      { path: '/animals-feature', component: AnimalsFeature },
+    ]
   },
   {
     path: '/login',
@@ -124,6 +125,15 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ '../views/ColorPicker.vue')
+  },
+  {
+    path: '/settings',
+    name: 'Settings',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/UserSettings.vue')
   }
 ];
 

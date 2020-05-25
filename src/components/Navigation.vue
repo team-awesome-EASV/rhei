@@ -82,7 +82,7 @@ export default {
         { name: "CHAT", path: "/chat", icon: "chat" }
       ],
       navLinksRight: [
-        { name: "CALM DOWN", path: "/breathing-exercise", icon: "calm" },
+        { name: "CALM DOWN", path: "/calm-down", icon: "calm" },
         { name: "PREMIUM", path: "/therapy", icon: "premium" }
       ]
     };

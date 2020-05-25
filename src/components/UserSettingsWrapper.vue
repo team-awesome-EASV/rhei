@@ -12,8 +12,12 @@
       class="profile-controls-popup"
     >
       <div class="controls-container">
-        <i class="fas fa-cog popup-cog" :style="{ color: createShade('80', '40') }" ></i>
+       <router-link to="/settings">
+         <i class="fas fa-cog popup-cog" :style="{ color: createShade('80', '40') }" ></i>
+       </router-link>
+        <router-link to="/login">
         <i class="las la-power-off"></i>
+        </router-link>
       </div>
     </div>
   </div>

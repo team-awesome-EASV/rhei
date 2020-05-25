@@ -62,13 +62,14 @@ export default {
           scale: 1,
           translateY:0,
           opacity: 1,
-          duration: 1,
+          duration: 1.3,
           ease: "power4.out"
         })
         .to(el, {
           scale: 0.2,
           translateY: 80,
           opacity: 0,
+          duration: 1.3,
           ease: "power4.out"
         });
       navAnim.play();
@@ -118,10 +119,11 @@ export default {
   watch: {
     $route() {
       if (
-        this.$route.name == "Login" ||
+        this.$route.name == "Login"  ||
         this.$route.name == "SingUp" ||
-        this.$route.name == "Color" ||
-        this.$route.name == "Therapy"
+        this.$route.name == "Color"  ||
+        this.$route.name == "Therapy"||
+        this.$route.name == "ConnectTheDots"
       ) {
         this.show = false;
       } else this.show = true;
@@ -236,5 +238,18 @@ a {
 .inner-shadow {
   border-radius: 10px;
   box-shadow: inset 8px 8px 16px #d3d4db, inset -8px -8px 16px #ffffff;
+}
+
+.arrow-size{
+  font-size:40px;
+  color: var(--main-accent-color);
+}
+
+.arrow-controls{
+  width:100%;
+  height:20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 </style>
