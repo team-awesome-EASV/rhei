@@ -9,7 +9,7 @@
     <div class="account-settings-banner">
       <UserSettingsWrapper />
     </div>
-
+    <router-link to="onboard-video"> VIDEO </router-link>
     <div class="illuWrapper">
       <TheConnectIllu />
     </div>
