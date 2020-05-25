@@ -11,13 +11,16 @@
 
 <script>
 import Navigation from "./components/Navigation.vue";
+
 export default {
   components: {
     Navigation: Navigation
   },
+
   data() {
     return {
-      show: true
+      show: true,
+      access: true
     };
   },
   methods: {
@@ -27,6 +30,9 @@ export default {
         "--main-accent-color",
         this.$store.state.accentColor.hex
       );
+    },
+    checkAccess() {
+      return this.access;
     }
   },
   updated() {
@@ -34,7 +40,11 @@ export default {
   },
 
   beforeMount() {
-    if (!this.$store.state.users.access) {
+    if (this.$store.state.user.access) {
+      this.$router.push({
+        path: "/"
+      });
+    } else {
       this.$router.push({
         path: "/color"
       });
