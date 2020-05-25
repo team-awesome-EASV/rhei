@@ -1,35 +1,37 @@
 <template>
-  <div class="container main-padding">
-    <!-- <div class="arrow-controls">
-      <router-link to="connect-dots"> 
-         <i class="fas fa-arrow-circle-right arrow-size"></i>
-      </router-link>
-    </div> -->
-    <div class="main-padding">
-      <h1 class="anim-test">This is the breathing page</h1>
-    </div>
-
+  <div class="container">
     <div class="indicator-wrapper">
       <div class="breath-indicator"></div>
       <div class="bubble-pulse"></div>
-      <div class="bubble-pulse-umbe"></div>
     </div>
-    <h3>{{ cycleCount + 1 }}</h3>
-    <h3>{{ animIteration }}</h3>
-    <h3>{{ this.breatheAnim.isActive() }}</h3>
-    <h3>{{ isPlaying }}</h3>
-    <!-- <main-button text="Start"></main-button> -->
+<!-- <h3>{{ animIteration }}</h3> -->
     <div class="controls-wrapper">
-      <button class="cycle-control" @click="incrementCycle()">+</button>
-      <button class="cycle-control" @click="decrementCycle()">-</button>
-      <button class="cycle-control" @click="timelineTime()">duration</button>
-
-      <button @click="animStop()" v-if="isPlaying">
-        STOP
-      </button>
-      <button @click="breathIndicator()" v-if="!isPlaying">
-        START
-      </button>
+      <div class="cycles-controls">
+         <button class="cycle-control outer-shadow" @click="incrementCycle()">+</button>
+          <div class="cycle-view">
+              <h3>{{ cycleCount + 3 +" Cycles " }}</h3>
+          </div>
+        <button class="cycle-control outer-shadow" @click="decrementCycle()">-</button>
+      </div>
+      
+       <div class="cycles-controls">
+         <button class="cycle-control outer-shadow">+</button>
+          <div class="cycle-view">
+              <h3>{{ "fasterfaster" }}</h3>
+          </div>
+        <button class="cycle-control outer-shadow">-</button>
+      </div>
+      
+      <!-- <button class="cycle-control" @click="timelineTime()">duration</button> -->
+      <div class="start-button-container">
+         <button class="start-button" @click="animStop()" v-if="isPlaying">
+            STOP
+         </button>
+         <button class="start-button" @click="breathIndicator()" v-if="!isPlaying">
+            START
+         </button>
+      </div>
+     
     </div>
   </div>
 </template>
@@ -37,23 +39,19 @@
 <script>
 import { gsap } from "gsap";
 // import { TimelineLite, Back, Elastic, Expo } from "gsap"
-// import mainButton from "../components/MainButton";
 
 export default {
-  components: {
-    // "main-button": mainButton
-  },
 
   data() {
     return {
       cycleCount: 2,
       breatheAnim: gsap.timeline({
-        paused: true,
+      paused: true,
 
-        onRepeat: this.logthis,
-        onRepeatParams: ["repeat"],
-        onComplete: this.logthis,
-        onCompleteParams: ["complete"]
+      onRepeat: this.logthis,
+      onRepeatParams: ["repeat"],
+      onComplete: this.logthis,
+      onCompleteParams: ["complete"]
       })
     };
   },
@@ -122,57 +120,64 @@ export default {
 
   mounted() {
     this.breatheAnim
+      .to(
+        ".breath-indicator",
+        {
+          duration: 2.5,
+          scale: 0.3,
+          yoyo: true,
+          rotation: 16,
+         ease: "power1.out"
+        }
+      )
       .to(".breath-indicator", {
-        duration: 2.5,
-        scale: 0.3,
-        yoyo: true,
-        rotation: 16,
-        ease: "power1.out"
-      })
-      .to(".breath-indicator", {
-        scale: 1.1,
+        scale:1.1,
         duration: 2.2,
         yoyo: true,
-        rotation: "-=16",
+        rotation: '-=16',
         ease: "back.out(2)"
       })
       .to(
         ".bubble-pulse",
         {
-          delay: 2,
-          scale: 30,
-          duration: 1,
-          ease: "power3.out",
-          opacity: 0.3
+        delay: 2,
+        scale: 30,
+        duration:1,
+        ease: "power3.out",
+        opacity:0.3
         },
         0
       )
       .to(
         ".bubble-pulse",
         {
-          scale: 30,
-          delay: 2,
-          duration: 1,
-          ease: "power3.out",
-          opacity: 0.0
+        scale: 30,
+        delay: 2,
+        duration:1,
+        ease: "power3.out",
+        opacity:0.0
         },
         0
       )
-      .to(".bubble-pulse-umbe", {
-        delay: 1.8,
-        scale: 12,
-        duration: 1.2,
-        ease: "power3.out",
-        opacity: 1
-      })
       .to(
         ".bubble-pulse-umbe",
         {
-          scale: 12,
-          delay: 1.6,
-          duration: 1.2,
-          ease: "power3.out",
-          opacity: 0.0
+        delay: 1.8,
+        scale: 12,
+        duration:1.2,
+        ease: "power3.out",
+        opacity:1
+        },
+      
+      )
+       .to(
+        ".bubble-pulse-umbe",
+        {
+         scale: 12,
+        delay: 1.6,
+        duration:1.2,
+        ease: "power3.out",
+        opacity:0.0
         },
         0
       );
@@ -181,13 +186,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+}
 .indicator-wrapper {
   width: 100%;
-  height: 50vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top:48px;
 }
 
 .breath-indicator {
@@ -195,7 +208,7 @@ export default {
   height: 250px;
   border-radius: 50%;
   z-index: 99;
-  background-color: blue;
+  background-color: var(--main-accent-color);
 }
 
 .bubble-pulse {
@@ -209,8 +222,8 @@ export default {
   transform: scale(0);
 }
 
-.bubble-pulse-umbe {
-  position: absolute;
+.bubble-pulse-umbe{
+   position: absolute;
   z-index: 1;
   height: 20px;
   width: 20px;
@@ -221,19 +234,60 @@ export default {
 }
 
 .controls-wrapper {
-  width: 100%;
-  height: 10vh;
+  width:70%;
+  height:38vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+.cycles-controls{
+  width:100%;
+  height:7vh;
+  display: flex;
+  margin-top:13px;
+}
+
+.cycle-view{
+  width:70%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
-button {
-  width: 200px;
-  height: 50px;
+.cycle-control{
+  width: 18%;
+  height: 100%;
   border-radius: 10px;
-  background-color: #6cccff;
-  color: #fcfbf0;
+  background-color: #ecece3;
   font-size: 20px;
 }
+
+.start-button-container{
+  width:100%;
+  height:15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.start-button{
+  width:100%;
+  border-radius:50px;
+  height:50px;
+  border:none;
+  background-color: var(--main-accent-color);
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+h3{
+  font-size:2rem;
+}
+
 </style>
