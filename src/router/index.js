@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+// import { mapGetters } from 'vuex'
 
 import AppHomeComponent from '../components/AppHomeComponent';
 
@@ -21,7 +22,29 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    // data: {
+    //   access
+    // },
+    // computed: {
+    //   ...mapGetters['access'],
+    //   showAccess({
+    //       return this.access
+
+    //   })
+
+    // },
+
+    // beforeEnter(to, from, next) {
+    //   // check vuex store //
+    //   if (access) {
+    //     next()
+    //   } else {
+    //     next({
+    //       name: "color" // back to safety route //
+    //     });
+    //   }
+    // }
   },
   {
     path: '/moodtracker',

@@ -5,7 +5,7 @@
     <p :style="{ color: loadUser.hex }">this must have the accent color</p>
     <h2 class="accent-color">
       this must alose be in accents color but with css var
-    </h2> -->
+    </h2>-->
     <div class="account-settings-banner">
       <UserSettingsWrapper />
     </div>

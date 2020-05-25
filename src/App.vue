@@ -33,6 +33,14 @@ export default {
     this.changeVariableColor();
   },
 
+  beforeMount() {
+    if (!this.$store.state.users.access) {
+      this.$router.push({
+        path: "/color"
+      });
+    }
+  },
+
   mounted() {
     this.$root.$on("hideNavigation", () => {
       this.show = false;
@@ -47,7 +55,7 @@ export default {
       if (
         this.$route.name == "Login" ||
         this.$route.name == "SingUp" ||
-        this.$route.name == "Color" 
+        this.$route.name == "Color"
       ) {
         this.show = false;
       } else this.show = true;

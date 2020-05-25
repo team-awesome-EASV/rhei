@@ -10,6 +10,7 @@ const state = {
       name: "",
       email: "",
       password: "",
+      access: true
     }
 
 
@@ -73,7 +74,8 @@ const state = {
 const getters = {
   allUser: state => state.users,
   allColors: state => state.colors,
-  accentColor: state => state.accentColor
+  accentColor: state => state.accentColor,
+  access: state => state.users.access
 }
 
 const actions = {
@@ -85,6 +87,7 @@ const actions = {
 }
 const mutations = {
   setAccentColor: (state, response) => (state.accentColor = response),
+
 }
 export default new Vuex.Store({
   state,
