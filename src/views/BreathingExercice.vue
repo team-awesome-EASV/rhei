@@ -7,6 +7,7 @@
     <div class="indicator-wrapper">
       <div class="breath-indicator"></div>
       <div class="bubble-pulse"></div>
+       <div class="bubble-pulse-umbe"></div>
     </div>
     <h3>{{ cycleCount + 1 }}</h3>
     <h3>{{ animIteration }}</h3>
@@ -116,26 +117,64 @@ export default {
 
   mounted() {
     this.breatheAnim
-      .fromTo(
+      .to(
         ".breath-indicator",
-        { scale: 1 },
         {
-          scale: 0,
-          duration: 1,
+          duration: 2.5,
+          scale: 0.3,
+          yoyo: true,
+          rotation: 16,
+         ease: "power1.out"
         }
       )
       .to(".breath-indicator", {
-        scale: 1,
-        duration: 1
+        scale:1.1,
+        duration: 2.2,
+        yoyo: true,
+        rotation: '-=16',
+        ease: "back.out(2)"
       })
       .to(
         ".bubble-pulse",
         {
-          scale: 10,
-          duration: 1,
-          opacity: 0.1
-          // repeat: -1 // number of repeats (-1 for infinite),
-          // repeat: this.cycleCount
+        delay: 2,
+        scale: 30,
+        duration:1,
+        ease: "power3.out",
+        opacity:0.3
+        },
+        0
+      )
+      .to(
+        ".bubble-pulse",
+        {
+        scale: 30,
+        delay: 2,
+        duration:1,
+        ease: "power3.out",
+        opacity:0.0
+        },
+        0
+      )
+      .to(
+        ".bubble-pulse-umbe",
+        {
+        delay: 1.8,
+        scale: 12,
+        duration:1.2,
+        ease: "power3.out",
+        opacity:1
+        },
+      
+      )
+       .to(
+        ".bubble-pulse-umbe",
+        {
+         scale: 12,
+        delay: 1.6,
+        duration:1.2,
+        ease: "power3.out",
+        opacity:0.0
         },
         0
       );
@@ -163,6 +202,17 @@ export default {
 
 .bubble-pulse {
   position: absolute;
+  z-index: 1;
+  height: 20px;
+  width: 20px;
+  background: blue;
+  border-radius: 50%;
+  opacity: 0.4;
+  transform: scale(0);
+}
+
+.bubble-pulse-umbe{
+   position: absolute;
   z-index: 1;
   height: 20px;
   width: 20px;

@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div @click="closeControls()" class="profile-controls-wrapper">
-      <i
-        :style="{ color: createShade('80', '40') }"
-        class="las la-cog picture-cog"
-      ></i>
+      <div class="user-active-wrapper"> 
+         <!-- is green when user active or red when he is offline ---->
+      </div>
+       <i class="fas fa-cog picture-cog" :style="{ color: createShade('80', '40') }" ></i>
     </div>
 
     <div
@@ -12,10 +12,7 @@
       class="profile-controls-popup"
     >
       <div class="controls-container">
-        <i
-          :style="{ color: createShade('80', '40') }"
-          class="las la-cog popup-cog"
-        ></i>
+        <i class="fas fa-cog popup-cog" :style="{ color: createShade('80', '40') }" ></i>
         <i class="las la-power-off"></i>
       </div>
     </div>
@@ -44,7 +41,7 @@ export default {
     this.controlsAnim
       .to(".picture-cog", {
         scale: 0,
-        rotation: 360,
+        rotation: 280,
         transformOrigin: "10% 20%",
         ease: "back.in(3)"
       })
@@ -89,8 +86,6 @@ export default {
 
 
 <style lang="scss" scoped>
-.container {
-}
 
 .profile-controls-wrapper {
   width: 8vh;
@@ -108,11 +103,21 @@ export default {
   z-index: 2;
 }
 
+.user-active-wrapper{
+  width:11px;
+  height:11px;
+  z-index:99;
+  position:absolute;
+  border-radius:50%;
+  transform: translate(-23px, -16px);
+  background-color:#1cf292;
+}
+
 .picture-cog {
   color: white;
-  font-size: 30px;
-  margin-top: 42px;
-  margin-left: 50px;
+  font-size: 28px;
+  margin-top: 3rem;
+  margin-left: 3.5rem;
 }
 
 .profile-controls-popup {
@@ -141,12 +146,12 @@ export default {
 }
 
 .popup-cog {
-  font-size: 32px;
+  font-size: 30px;
   color: whitesmoke;
 }
 
 .la-power-off {
-  font-size: 32px;
+  font-size: 30px;
   color: red;
 }
 </style>
