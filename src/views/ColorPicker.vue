@@ -23,8 +23,8 @@
       </section>
       <section class="color-picker-container padding-all outer-shadow">
         <div
-          v-for="color in allColors"
-          :key="color.hsl"
+          v-for="(color, index) in allColors"
+          :key="index"
           :style="{ background: color.hex }"
           :title="color.hsl"
           class="color-element outer-shadow"

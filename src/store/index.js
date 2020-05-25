@@ -13,7 +13,8 @@ const state = {
     userColor: {
       hex: '#8A8BFF',
       hsl: '239'
-    }
+    },
+    allMoodPositions: []
   },
   accentColor: {
     hex: '#8A8BFF',
@@ -85,12 +86,17 @@ const actions = {
   grantAccess({ commit }, value) {
     const response = value
     commit('grantAccess', response)
+  },
+  updateMoodPositions({ commit }, area) {
+    const response = area
+    commit("updateMoodPositions", response)
   }
 }
 const mutations = {
   setAccentColor: (state, response) => (state.accentColor = response),
   setUserColor: (state, response) => (state.user.userColor = response),
   grantAccess: (state, response) => (state.user.access = response),
+  updateMoodPositions: (state, response) => (state.user.allMoodPositions = response)
 }
 export default new Vuex.Store({
   state,
