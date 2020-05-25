@@ -14,6 +14,7 @@
 
 <script>
 import { mapActions } from "vuex";
+
 export default {
   name: "MoodPosition",
   data() {
@@ -37,9 +38,15 @@ export default {
     };
   },
   methods: {
-    ...mapActions["updateMoodPositions"],
+    ...mapActions([
+      "populateMood", // map `this.increment()` to `this.$store.commit('increment')`
+
+      // `mapMutations` also supports payloads:
+      "this.positionOneElement" // map `this.incrementBy(amount)` to `this.$store.commit('incrementBy', amount)`
+    ]),
     populateArray() {
       this.allPositions.push(this.positionOneElement);
+      this.populateMood(this.positionOneElement);
     },
     createPositionElement() {
       this.positionOneElement.date = new Date();
@@ -61,6 +68,11 @@ export default {
       this.positionStyle();
     }
   },
+<<<<<<< HEAD
+  mounted() {
+    this.boxLocation.left = this.$refs.moodArea.getBoundingClientRect().left;
+    this.boxLocation.top = this.$refs.moodArea.getBoundingClientRect().top;
+=======
   computed: {
     // updateMoodPositions(allPositions)
   },
@@ -68,6 +80,7 @@ export default {
     this.boxLocation.left = this.$refs.moodArea.getBoundingClientRect().left;
     this.boxLocation.top = this.$refs.moodArea.getBoundingClientRect().top;
     this.$store.state.user.allMoodPositions = this.allPositions;
+>>>>>>> 09bf4b00927ff864a0b79b451953773bba45fcb9
   }
 };
 </script>

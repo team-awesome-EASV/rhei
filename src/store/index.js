@@ -87,16 +87,19 @@ const actions = {
     const response = value
     commit('grantAccess', response)
   },
-  updateMoodPositions({ commit }, area) {
-    const response = area
-    commit("updateMoodPositions", response)
+  populateMood({ commit }, mood) {
+    const element = mood
+    commit('populateMood', element)
   }
+
 }
 const mutations = {
   setAccentColor: (state, response) => (state.accentColor = response),
   setUserColor: (state, response) => (state.user.userColor = response),
   grantAccess: (state, response) => (state.user.access = response),
-  updateMoodPositions: (state, response) => (state.user.allMoodPositions = response)
+  populateMood(state, element) {
+    state.user.allMoodPositions.push(element);
+  }
 }
 export default new Vuex.Store({
   state,
