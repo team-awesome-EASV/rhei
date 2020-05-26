@@ -138,6 +138,7 @@ export default {
   --button-color-second: #fefbfb;
   --button-shadow-color: #d3d4db;
   --background-element-color: #6cccff;
+  --text-color: #383838;
 }
 
 html {
@@ -159,6 +160,7 @@ html {
   overflow: hidden;
   width: 100vw;
   background-color: var(--secondary-background-color);
+  color: var(--text-color);
 }
 
 .main-padding {
@@ -245,7 +247,7 @@ a {
   }
 }
 
-.outer-shadow-unactive{
+.outer-shadow-unactive {
   border-radius: 22px;
   background: linear-gradient(
     145deg,
@@ -257,7 +259,7 @@ a {
 
 .inner-shadow {
   border-radius: 10px;
-  background: linear-gradient(145deg, #e3e2d8,var(--button-color-second));
+  background: linear-gradient(145deg, #e3e2d8, var(--button-color-second));
   box-shadow: inset 8px 8px 16px #d3d4db, inset -8px -8px 16px #ffffff;
 }
 

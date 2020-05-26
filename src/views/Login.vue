@@ -30,12 +30,21 @@
           <br />how are you?
         </h1>
       </section>
-      <loginform v-if="userExists"></loginform>
-      <signupform v-else></signupform>
+      <transition mode="out-in" @enter="enter" @leave="leave" :css="false">
+        <loginform v-if="userExists"></loginform>
+        <signupform v-else></signupform>
+      </transition>
     </div>
-    <section class="bottom-login-section" v-if="userExists">
-      <a href="#">Forgot Password?</a>
-    </section>
+    <transition
+      mode="out-in"
+      @enter="enterSection"
+      @leave="leaveSection"
+      :css="false"
+    >
+      <section class="bottom-login-section" v-if="userExists">
+        <a href="#">Forgot Password?</a>
+      </section>
+    </transition>
   </div>
 </template>
 
@@ -43,6 +52,7 @@
 import logo from "@/components/Logo";
 import loginform from "@/components/LoginForm";
 import signupform from "../components/SignUpForm";
+import { gsap } from "gsap";
 export default {
   components: {
     logo: logo,
@@ -54,6 +64,63 @@ export default {
     return {
       userExists: true
     };
+  },
+
+  methods: {
+    enter(el, done) {
+      console.log("enter");
+      gsap.fromTo(
+        el,
+        { x: "-150%", opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: "back.out(1.7)",
+          onComplete: done
+        }
+      );
+    },
+
+    leave(el, done) {
+      console.log("leave");
+      gsap.to(el, {
+        x: "150%",
+        opacity: 1,
+        duration: 0.5,
+        ease: "back.in(1.7)",
+        onComplete: done
+      });
+    },
+    enterSection(el, done) {
+      console.log("enter");
+      gsap.fromTo(
+        el,
+        { y: "400%", opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: "back.out(1.7)",
+          onComplete: done
+        }
+      );
+    },
+
+    leaveSection(el, done) {
+      console.log("leave");
+      gsap.fromTo(
+        el,
+        { y: 0, opacity: 1 },
+        {
+          y: "300%",
+          opacity: 0,
+          duration: 0.5,
+          ease: "back.in(1.7)",
+          onComplete: done
+        }
+      );
+    }
   }
 };
 </script>

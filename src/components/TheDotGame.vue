@@ -155,6 +155,7 @@ export default {
 
       let lastDot = this.dotsRelative[this.dotsRelative.length - 1];
       if (this.clickedDot === lastDot && this.dotsRelative.length > 19) {
+        this.ctx.globalCompositeOperation = "destination-over";
         this.ctx.drawImage(image, imgCornerTL, 50, imgW, imgH);
         console.log("last man standing");
       } else console.log("not last");
