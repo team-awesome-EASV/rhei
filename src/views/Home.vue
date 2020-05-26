@@ -1,9 +1,11 @@
 <template>
-  <div class="main-padding">
+  <div class="main-padding" v-show="wasHere">
     <div class="account-settings-banner">
       <UserSettingsWrapper />
     </div>
-    <router-link id="videoPage" to="onboard-video"> Watch video </router-link>
+    <router-link id="videoPage" to="onboard-video">
+      Watch video {{ wasHere }}
+    </router-link>
     <div class="illuWrapper">
       <TheConnectIllu />
     </div>
@@ -11,12 +13,19 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import TheConnectIllu from "../components/illustrations/TheConnectIllu";
 import UserSettingsWrapper from "../components/UserSettingsWrapper";
 export default {
   components: {
     TheConnectIllu,
     UserSettingsWrapper
+  },
+  computed: {
+    ...mapGetters(["allUser"]),
+    wasHere() {
+      return this.allUser.access;
+    }
   }
 };
 </script>

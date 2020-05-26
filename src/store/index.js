@@ -79,7 +79,7 @@ export default new Vuex.Store({
     ]
   },
   getters: {
-    allUser: state => state.users,
+    allUser: state => state.user,
     allColors: state => state.colors,
     accentColor: state => state.accentColor,
     userColor: state => state.user.userColor,

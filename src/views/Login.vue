@@ -21,7 +21,6 @@
           Hello,
           <br />how are you?
         </h1>
-        <p>{{ positionHelper }}</p>
       </section>
       <transition mode="out-in" @enter="enter" @leave="leave" :css="false">
         <keep-alive>
