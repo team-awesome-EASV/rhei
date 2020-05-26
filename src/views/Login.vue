@@ -22,6 +22,7 @@
         </h1>
       </section>
       <loginform></loginform>
+      <signupform></signupform>
     </div>
     <section class="bottom-login-section">
       <a href="#">Forgot Password?</a>
@@ -32,10 +33,12 @@
 <script>
 import logo from "@/components/Logo";
 import loginform from "@/components/LoginForm";
+import signupform from "../components/SignUpForm";
 export default {
   components: {
     logo: logo,
-    loginform: loginform
+    loginform: loginform,
+    signupform: signupform
   }
 };
 </script>
@@ -51,7 +54,7 @@ export default {
   border-radius: 2px;
 }
 .top-login-section {
-  height: 25vh;
+  height: 18vh;
   background: url("../assets/welcome illustration.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -59,7 +62,8 @@ export default {
   display: flex;
 }
 .bottom-login-section {
-  height: 20vh;
+  height: 18vh;
+  margin-top: 0.5rem;
   background: url("../assets/forgot pasword illustration.png");
   background-repeat: no-repeat;
   background-size: contain;

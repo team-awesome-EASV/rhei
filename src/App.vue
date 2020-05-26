@@ -162,13 +162,13 @@ html {
 }
 
 .main-padding {
-  padding: 3rem 3rem;
+  padding: 2.5rem 3rem;
 }
 
 h1 {
-  font-size: 3.2rem;
-  font-weight: normal;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0.5em 0;
 }
 ul {
   list-style-type: none;
