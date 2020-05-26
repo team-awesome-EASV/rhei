@@ -245,9 +245,19 @@ a {
   }
 }
 
+.outer-shadow-unactive{
+  border-radius: 22px;
+  background: linear-gradient(
+    145deg,
+    var(--button-color-first),
+    var(--button-color-second)
+  );
+  box-shadow: 8px 8px 16px #d3d4db, -8.8px -8.8px 30px -35px #d3d4db;
+}
+
 .inner-shadow {
   border-radius: 10px;
-  background: linear-gradient(145deg, #e3e2d8, #ffffff);
+  background: linear-gradient(145deg, #e3e2d8,var(--button-color-second));
   box-shadow: inset 8px 8px 16px #d3d4db, inset -8px -8px 16px #ffffff;
 }
 

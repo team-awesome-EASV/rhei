@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form class="form-style padding-all outer-shadow">
+    <form class="form-style padding-all outer-shadow-unactive">
       <inputelement name="Full name" place="your full name" type="text"></inputelement>
       <inputelement name="Username" place="your username" type="text"></inputelement>
       <inputelement name="Password" place="your password" type="password"></inputelement>

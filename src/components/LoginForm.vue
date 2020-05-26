@@ -1,6 +1,6 @@
 <template>
   <div class="LogonForm-component">
-    <form class="form-style padding-all outer-shadow">
+    <form class="form-style padding-all outer-shadow-unactive">
       <inputelement
         name="Username"
         place="your username"

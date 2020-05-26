@@ -9,9 +9,7 @@
             <div class="border-bottom"></div>
           </li>
           <li>
-            <router-link class="margin-right" to="/sign-up"
-              >sign-up</router-link
-            >
+            <router-link class="margin-right" to="/sign-up">sign-up</router-link>
           </li>
         </ul>
       </section>
