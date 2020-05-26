@@ -1,5 +1,5 @@
 <template>
-   <div class="mood-tracker-wrapper">
+  <div class="mood-tracker-wrapper">
     <div class="arrow-container next" @click="goToNext()">
       <!-- <router-link to="/calm-down/connect-dots">
         
@@ -17,21 +17,21 @@
 </template>
 
 <script>
-  export default {
-    methods: {
-      goToNext() {
-        if (this.$route.name === "TrigerPage")
-          this.$router.push({ name: "ProgressPage" });
-        else if (this.$route.name === "ProgressPage")
-          this.$router.push({ name: "Home" });
-        else this.$router.push({ name: "TrigerPage" });
-      },
+export default {
+  methods: {
+    goToNext() {
+      if (this.$route.name === "TrigerPage")
+        this.$router.push({ name: "ProgressPage" });
+      else if (this.$route.name === "ProgressPage")
+        this.$router.push({ name: "Home" });
+      else this.$router.push({ name: "TrigerPage" });
+    },
 
-      goToPrev() {
-        this.$router.go(-1);
-      }
+    goToPrev() {
+      this.$router.go(-1);
     }
-  };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
