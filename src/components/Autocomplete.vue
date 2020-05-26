@@ -9,9 +9,7 @@
         @focus="modal = true"
         @input="filterFeelings"
       />
-      <button @click="updateFelings(feeling)" class="rounded-corners-button">
-        Add
-      </button>
+      <button @click="updateFelings(feeling)" class="rounded-corners-button">Add</button>
     </div>
 
     <div v-if="filteredFeelings && modal" class="modal">
@@ -22,9 +20,7 @@
           v-for="feel in filteredFeelings"
           :key="feel"
           @click="setFeeling(feel)"
-        >
-          {{ feel }}
-        </li>
+        >{{ feel }}</li>
       </ul>
     </div>
     <div v-if="allFeelings">
@@ -34,9 +30,7 @@
           class="rounded-corners-button"
           v-for="feeling in allFeelings"
           :key="feeling"
-        >
-          {{ feeling }}
-        </li>
+        >{{ feeling }}</li>
       </ul>
     </div>
   </section>
@@ -68,15 +62,15 @@ export default {
     setFeeling(feel) {
       this.feeling = feel;
       this.modal = false;
-      let newFeeling = feel[0].toUpperCase() + feel.slice(1).toLowerCase();
+      var newFeeling = feel[0].toUpperCase() + feel.slice(1).toLowerCase();
       this.allFeelings.push(newFeeling);
       this.clearInput();
     },
     updateFelings(feel) {
       this.setFeeling(feel);
-      let newFeeling = feel[0].toUpperCase() + feel.slice(1).toLowerCase();
-      this.feelings.push(newFeeling);
-      this.clearInput();
+      // let newFeeling = feel[0].toUpperCase() + feel.slice(1).toLowerCase();
+      // this.feelings.push(newFeeling);
+      // this.clearInput();
     }
   },
 

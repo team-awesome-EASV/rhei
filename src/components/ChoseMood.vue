@@ -45,13 +45,30 @@ export default {
       "this.positionOneElement" // map `this.incrementBy(amount)` to `this.$store.commit('incrementBy', amount)`
     ]),
     populateArray() {
-      this.allPositions.push(this.positionOneElement);
-      this.populateMood(this.positionOneElement);
+      this.allPositions.push(
+        new this.createObjectElement(
+          this.positionOneElement.date,
+          this.positionOneElement.left,
+          this.positionOneElement.top
+        )
+      );
+      this.populateMood(
+        new this.createObjectElement(
+          this.positionOneElement.date,
+          this.positionOneElement.left,
+          this.positionOneElement.top
+        )
+      );
     },
     createPositionElement() {
       this.positionOneElement.date = new Date();
       this.positionOneElement.left = this.coordX - this.boxLocation.left;
       this.positionOneElement.top = this.coordY - this.boxLocation.top;
+    },
+    createObjectElement(date, left, top) {
+      this.date = date;
+      this.left = left;
+      this.top = top;
     },
 
     positionStyle() {
@@ -76,7 +93,6 @@ export default {
   mounted() {
     this.boxLocation.left = this.$refs.moodArea.getBoundingClientRect().left;
     this.boxLocation.top = this.$refs.moodArea.getBoundingClientRect().top;
-    this.$store.state.user.allMoodPositions = this.allPositions;
   }
 
   // mounted() {
