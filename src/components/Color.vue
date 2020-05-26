@@ -40,10 +40,12 @@ export default {
   grid-template-rows: auto;
   gap: 2rem;
   margin-top: 1rem;
+  place-content: center;
 }
 .color-element {
-  height: 70px;
-  width: 70px;
+  height: 7rem;
+  width: 7rem;
+  justify-self: center;
 }
 .no-shadow {
   box-shadow: 1px 1px 2px #d3d4db, -1px -1px 2px #ffffff;

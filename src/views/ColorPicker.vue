@@ -72,8 +72,8 @@ export default {
   }
 }
 .color-button {
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: 400;
   border-radius: 10px;
   margin-top: 2rem;
   background-color: var(--main-accent-color);
