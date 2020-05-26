@@ -34,14 +34,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.top-login-section {
-  height: 25vh;
-  background: url("../assets/welcome illustration.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
-  display: flex;
-}
 .color-picker-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -1,9 +1,10 @@
 <template>
   <div class="main-padding">
     <div class="main-view">
-      <section class="top-nav flex-space-between">
+      <logo></logo>
+      <!-- <section class="top-nav flex-space-between">
         <router-link to="/">
-          <logo></logo>
+          
         </router-link>
         <ul class="flex-space-around">
           <li>
@@ -14,17 +15,18 @@
             <router-link class="margin-right" to="/sign-up">sign-up</router-link>
           </li>
         </ul>
-      </section>
+      </section> -->
       <section class="top-login-section">
         <h1 class="vertical-allign-bottom">
-          Let's start,
-          <br />pick a color.
+          Let's start, pick a color.
         </h1>
       </section>
       <colorPick></colorPick>
       <div>
         <router-link to="/login">
-          <button class="color-button padding-all" type="button">Go to login</button>
+          <button class="color-button padding-all" type="button">
+            Go to login
+          </button>
         </router-link>
       </div>
     </div>
@@ -56,12 +58,11 @@ export default {
   border-radius: 2px;
 }
 .top-login-section {
-  height: 25vh;
-  background: url("../assets/welcome illustration.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
+  height: 15vh;
+
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .color-button {
   font-size: 1.4rem;
