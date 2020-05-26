@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+
+
 Vue.use(Vuex)
+
 
 const state = {
   user: {
@@ -75,7 +78,8 @@ const state = {
 const getters = {
   allUser: state => state.users,
   allColors: state => state.colors,
-  accentColor: state => state.accentColor
+  accentColor: state => state.accentColor,
+  moodDotPosition: state => state.user.allMoodPositions
 }
 
 const actions = {
@@ -101,9 +105,11 @@ const mutations = {
     state.user.allMoodPositions.push(element);
   }
 }
+
 export default new Vuex.Store({
   state,
   getters,
   mutations,
   actions
 })
+
