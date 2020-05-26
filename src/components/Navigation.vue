@@ -13,9 +13,6 @@
           <router-link :to="link.path">
             <div class="links-center">
               <app-icon :icon="link.icon"></app-icon>
-              <p>
-                {{ link.name }}
-              </p>
             </div>
           </router-link>
         </li>
@@ -31,9 +28,6 @@
           <router-link :to="link.path">
             <div class="links-center">
               <app-icon :icon="link.icon"></app-icon>
-              <p>
-                {{ link.name }}
-              </p>
             </div>
           </router-link>
         </li>
