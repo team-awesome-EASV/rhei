@@ -3,13 +3,13 @@ import { mapGetters } from "vuex";
 export const createShadeAccentColor = {
 
 
-    // data() {
-    //     return {};
-    // },
+    data() {
+        return {};
+    },
     computed: {
-        ...mapGetters(["accentColor"]),
+        ...mapGetters(["userColor"]),
         loadColor() {
-            return this.accentColor;
+            return this.userColor;
         },
 
         // color1() {

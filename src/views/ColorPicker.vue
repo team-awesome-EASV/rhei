@@ -11,7 +11,9 @@
             <div class="border-bottom"></div>
           </li>
           <li>
-            <router-link class="margin-right" to="/sign-up">sign-up</router-link>
+            <router-link class="margin-right" to="/sign-up"
+              >sign-up</router-link
+            >
           </li>
         </ul>
       </section>
@@ -28,12 +30,14 @@
           :style="{ background: color.hex }"
           :title="color.hsl"
           class="color-element outer-shadow"
-          @click="setAccentColor(color)"
+          @click="setAccentColor(color), setUserColor(color)"
         ></div>
       </section>
       <div>
         <router-link to="/login">
-          <button class="color-button padding-all" type="button">Go to login</button>
+          <button class="color-button padding-all" type="button">
+            Go to login
+          </button>
         </router-link>
       </div>
     </div>
@@ -56,7 +60,7 @@ export default {
     ...mapGetters(["allColors", "accentColor"])
   },
   methods: {
-    ...mapActions(["setAccentColor"])
+    ...mapActions(["setAccentColor", "setUserColor"])
   }
 };
 </script>
