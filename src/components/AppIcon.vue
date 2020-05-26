@@ -34,12 +34,10 @@ export default {
   display: inline-block;
   width: 3.5rem;
   fill: var(--main-accent-color);
-  filter: grayscale(95%);
-  
-  &:active{
-  filter: grayscale(0%);
-}
-}
+  filter: saturate(50%);
 
-
+  &:active {
+    filter: saturate(100%);
+  }
+}
 </style>

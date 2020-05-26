@@ -1,5 +1,5 @@
 .<template>
-  <section class="color-picker-container padding-all outer-shadow">
+  <section class="color-picker-container padding-all outer-shadow-unactive">
     <div
       v-for="(color, index) in allColors"
       :key="index"
