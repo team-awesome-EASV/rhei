@@ -82,6 +82,7 @@ export default new Vuex.Store({
     allUser: state => state.users,
     allColors: state => state.colors,
     accentColor: state => state.accentColor,
+    userColor: state => state.user.userColor,
     moodDotPosition: state => state.user.allMoodPositions
   },
   mutations: {
@@ -91,14 +92,19 @@ export default new Vuex.Store({
     populateMood(state, element) {
       state.user.allMoodPositions.push(element);
     },
-    saveUser: (state) => sessionStorage.setItem(state, JSON.stringify(state)),
-    initaliseStore: (state) => sessionStorage.getItem(state, JSON.parse.state)
+    // saveUser: (state) => sessionStorage.setItem(state, JSON.stringify(state)),
+    // initaliseStore: (state) => sessionStorage.getItem(state, JSON.parse.state)
 
   },
   actions: {
     setAccentColor({ commit }, color) {
       const response = color
       commit('setAccentColor', response)
+    },
+
+    setUserColor({ commit }, color) {
+      const response = color
+      commit('setUserColor', response)
     },
 
     grantAccess({ commit }, value) {

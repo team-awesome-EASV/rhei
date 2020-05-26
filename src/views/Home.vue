@@ -9,7 +9,7 @@
     <div class="account-settings-banner">
       <UserSettingsWrapper />
     </div>
-    <router-link to="onboard-video"> VIDEO </router-link>
+    <router-link id="videoPage" to="onboard-video"> Watch video </router-link>
     <div class="illuWrapper">
       <TheConnectIllu />
     </div>
@@ -51,5 +51,9 @@ export default {
   align-items: center;
   justify-content: flex-start;
   position: relative;
+}
+#videoPage {
+  margin-left: 30%;
+  margin-top: 15px;
 }
 </style>

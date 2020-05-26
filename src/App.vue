@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="fullscreen">
+    <p>{{ colorGet }}</p>
     <div class="main-view">
       <!-- <router-link to="/color">Change color</router-link> -->
       <router-view v-on:hideNavigation="this.show = false" />
@@ -14,6 +15,7 @@
 <script>
 import Navigation from "./components/Navigation.vue";
 import { gsap } from "gsap";
+import { mapGetters } from "vuex";
 
 export default {
   components: {
@@ -26,13 +28,16 @@ export default {
       access: true
     };
   },
+  computed: {
+    ...mapGetters(["userColor"]),
+    colorGet() {
+      return this.userColor;
+    }
+  },
   methods: {
     changeVariableColor() {
       let root = document.documentElement;
-      root.style.setProperty(
-        "--main-accent-color",
-        this.$store.state.accentColor.hex
-      );
+      root.style.setProperty("--main-accent-color", this.colorGet.hex);
     },
     checkAccess() {
       return this.access;
@@ -92,6 +97,7 @@ export default {
   },
 
   mounted() {
+    this.changeVariableColor();
     // this.navAnim
     //   .to("#theNavigation", {
     //     scale: 0,
