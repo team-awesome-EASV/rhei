@@ -5,20 +5,12 @@
         <logo></logo>
         <ul class="flex-space-around">
           <li>
-            <div
-              class="margin-right switch-text"
-              to="/login"
-              @click="userExists = true"
-            >
+            <div class="margin-right switch-text" @click="userExists = true">
               login
             </div>
           </li>
           <li>
-            <div
-              class="margin-right switch-text"
-              to="/login"
-              @click="userExists = false"
-            >
+            <div class="margin-right switch-text" @click="userExists = false">
               sign up
             </div>
           </li>
@@ -29,15 +21,23 @@
           Hello,
           <br />how are you?
         </h1>
+        <p>{{ positionHelper }}</p>
       </section>
       <transition mode="out-in" @enter="enter" @leave="leave" :css="false">
-        <div v-if="userExists">
-          <loginform></loginform>
-          <section class="bottom-login-section">
-            <a href="#">Forgot Password?</a>
-          </section>
+        <keep-alive>
+          <component :is="activeComponent"></component>
+        </keep-alive>
+      </transition>
+      <transition
+        mode="in-out"
+        @enter="enterSection"
+        @after-enter="afterEnterSection"
+        @leave="leaveSection"
+        :css="false"
+      >
+        <div class="bottom-login-section" v-show="userExists">
+          <a href="#">Forgot Password?</a>
         </div>
-        <signupform v-else></signupform>
       </transition>
     </div>
   </div>
@@ -52,13 +52,21 @@ export default {
   components: {
     logo: logo,
     loginform: loginform,
-    signupform: signupform
+    signupform: signupform,
+    positionHelper: null
   },
 
   data() {
     return {
       userExists: true
     };
+  },
+
+  computed: {
+    activeComponent() {
+      if (this.userExists) return "loginform";
+      else return signupform;
+    }
   },
 
   methods: {
@@ -88,22 +96,33 @@ export default {
       });
     },
     enterSection(el, done) {
-      console.log("enter");
-      gsap.fromTo(
+      let enterAnim = gsap.timeline({ paused: true, onComplete: done });
+
+      // enterAnim.set(el, { y: 100 });
+      enterAnim.to(
         el,
-        { x: "-150%", opacity: 0 },
+
         {
-          x: 0,
-          opacity: 1,
+          y: -100,
+          opacity: 0,
           duration: 0.5,
           ease: "back.out(1.7)",
           onComplete: done
         }
       );
+
+      enterAnim.play();
+      this.positionHelper = gsap.getProperty(el, "y");
+      console.log("enter section");
+    },
+
+    afterEnterSection(el) {
+      gsap.set(el, { y: 0 });
+      gsap.to(el, { opacity: 1 });
     },
 
     leaveSection(el, done) {
-      console.log("leave");
+      console.log("leave section");
       gsap.fromTo(
         el,
         { y: 0, opacity: 1 },
