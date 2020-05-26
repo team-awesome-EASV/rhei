@@ -1,24 +1,25 @@
 <template>
-    <div class="main-view">
-        <h1>this is user settings page</h1>
-    </div>
+  <div class="main-view padding-all">
+    <h1>this is user settings page</h1>
+
+    <p>you can change your clor here:</p>
+    <colorPick></colorPick>
+  </div>
 </template>
 
 <script>
-
+import colorPick from "../components/Color";
 
 export default {
-  name: 'juansi',
-    components: {
-   
-      },
+  name: "juansi",
+  components: {
+    colorPick: colorPick
+  },
 
   data() {
-    return {
-      
-    }
+    return {};
   }
-  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -28,6 +29,6 @@ export default {
 }
 
 .item {
-  position: absolute,
+  position: absolute;
 }
 </style>

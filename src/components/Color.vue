@@ -6,7 +6,7 @@
       :style="{ background: color.hex }"
       :title="color.hsl"
       class="color-element outer-shadow"
-      @click="setAccentColor(color)"
+      @click="setAccentColor(color), setUserColor(color)"
     ></div>
   </section>
 </template>
@@ -24,7 +24,7 @@ export default {
     ...mapGetters(["allColors", "accentColor"])
   },
   methods: {
-    ...mapActions(["setAccentColor"])
+    ...mapActions(["setAccentColor", "setUserColor"])
   }
 };
 </script>

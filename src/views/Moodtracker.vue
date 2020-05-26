@@ -3,13 +3,13 @@
     <div class="arrow-container next" @click="goToNext()">
       <!-- <router-link to="/calm-down/connect-dots">
         
-      </router-link> -->
+      </router-link>-->
       <i class="fas fa-arrow-circle-right arrow-size"></i>
     </div>
     <div class="arrow-container back" @click="goToPrev()">
       <!-- <router-link to="/calm-down/connect-dots">
         
-      </router-link> -->
+      </router-link>-->
       <i class="fas fa-arrow-circle-left arrow-size"></i>
     </div>
     <router-view></router-view>
