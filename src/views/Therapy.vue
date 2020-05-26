@@ -1,8 +1,8 @@
 <template>
   <div class="fullscreen main-padding">
     <div class="main-view">
-      <h1>this is the premiun therapy page</h1>
-      <router-link to="/"> home </router-link>
+      <h1>This is the premium therapy page</h1>
+      <router-link to="/"> Home </router-link>
     </div>
     <TheCalmDown />
   </div>
