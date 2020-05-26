@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div class="item">
+      <div class="rheiVideo">
         <lottie
           :options="defaultOptions"
 
@@ -40,9 +40,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.item {
-  height: 375px;
-  width: 375px;
+.rheiVideo {
+  width: 100vw;
 }
 #skipButton {
   justify-content: center;
