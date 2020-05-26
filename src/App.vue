@@ -1,7 +1,9 @@
 <template>
   <div id="app" class="fullscreen">
     <div class="main-view">
-      <router-view v-on:hideNavigation="this.show = false" />
+      <transition mode="out-in" @enter="enter" @leave="leave" :css="false">
+        <router-view v-on:hideNavigation="this.show = false" />
+      </transition>
     </div>
 
     <transition @enter="showNav" @leave="hideNav">
@@ -76,6 +78,32 @@ export default {
           ease: "power4.out"
         });
       navAnim.play();
+    },
+
+    enter(el, done) {
+      console.log("enter");
+      gsap.fromTo(
+        el,
+        { x: "-150%", opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: "expo.out",
+          onComplete: done
+        }
+      );
+    },
+
+    leave(el, done) {
+      console.log("leave");
+      gsap.to(el, {
+        x: "150%",
+        opacity: 1,
+        duration: 0.5,
+        ease: "expo.in",
+        onComplete: done
+      });
     }
   },
   updated() {
