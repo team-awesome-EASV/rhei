@@ -27,7 +27,7 @@ export default {
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
   width: 100%;
   .input-style {
     padding: 1em 1em;
