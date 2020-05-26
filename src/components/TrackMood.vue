@@ -19,18 +19,14 @@
         </div>
       </div>
     </div>
-
-    <autocomplete></autocomplete>
   </div>
 </template>
 
 <script>
-import autocomplete from "../components/Autocomplete";
 import chooseMood from "../components/ChoseMood";
 
 export default {
   components: {
-    autocomplete: autocomplete,
     chooseMood: chooseMood
   }
 };
