@@ -171,6 +171,7 @@ html {
 h1 {
   font-size: 3.2rem;
   font-weight: normal;
+  margin-bottom: 2rem;
 }
 ul {
   list-style-type: none;
