@@ -33,7 +33,14 @@ export default {
     padding: 1em 1em;
     font-size: 1em;
     margin-top: 5px;
-    background: inherit;
+    // background: inherit;
+    &::placeholder {
+      font-weight: 200;
+    }
   }
+  // label {
+  //   font-size: 1.5rem;
+  //   font-weight: 300;
+  // }
 }
 </style>
