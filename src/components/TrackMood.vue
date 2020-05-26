@@ -1,6 +1,6 @@
 <template>
   <div class="main-padding padding-bottom">
-    <h1>How are your feeling today?</h1>
+    <h1>How are you feeling, today?</h1>
     <p>Take your time to pin-point how you are doing today.</p>
     <div class="mood-parent">
       <chooseMood class="put-on-top"></chooseMood>

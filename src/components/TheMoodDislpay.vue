@@ -6,8 +6,8 @@
         :key="index"
         class="clickPoint"
         v-bind:style="{
-          top: dot.top + 'px',
-          left: dot.left + 'px',
+          top: dot.top + '%',
+          left: dot.left + '%',
         }"
       ></div>
     </div>
@@ -42,10 +42,11 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .clickArea {
-  width: 100%;
-  height: 250px;
+  width: 80vw;
+  height: 60vh;
   position: relative;
   border: 1px solid black;
 }

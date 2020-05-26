@@ -4,8 +4,8 @@
       <div
         class="clickPoint"
         v-bind:style="{
-          top: positionElement.top + 'px',
-          left: positionElement.left + 'px'
+          top: positionElement.top + '%',
+          left: positionElement.left + '%'
         }"
       ></div>
     </div>
@@ -23,7 +23,9 @@ export default {
       coordY: 0,
       boxLocation: {
         left: 0,
-        top: 0
+        top: 0,
+        width: 0,
+        height: 0
       },
       positionOneElement: {
         date: 0,
@@ -62,8 +64,10 @@ export default {
     },
     createPositionElement() {
       this.positionOneElement.date = new Date();
-      this.positionOneElement.left = this.coordX - this.boxLocation.left;
-      this.positionOneElement.top = this.coordY - this.boxLocation.top;
+      this.positionOneElement.left =
+        (this.coordX / this.boxLocation.width) * 100;
+      this.positionOneElement.top =
+        (this.coordY / this.boxLocation.height) * 100;
     },
     createObjectElement(date, left, top) {
       this.date = date;
@@ -72,14 +76,14 @@ export default {
     },
 
     positionStyle() {
-      this.positionElement.left = this.coordX - this.boxLocation.left;
-      this.positionElement.top = this.coordY - this.boxLocation.top;
+      this.positionElement.left = (this.coordX / this.boxLocation.width) * 100;
+      this.positionElement.top = (this.coordY / this.boxLocation.height) * 100;
     },
 
     clickRecorder(event) {
       // clientX/Y gives the coordinates relative to the viewport in CSS pixels.
-      this.coordX = event.clientX; // x coordinate
-      this.coordY = event.clientY; // y coordinate
+      this.coordX = event.offsetX; // x coordinate
+      this.coordY = event.offsetY; // y coordinate
       this.createPositionElement();
       this.populateArray();
       this.positionStyle();
@@ -93,6 +97,8 @@ export default {
   mounted() {
     this.boxLocation.left = this.$refs.moodArea.getBoundingClientRect().left;
     this.boxLocation.top = this.$refs.moodArea.getBoundingClientRect().top;
+    this.boxLocation.width = this.$refs.moodArea.getBoundingClientRect().width;
+    this.boxLocation.height = this.$refs.moodArea.getBoundingClientRect().height;
   }
 
   // mounted() {
@@ -112,8 +118,8 @@ h1 {
   position: relative;
 }
 .clickArea {
-  width: 100%;
-  height: 250px;
+  width: 80vw;
+  height: 60vh;
   position: relative;
   border: 1px solid black;
 }
