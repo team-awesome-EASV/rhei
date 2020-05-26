@@ -1,5 +1,5 @@
 <template>
-  <div class="fullscreen main-padding padding-bottom">
+  <div class="fullscreen main-padding padding-bottom padding-all">
     <div class="main-view">
       <h1>Triger Page</h1>
       <autocomplete></autocomplete>
