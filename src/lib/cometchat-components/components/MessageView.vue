@@ -529,7 +529,7 @@ export default {
 
 <style scoped>
 #messageViewWrapr {
-  background-color: #fcfbf0;
+  background-color: --secondary-background-color;
 }
 
 .sender-msg .cc1-chat-win-msg-time-wrap {

@@ -64,7 +64,7 @@ export default {
   position: relative;
   padding-top: 71px;
   padding-bottom: 70px;
-  background-color: #fcfbf0;
+  background-color:--secondary-background-color;
   flex: 1 1 0;
   width: calc(100% - 280px);
 }
@@ -156,7 +156,7 @@ export default {
   display: inline-block;
   border-radius: 8px;
   background: linear-gradient(145deg, #e3e2d8, #ffffff);
-  box-shadow: 6px 6px 12px #d6d5cc, -6px -6px 12px #ffffff;
+  box-shadow: 6px 6px 12px --secondary-background-color, -6px -6px 12px #ffffff;
   padding: 8px 12px;
   word-break: break-all;
 }
