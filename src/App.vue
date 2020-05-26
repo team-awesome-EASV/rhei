@@ -133,7 +133,7 @@ export default {
   font-size: 10px;
   font-family: "Poppins", sans-serif;
   --main-accent-color: #8a8bff;
-  --secondary-background-color:#f7f7f7;
+  --secondary-background-color: #f7f7f7;
   --background-element-color: #6cccff;
 }
 

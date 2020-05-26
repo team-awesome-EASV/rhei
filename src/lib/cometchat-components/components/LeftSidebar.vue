@@ -73,7 +73,7 @@ export default {
   border-right: 1px solid #eaeaea;
   height: 100vh;
   position: relative;
-  background-color: --secondary-background-color;
+  background-color: var(--secondary-background-color);
 }
 .ccl-left-panel-head-wrap,
 .ccl-right-panel-head-wrap {
@@ -93,7 +93,7 @@ export default {
 .ccl-left-panel-srch-inpt-wrap {
   position: relative;
   border-radius: 11px;
-  background: #fcfbf0;
+  background: var(--secondary-background-color);
   box-shadow: inset 5px 5px 10px #d6d5cc, inset -5px -5px 10px #ffffff;
 }
 .ccl-left-panel-srch {
@@ -126,7 +126,7 @@ bottom property to move chat navigation up or down */
   width: 100%;
   /* left: 0;
   top: 0%; */
-  background-color: #fcfbf0;
+  background-color: var(--secondary-background-color);
   z-index: 1;
 }
 
@@ -142,7 +142,7 @@ bottom property to move chat navigation up or down */
   float: left;
   text-align: center;
   border-radius: 11px;
-  background: #fcfbf0;
+  background: var(--secondary-background-color);
   box-shadow: 5px 5px 10px #d6d5cc, -5px -5px 10px #ffffff;
 }
 .ccl-left-panel-nav-link {
@@ -279,7 +279,7 @@ bottom property to move chat navigation up or down */
   background-color: rgba(255, 255, 255, 0.1);
 }
 .contact-list-wrpr:hover {
-  background-color: #f8f8f8;
+  background-color: var(--secondary-background-color);
 }
 .cometchat-message-container {
   height: 50%;

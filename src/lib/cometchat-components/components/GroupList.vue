@@ -335,7 +335,7 @@ export default {
   width: 16px;
   height: 16px;
   border-radius: 8px;
-  background-color: #39f;
+  background-color: var(--main-accent-color);
   color: #fff;
   letter-spacing: -0.1px;
   text-align: center;
@@ -349,7 +349,7 @@ export default {
   width: 100%;
   left: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: var(--secondary-background-color);
   z-index: 1;
 }
 /* .ccl-left-panel-nav-listitem {

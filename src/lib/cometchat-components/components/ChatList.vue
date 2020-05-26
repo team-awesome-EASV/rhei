@@ -260,7 +260,7 @@ export default {
   width: 130px;
   box-shadow: rgba(20, 20, 20, 0.12) 0 4px 8px, rgba(20, 20, 20, 0.08) 0 0 0 1px;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--secondary-background-color);
   z-index: 1;
   right: -106px;
   bottom: -133px;

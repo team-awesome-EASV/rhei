@@ -109,7 +109,7 @@ export default {
   width: 100%;
   left: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: var(--secondary-background-color);
   z-index: 1;
 }
 /* .ccl-left-panel-nav-listitem{display:inline-block;width:20%;float:left;text-align:center} */
