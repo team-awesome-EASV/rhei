@@ -1,7 +1,7 @@
 <template>
   <div class="main-padding">
     <div class="main-view">
-      <logo></logo>
+      <logo class="logo-center"></logo>
       <!-- <section class="top-nav flex-space-between">
         <router-link to="/">
           
@@ -51,6 +51,10 @@ export default {
 .top-nav {
   align-items: center;
 }
+
+.logo-center {
+  margin: 0 auto;
+}
 .border-bottom {
   height: 4px;
   background-color: #444444;
@@ -58,17 +62,20 @@ export default {
   border-radius: 2px;
 }
 .top-login-section {
-  height: 15vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2em;
+
+  h1 {
+    font-weight: 200;
+  }
 }
 .color-button {
   font-size: 1.4rem;
   font-weight: bold;
   border-radius: 10px;
-  margin: 2rem 0;
+  margin-top: 2rem;
   background-color: var(--main-accent-color);
   color: #ffffff;
   width: 100%;

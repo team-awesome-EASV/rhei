@@ -8,7 +8,10 @@
     >
       <g id="a4ac40a5-536a-47f9-a615-87c8e8c379bb" data-name="Layer 2">
         <g id="b3a441a2-c725-479b-ad19-41b897515fad" data-name="Layer 2">
-          <g id="f3c50531-bd7c-4c8a-b16b-37a838e44f43" data-name="black - color">
+          <g
+            id="f3c50531-bd7c-4c8a-b16b-37a838e44f43"
+            data-name="black - color"
+          >
             <g>
               <path
                 d="M394.85,152.63c.75,28.85-20.89,45-21.88,45.67a158.19,158.19,0,0,1-12.22-19.37c-5.08-9.46-8.26-18.22-14-34.12-3.68-10.11-6.13-18-8.29-25-2.26-7.29-4.24-13.64-6.91-20.2a64,64,0,0,1,8.3-.55,54,54,0,0,1,32,10C374.13,110.69,394.16,125.76,394.85,152.63Z"
@@ -61,7 +64,7 @@ export default {};
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .logo-container {
-  width: 60px;
+  width: 6rem;
 }
 svg {
   height: 100%;
