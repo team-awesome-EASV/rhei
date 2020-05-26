@@ -107,7 +107,8 @@ section {
   margin: 0.5rem;
   font-size: 1.2rem;
   // background-color: var(--main-accent-color);
-  color: var(--secondary-background-color);
+  background: var(--main-accent-color);
+  color: #ffffff;
   padding: 0.5rem 2rem;
   border-radius: 1rem;
 }
