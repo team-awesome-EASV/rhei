@@ -314,7 +314,7 @@ a {
   top: 6px;
 }
 .ccl-dtls-panel-media-fltr-btn.active {
-  background-color: #fff;
+  background-color: var(--secondary-background-color);
   box-shadow: rgba(20, 20, 20, 0.04) 0 3px 1px, rgba(20, 20, 20, 0.12) 0 3px 8px;
   border-radius: 7px;
 }

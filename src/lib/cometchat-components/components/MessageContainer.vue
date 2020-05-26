@@ -64,7 +64,7 @@ export default {
   position: relative;
   padding-top: 71px;
   padding-bottom: 70px;
-  background-color:--secondary-background-color;
+  background-color: var(--secondary-background-color);
   flex: 1 1 0;
   width: calc(100% - 280px);
 }
@@ -81,7 +81,7 @@ export default {
   left: 0;
   top: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--secondary-background-color);
   z-index: 1;
 }
 .cc1-chat-win-user {
@@ -145,7 +145,7 @@ export default {
   padding: 5px 16px;
   height: calc(100vh - 320px);
   overflow-y: auto;
-  background-color: #fff;
+  background-color: var(--secondary-background-color);
   z-index: 1;
   position: relative;
 }
@@ -155,8 +155,13 @@ export default {
 .cc1-chat-win-rcvr-msg-wrap {
   display: inline-block;
   border-radius: 8px;
-  background: linear-gradient(145deg, #e3e2d8, #ffffff);
-  box-shadow: 6px 6px 12px --secondary-background-color, -6px -6px 12px #ffffff;
+  background: linear-gradient(
+    145deg,
+    var(--secondary-background-color),
+    #ffffff
+  );
+  box-shadow: 6px 6px 12px var(--secondary-background-color),
+    -6px -6px 12px #ffffff;
   padding: 8px 12px;
   word-break: break-all;
 }
@@ -194,7 +199,8 @@ export default {
   border-radius: 8px;
   /* background: linear-gradient(145deg, #e1978d, #ffb4a8); */
   background: var(--main-accent-color);
-  box-shadow: 6px 6px 12px #d6d5cc, -6px -6px 12px #ffffff;
+  box-shadow: 6px 6px 12px var(--secondary-background-color),
+    -6px -6px 12px #ffffff;
   /* border-radius: 12px;
   background-color: rgba(51, 153, 255, 0.92); */
   color: #fff;
@@ -217,7 +223,7 @@ export default {
 .cc1-chat-win-msg-like-cnt {
   display: inline-block;
   float: right;
-  background-color: #fff;
+  background-color: var(--secondary-background-color);
   border-radius: 9px;
   font-size: 11px;
   letter-spacing: -0.1px;
@@ -431,7 +437,7 @@ a.cc1-chat-win-inpt-voice-btn {
   box-shadow: rgba(20, 20, 20, 0.08) 0 2px 6px, rgba(20, 20, 20, 0.04) 0 1px 1px,
     rgba(20, 20, 20, 0.04) 0 0 0 1px;
   border-radius: 18px;
-  background-color: #fff;
+  background-color: var(--secondary-background-color);
   display: inline-block;
   padding: 8px 12px;
   margin: 0 6px;
@@ -445,7 +451,7 @@ a.cc1-chat-win-inpt-voice-btn {
   box-shadow: rgba(20, 20, 20, 0.2) 0 16px 32px,
     rgba(20, 20, 20, 0.04) 0 0 0 1px;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--secondary-background-color);
   overflow: hidden;
   z-index: 1;
 }

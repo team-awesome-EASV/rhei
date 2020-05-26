@@ -179,7 +179,7 @@ export default {
 
 <style scoped>
 .container {
-  background-color:--secondary-background-color;
+  background-color: var(--secondary-background-color);
 }
 
 .chat-contact-list-apla-ftlr {
@@ -193,7 +193,7 @@ export default {
   -ms-flex: 1 1 0px;
   flex: 1 1 0;
   padding-bottom: 25px;
-  border-bottom: 1px solid --secondary-background-color;
+  border-bottom: 1px solid var(--secondary-background-color);
   font-weight: 600;
 }
 

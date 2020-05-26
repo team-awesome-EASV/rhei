@@ -152,7 +152,7 @@ export default {
 </script>
 <style scoped>
 .cc1-chat-win-header {
-  background-color:--secondary-background-color;
+  background-color: var(--secondary-background-color);
 }
 .avatar {
   width: 100%x;
