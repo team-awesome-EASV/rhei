@@ -276,7 +276,7 @@ export default {
 .start-button {
   width: 100%;
   border-radius: 50px;
-  height: 50px;
+  height: 5rem;
   border: none;
   background-color: var(--main-accent-color);
   font-size: 1.4rem;

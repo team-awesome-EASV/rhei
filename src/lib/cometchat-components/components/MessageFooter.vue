@@ -279,7 +279,7 @@ export default {
 </script>
 <style scoped>
 .cc1-chat-win-inpt-ext-wrap {
-  background-color: #fcfbf0;
+  background-color: --secondary-background-color;
   display: flex;
   align-items: center;
   justify-content: center;

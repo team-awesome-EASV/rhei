@@ -96,9 +96,9 @@ export default {
 .nav-container {
   width: 100%;
   height: 10%;
-  filter: drop-shadow(5px -4px 32px #d6d5cc);
-  -webkit-filter: drop-shadow(5px -4px 15px #d6d5cc);
-  -moz-filter: drop-shadow(5px -4px 15px #d6d5cc);
+  filter: drop-shadow(5px -4px 32px #c2c1b9);
+  -webkit-filter: drop-shadow(5px -4px 15px #c2c1b9);
+  -moz-filter: drop-shadow(5px -4px 15px #c2c1b9);
   position: fixed;
   bottom: 0;
 }
@@ -122,7 +122,7 @@ export default {
 
 .nav-wrapper {
   clip-path: url(#clipped);
-  background: #fcfbf0;
+  background:#eeebeb;
   height: 100%;
   display: flex;
   align-items: center;
