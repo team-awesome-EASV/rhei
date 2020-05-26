@@ -233,11 +233,13 @@ a {
 
 .outer-shadow {
   border-radius: 22px;
+  background: linear-gradient(145deg, #e3e2d8, #ffffff);
   box-shadow: 8px 8px 16px #d3d4db, -8px -8px 16px #ffffff;
 }
 
 .inner-shadow {
   border-radius: 10px;
+  background: linear-gradient(145deg, #e3e2d8, #ffffff);
   box-shadow: inset 8px 8px 16px #d3d4db, inset -8px -8px 16px #ffffff;
 }
 
