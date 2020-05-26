@@ -3,12 +3,16 @@
       <div class="item">
         <lottie
           :options="defaultOptions"
-          :height="250"
-          :width="250"
+          :height="350"
+          :width="350"
+          
           v-on:animCreated="handleAnimation"
 
         />
       </div>
+
+        <router-link id="skipButton" to="/"
+              >Skip</router-link>
   </div>
 </template>
 
@@ -37,12 +41,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#bkgrdVideo {
-  width: 60vw;
-  height: 60vw;
-}
-
 .item {
-  position: absolute,
+  justify-content: center;
+  padding-top: 30px;
+}
+#skipButton {
+  justify-content: right;
+  margin-left: 50%;
+  margin-top: 40px;
 }
 </style>
