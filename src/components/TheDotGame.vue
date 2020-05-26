@@ -8,14 +8,15 @@
     <div style="display:none">
       <img id="image" :src="src" alt="" ref="obrazek" />
     </div>
-    <!-- <div>
-      <p>{{ dotsRelative }}</p>
-    </div> -->
   </div>
 </template>
 
 <script>
+import { createShadeAccentColor } from "./mixins/createShadeAccentColor";
+
 export default {
+  name: "The Dot Game",
+  mixins: [createShadeAccentColor],
   data() {
     return {
       canvas: null,
@@ -57,7 +58,6 @@ export default {
     prepCanvas() {
       var res = window.devicePixelRatio || 1;
 
-      // let image = this.$refs.obrazek;
       let imgH = 0.165 * window.innerWidth * 4;
       let imgW = 0.12 * window.innerWidth * 4;
       let imgCornerTL = window.innerWidth / 2 - imgW / 2; // img x
@@ -67,9 +67,6 @@ export default {
       this.imageXcoord = Math.round(imgCornerTL);
       this.dotsRelative.splice(0, this.dotsRelative.length);
 
-      // let imgCornerBL =
-      // let imgCornerBR
-      // var scale = 1 / res;
       this.canvas = document.getElementById("canvas_dots");
       this.ctx = this.canvas.getContext("2d");
       this.myWidth = window.innerWidth * res;
@@ -81,27 +78,7 @@ export default {
       this.canvas.style.width = window.innerWidth + "px";
       this.canvas.style.height = window.innerHeight + "px";
       this.ctx.scale(res, res);
-      //   this.canvas.addEventListener("mousedown", function(e) {
-      //     this.checkForDot(e);
-      //   });
-      // this.ctx.fillStyle = "#00ffff";
-      // this.ctx.fillRect(0, 0, this.myWidth, this.myHeight);
-      // this.ctx.drawImage(image, imgCornerTL, 50, imgW, imgH);
 
-      //Draw test dot
-      // this.ctx.beginPath();
-      // this.ctx.arc(
-      //   imgCornerTL + 0.5 * imgW, // test dot X
-      //   50 + 0.5 * imgH, // test dot Y
-      //   5,
-      //   0,
-      //   2 * Math.PI
-      // );
-      // //change dot color
-      // this.ctx.fillStyle = "#000";
-      // this.ctx.fill();
-      // this.ctx.closePath();
-      //draw test dot end
       this.drawDots();
     },
 
@@ -111,15 +88,6 @@ export default {
       }
       console.log("drawdots");
     },
-
-    // makeDot: function(i) {
-    //   var d = this.dots[i];
-    //   this.ctx.beginPath();
-    //   this.ctx.arc(d.x, d.y, 10, 0, 2 * Math.PI);
-    //   this.ctx.fillStyle = "#777";
-    //   this.ctx.fill();
-    //   this.ctx.closePath();
-    // },
 
     timeDots(i) {
       let self = this;
@@ -138,11 +106,11 @@ export default {
         self.ctx.beginPath();
         self.ctx.arc(dotX, dotY, 5, 0, 2 * Math.PI);
         //change dot color
-        self.ctx.fillStyle = "#000";
+        self.ctx.fillStyle = self.createShade("80", "70");
         self.ctx.fill();
         self.ctx.closePath();
         //change numbers color
-        self.ctx.fillStyle = "blue";
+        self.ctx.fillStyle = self.createShade("80", "80");
         self.ctx.font = "20px Poppins";
         self.ctx.fillText(`${i + 1}`, dotX, dotY + 30);
       }, 2000 * i);
@@ -177,9 +145,6 @@ export default {
         this.clickedDot = col;
         this.checkforlast();
       } else this.clickedDot = null;
-
-      //   if (this.clickedDot === this.dots[this.dots.length])
-      //     console.log("last man standing");
     },
 
     checkforlast() {
@@ -201,20 +166,13 @@ export default {
       this.ctx.lineTo(toDot.x, toDot.y);
       this.ctx.lineWidth = 5;
       this.ctx.lineCap = "round";
-      this.ctx.strokeStyle = "#000";
+      this.ctx.strokeStyle = this.createShade("80", "80");
       this.ctx.stroke();
       this.ctx.closePath();
     }
-    // timedConsole: function() {
-    //   this.intervalid1 = setInterval(() => {
-    //     this.drawDots();
-    //   }, 3000);
-    // }
   },
   mounted() {
     this.prepCanvas();
-
-    // this.timedConsole();
 
     window.addEventListener("resize", this.prepCanvas);
   },
