@@ -3,8 +3,7 @@
       <div class="item">
         <lottie
           :options="defaultOptions"
-          :height="350"
-          :width="350"
+
           
           v-on:animCreated="handleAnimation"
 
@@ -42,12 +41,13 @@ export default {
 
 <style lang="scss" scoped>
 .item {
-  justify-content: center;
-  padding-top: 30px;
+  height: 375px;
+  width: 375px;
 }
 #skipButton {
-  justify-content: right;
-  margin-left: 50%;
-  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 47%;
+  padding-top: 50px;
 }
 </style>
