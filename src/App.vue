@@ -162,7 +162,7 @@ html {
 }
 
 .main-padding {
-  padding: 3rem;
+  padding: 5rem 3rem;
 }
 
 h1 {
@@ -218,7 +218,7 @@ a {
   padding: 0 2rem;
 }
 .padding-all {
-  padding: 2rem;
+  padding: 5rem 3rem;
 }
 
 .margin-right {
