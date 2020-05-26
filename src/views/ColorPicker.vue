@@ -21,16 +21,7 @@
           <br />pick a color.
         </h1>
       </section>
-      <section class="color-picker-container padding-all outer-shadow">
-        <div
-          v-for="(color, index) in allColors"
-          :key="index"
-          :style="{ background: color.hex }"
-          :title="color.hsl"
-          class="color-element outer-shadow"
-          @click="setAccentColor(color)"
-        ></div>
-      </section>
+      <colorPick></colorPick>
       <div>
         <router-link to="/login">
           <button class="color-button padding-all" type="button">Go to login</button>
@@ -42,21 +33,14 @@
 
 <script>
 import logo from "@/components/Logo";
-import { mapGetters, mapActions } from "vuex";
+import colorPick from "../components/Color";
 export default {
   data() {
-    return {
-      selected: false
-    };
+    return {};
   },
   components: {
-    logo: logo
-  },
-  computed: {
-    ...mapGetters(["allColors", "accentColor"])
-  },
-  methods: {
-    ...mapActions(["setAccentColor"])
+    logo: logo,
+    colorPick: colorPick
   }
 };
 </script>
@@ -78,20 +62,6 @@ export default {
   background-size: contain;
   background-position: right;
   display: flex;
-}
-.color-picker-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-.color-element {
-  height: 70px;
-  width: 70px;
-}
-.no-shadow {
-  box-shadow: 1px 1px 2px #d3d4db, -1px -1px 2px #ffffff;
 }
 .color-button {
   font-size: 1.4rem;

@@ -19,9 +19,7 @@ export default {
       selected: false
     };
   },
-  components: {
-    logo: logo
-  },
+  components: {},
   computed: {
     ...mapGetters(["allColors", "accentColor"])
   },
@@ -32,15 +30,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.top-nav {
-  align-items: center;
-}
-.border-bottom {
-  height: 4px;
-  background-color: #444444;
-  width: 80%;
-  border-radius: 2px;
-}
 .top-login-section {
   height: 25vh;
   background: url("../assets/welcome illustration.png");
