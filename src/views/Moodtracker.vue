@@ -44,6 +44,7 @@ export default {
 }
 .mood-parent {
   position: relative;
+  margin-bottom: 3rem;
 }
 .put-on-top {
   z-index: 10;
@@ -57,6 +58,7 @@ export default {
   width: 100%;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 .line {
   width: 70%;
