@@ -6,13 +6,14 @@
       :style="{ background: color.hex }"
       :title="color.hsl"
       class="color-element outer-shadow"
-      @click="setAccentColor(color), setUserColor(color)"
+      @click="setAccentColor(color), setUserColor(color), triggerCssVar()"
     ></div>
   </section>
 </template>
 
 <script>
 import { mapGetters, mapActions } from "vuex";
+
 export default {
   data() {
     return {
@@ -24,7 +25,10 @@ export default {
     ...mapGetters(["allColors", "accentColor"])
   },
   methods: {
-    ...mapActions(["setAccentColor", "setUserColor"])
+    ...mapActions(["setAccentColor", "setUserColor"]),
+    triggerCssVar() {
+      this.$root.$emit("colorChanged");
+    }
   }
 };
 </script>

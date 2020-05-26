@@ -1,8 +1,6 @@
 <template>
   <div id="app" class="fullscreen">
-    <!-- <p>{{ colorGet }}</p> -->
     <div class="main-view">
-      <!-- <router-link to="/color">Change color</router-link> -->
       <router-view v-on:hideNavigation="this.show = false" />
     </div>
 
@@ -24,8 +22,8 @@ export default {
 
   data() {
     return {
-      show: true,
-      access: true
+      show: true
+      // access: true
     };
   },
   computed: {
@@ -39,9 +37,9 @@ export default {
       let root = document.documentElement;
       root.style.setProperty("--main-accent-color", this.colorGet.hex);
     },
-    checkAccess() {
-      return this.access;
-    },
+    // checkAccess() {
+    //   return this.access;
+    // },
     showNav: function(el, done) {
       let navAnim = gsap.timeline({ paused: true, onComplete: done });
       navAnim
@@ -98,20 +96,6 @@ export default {
 
   mounted() {
     this.changeVariableColor();
-    // this.navAnim
-    //   .to("#theNavigation", {
-    //     scale: 0,
-    //     translateY: 170,
-    //     opacity: 0,
-    //     duration: 0.5,
-    //     ease: "power4.out"
-    //   })
-    //   .to("#theNavigation", {
-    //     scale: 1,
-    //     translateY: 0,
-    //     opacity: 1,
-    //     ease: "power4.out"
-    //   });
 
     this.$root.$on("hideNavigation", () => {
       this.show = false;
@@ -119,6 +103,10 @@ export default {
 
     this.$root.$on("showNavigation", () => {
       this.show = true;
+    });
+
+    this.$root.$on("colorChanged", () => {
+      this.changeVariableColor();
     });
   },
 
