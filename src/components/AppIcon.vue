@@ -29,14 +29,17 @@ export default {
 </script>
 
 
-<style scoped>
+<style lang='scss' scoped>
 .app-icon {
   display: inline-block;
-  width: 3rem;
+  width: 3.5rem;
   fill: var(--main-accent-color);
+  filter: grayscale(95%);
+  
+  &:active{
+  filter: grayscale(0%);
+}
 }
 
-.cls-1 {
-  fill: var(--main-accent-color);
-}
+
 </style>

@@ -12,7 +12,7 @@
         >
           <router-link :to="link.path">
             <div class="links-center">
-              <app-icon :icon="link.icon"></app-icon>
+              <app-icon class="actiwes" :icon="link.icon"></app-icon>
             </div>
           </router-link>
         </li>
@@ -87,6 +87,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+nav li.router-link-active,
+ nav li.router-link-exact-active {
+   fill: indianred;
+   cursor: pointer;
+ }
+
+ .actiwes{
+   fill:black;
+ }
+
 .nav-container {
   width: 100%;
   height: 10%;
