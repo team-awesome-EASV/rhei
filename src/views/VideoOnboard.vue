@@ -1,17 +1,15 @@
 <template>
   <div>
-      <div class="rheiVideo">
-        <lottie
-          :options="defaultOptions"
+    <div class="rheiVideo">
+      <lottie
+        id="videoClip"
+        :options="defaultOptions"
+        v-on:animCreated="handleAnimation"
+        @complete="goToColors"
+      />
+    </div>
 
-          
-          v-on:animCreated="handleAnimation"
-
-        />
-      </div>
-
-        <router-link id="skipButton" to="/"
-              >Skip</router-link>
+    <router-link id="skipButton" to="/color">Skip</router-link>
   </div>
 </template>
 
@@ -20,23 +18,33 @@ import Lottie from "vue-lottie";
 import * as animationData from "@/assets/video.json";
 
 export default {
-  name: 'juansi',
-    components: {
+  name: "juansi",
+  components: {
     lottie: Lottie
-      },
+  },
 
   data() {
     return {
-      name: 'juansi',
-      defaultOptions: { animationData: animationData.default },
-      };
-    },
-    methods: {
+      name: "juansi",
+      defaultOptions: { animationData: animationData.default, loop: false }
+    };
+  },
+  methods: {
     handleAnimation: function(anim) {
       this.anim = anim;
     },
-    },
+
+    goToColors() {
+      console.log("hello");
+    }
+  },
+
+  mounted() {
+    let videoClip = document.getElementById("videoClip");
+
+    videoClip.addEventListener("complete", this.goToColors, true);
   }
+};
 </script>
 
 <style lang="scss" scoped>
