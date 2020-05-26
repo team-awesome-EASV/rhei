@@ -31,20 +31,15 @@
         </h1>
       </section>
       <transition mode="out-in" @enter="enter" @leave="leave" :css="false">
-        <loginform v-if="userExists"></loginform>
+        <div v-if="userExists">
+          <loginform></loginform>
+          <section class="bottom-login-section">
+            <a href="#">Forgot Password?</a>
+          </section>
+        </div>
         <signupform v-else></signupform>
       </transition>
     </div>
-    <transition
-      mode="out-in"
-      @enter="enterSection"
-      @leave="leaveSection"
-      :css="false"
-    >
-      <section class="bottom-login-section" v-if="userExists">
-        <a href="#">Forgot Password?</a>
-      </section>
-    </transition>
   </div>
 </template>
 
@@ -96,9 +91,9 @@ export default {
       console.log("enter");
       gsap.fromTo(
         el,
-        { y: "400%", opacity: 0 },
+        { x: "-150%", opacity: 0 },
         {
-          y: 0,
+          x: 0,
           opacity: 1,
           duration: 0.5,
           ease: "back.out(1.7)",
