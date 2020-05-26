@@ -229,7 +229,7 @@ a {
   border-radius: 22px;
   background: linear-gradient(145deg, #e3e2d8, #ffffff);
   box-shadow: 8px 8px 16px #d3d4db, -8px -8px 16px #ffffff;
-  transition: all 1s ease-in-out;
+  transition: all 2s ease-in-out;
 
   &:active {
     border-radius: 10px;
@@ -255,5 +255,17 @@ a {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.arrow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    color: darkgray;
+    font-weight: 200;
+  }
 }
 </style>
