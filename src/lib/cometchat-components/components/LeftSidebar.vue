@@ -73,11 +73,10 @@ export default {
   border-right: 1px solid #eaeaea;
   height: 100vh;
   position: relative;
-<<<<<<< HEAD
+
   background-color: var(--secondary-background-color);
-=======
-  background-color: --secondary-background-color  ;
->>>>>>> dcb04ccabb957909f2fcfaf51b89ae5f2f479b3a
+  background-color: --secondary-background-color;
+
 }
 .ccl-left-panel-head-wrap,
 .ccl-right-panel-head-wrap {

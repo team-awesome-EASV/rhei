@@ -133,14 +133,10 @@ export default {
   font-size: 10px;
   font-family: "Poppins", sans-serif;
   --main-accent-color: #8a8bff;
-<<<<<<< HEAD
-  --secondary-background-color: #f7f7f7;
-=======
   --secondary-background-color:#f7f7f7;
   --button-color-first:#fdfcfc;
   --button-color-second:#fefbfb;
   --button-shadow-color: #d3d4db;
->>>>>>> dcb04ccabb957909f2fcfaf51b89ae5f2f479b3a
   --background-element-color: #6cccff;
 }
 
