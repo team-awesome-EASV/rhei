@@ -155,13 +155,13 @@ export default {
 .cc1-chat-win-rcvr-msg-wrap {
   display: inline-block;
   border-radius: 8px;
+
   background: linear-gradient(
     145deg,
-    var(--secondary-background-color),
-    #ffffff
+    var(--button-color-first),
+    var(--button-color-second)
   );
-  box-shadow: 6px 6px 12px var(--secondary-background-color),
-    -6px -6px 12px #ffffff;
+  box-shadow: 8px 8px 16px #d3d4db, -8.8px -8.8px 30px -35px #d3d4db;
   padding: 8px 12px;
   word-break: break-all;
 }
@@ -366,13 +366,12 @@ a.cc1-chat-win-inpt-voice-btn {
   display: block;
   width: 100%;
   border: 0;
-
   letter-spacing: -0.1px;
   line-height: 20px;
   padding: 6px 36px 6px 12px;
-  box-shadow: rgba(20, 20, 20, 0.04) 0 0 0 1px inset;
+  /* box-shadow: rgba(20, 20, 20, 0.04) 0 0 0 1px inset;
   border-radius: 11px;
-  background-color: rgba(20, 20, 20, 0.04);
+  background-color: var(--secondary-background-color); */
 }
 .smile-button {
   width: 20px;

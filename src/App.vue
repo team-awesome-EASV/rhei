@@ -133,9 +133,9 @@ export default {
   font-size: 10px;
   font-family: "Poppins", sans-serif;
   --main-accent-color: #8a8bff;
-  --secondary-background-color:#f7f7f7;
-  --button-color-first:#fdfcfc;
-  --button-color-second:#fefbfb;
+  --secondary-background-color: #f7f7f7;
+  --button-color-first: #fdfcfc;
+  --button-color-second: #fefbfb;
   --button-shadow-color: #d3d4db;
   --background-element-color: #6cccff;
 }
@@ -162,7 +162,7 @@ html {
 }
 
 .main-padding {
-  padding: 5rem 3rem;
+  padding: 3rem 3rem;
 }
 
 h1 {
@@ -218,7 +218,7 @@ a {
   padding: 0 2rem;
 }
 .padding-all {
-  padding: 5rem 3rem;
+  padding: 2rem 2rem;
 }
 
 .margin-right {
@@ -230,7 +230,11 @@ a {
 
 .outer-shadow {
   border-radius: 22px;
-  background: linear-gradient(145deg, var(--button-color-first), var(--button-color-second));
+  background: linear-gradient(
+    145deg,
+    var(--button-color-first),
+    var(--button-color-second)
+  );
   box-shadow: 8px 8px 16px #d3d4db, -8.8px -8.8px 30px -35px #d3d4db;
   transition: all 2s ease-in-out;
 
@@ -269,6 +273,18 @@ a {
   p {
     color: darkgray;
     font-weight: 200;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  :root {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  :root {
+    font-size: 12px;
   }
 }
 </style>

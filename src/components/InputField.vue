@@ -27,13 +27,20 @@ export default {
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
   width: 100%;
   .input-style {
     padding: 1em 1em;
     font-size: 1em;
     margin-top: 5px;
-    background: inherit;
+    // background: inherit;
+    &::placeholder {
+      font-weight: 200;
+    }
   }
+  // label {
+  //   font-size: 1.5rem;
+  //   font-weight: 300;
+  // }
 }
 </style>

@@ -45,7 +45,7 @@
         <input
           autocomplete="off"
           name="chatMsg"
-          class="cc1-chat-win-inpt-box font-15"
+          class="cc1-chat-win-inpt-box inner-shadow font-15"
           id="chatMsg"
           placeholder="Type Message"
           type="text"

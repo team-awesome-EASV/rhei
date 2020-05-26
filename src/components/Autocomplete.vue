@@ -17,8 +17,8 @@
         <li
           class="modal-element"
           :style="{ 'background-color': createShade('50', '60') }"
-          v-for="feel in filteredFeelings"
-          :key="feel"
+          v-for="(feel, index) in filteredFeelings"
+          :key="index"
           @click="setFeeling(feel)"
         >{{ feel }}</li>
       </ul>
@@ -28,8 +28,8 @@
         <li
           :style="{ 'background-color': createShade('100', '50') }"
           class="rounded-corners-button"
-          v-for="feeling in allFeelings"
-          :key="feeling"
+          v-for="(feeling, index) in allFeelings"
+          :key="index"
         >{{ feeling }}</li>
       </ul>
     </div>
@@ -83,7 +83,6 @@ export default {
 <style lang="scss" scoped>
 section {
   flex-grow: 1;
-  min-height: 50vh;
 }
 .autocomplete-style {
   padding: 1.6rem 1.6rem;
