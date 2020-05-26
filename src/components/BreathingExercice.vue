@@ -164,24 +164,6 @@ export default {
         },
         0
       );
-    // .to(".bubble-pulse-umbe", {
-    //   delay: 1.8,
-    //   scale: 12,
-    //   duration: 1.2,
-    //   ease: "power3.out",
-    //   opacity: 1
-    // })
-    // .to(
-    //   ".bubble-pulse-umbe",
-    //   {
-    //     scale: 12,
-    //     delay: 1.6,
-    //     duration: 1.2,
-    //     ease: "power3.out",
-    //     opacity: 0.0
-    //   },
-    //   0
-    // );
   }
 };
 </script>
@@ -222,17 +204,6 @@ export default {
   transform: scale(0);
 }
 
-.bubble-pulse-umbe {
-  position: absolute;
-  z-index: 1;
-  height: 20px;
-  width: 20px;
-  background: blue;
-  border-radius: 50%;
-  opacity: 0.4;
-  transform: scale(0);
-}
-
 .controls-wrapper {
   width: 70%;
   height: 38vh;
@@ -261,7 +232,7 @@ export default {
   width: 18%;
   height: 100%;
   border-radius: 10px;
-  background-color: #ecece3;
+  background-color: --secondary-background-color;
   font-size: 20px;
 }
 
