@@ -20,6 +20,10 @@ import BreathingExercice from '../components/BreathingExercice.vue';
 import ConnectTheDots from '../components/ConnectTheDots.vue';
 import AnimalsFeature from '../components/AnimalsFeature.vue';
 
+// Mood tracker features routes ------>
+import TrackMood from '../components/TrackMood.vue';
+import TrigerPage from '../components/TrigerPage';
+import ProgressPage from '../components/ProgressPage.vue'
 
 Vue.use(VueRouter);
 
@@ -31,12 +35,16 @@ const routes = [
   },
   {
     path: '/moodtracker',
-    name: 'Moodtracker',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/Moodtracker.vue')
+      import(/* webpackChunkName: "about" */ '../views/MoodTracker.vue'),
+    children: [
+      { path: '/', component: TrackMood, name: 'TrackMood' },
+      { path: '/triger-page', component: TrigerPage, name: 'TrigerPage' },
+      { path: '/progress-page', component: ProgressPage, name: 'ProgressPage' },
+    ]
   },
   {
     path: '/onboard-video',
