@@ -5,11 +5,22 @@
         <logo></logo>
         <ul class="flex-space-around">
           <li>
-            <router-link class="margin-right" to="/login">login</router-link>
-            <div class="border-bottom"></div>
+            <div
+              class="margin-right switch-text"
+              to="/login"
+              @click="userExists = true"
+            >
+              login
+            </div>
           </li>
           <li>
-            <router-link class="margin-right" to="/sign-up">sign-up</router-link>
+            <div
+              class="margin-right switch-text"
+              to="/login"
+              @click="userExists = false"
+            >
+              sign up
+            </div>
           </li>
         </ul>
       </section>
@@ -19,10 +30,10 @@
           <br />how are you?
         </h1>
       </section>
-      <loginform></loginform>
-      <signupform></signupform>
+      <loginform v-if="userExists"></loginform>
+      <signupform v-else></signupform>
     </div>
-    <section class="bottom-login-section">
+    <section class="bottom-login-section" v-if="userExists">
       <a href="#">Forgot Password?</a>
     </section>
   </div>
@@ -37,6 +48,12 @@ export default {
     logo: logo,
     loginform: loginform,
     signupform: signupform
+  },
+
+  data() {
+    return {
+      userExists: true
+    };
   }
 };
 </script>
@@ -58,6 +75,30 @@ export default {
   background-size: contain;
   background-position: right;
   display: flex;
+}
+
+.switch-text {
+  font-size: 1.2rem;
+  font-weight: 300;
+  position: relative;
+
+  &:after {
+    content: "";
+    height: 0.25em;
+    width: 0%;
+    background: var(--main-accent-color);
+    position: absolute;
+    left: 0;
+    bottom: -0.3em;
+
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
 }
 .bottom-login-section {
   height: 18vh;

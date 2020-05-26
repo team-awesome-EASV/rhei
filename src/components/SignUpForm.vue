@@ -1,11 +1,29 @@
 <template>
   <div>
     <form class="form-style padding-all outer-shadow-unactive">
-      <inputelement name="Full name" place="your full name" type="text"></inputelement>
-      <inputelement name="Username" place="your username" type="text"></inputelement>
-      <inputelement name="Password" place="your password" type="password"></inputelement>
+      <inputelement
+        name="Full name"
+        place="your full name"
+        type="text"
+      ></inputelement>
+      <inputelement
+        name="Username"
+        place="your username"
+        type="text"
+      ></inputelement>
+      <inputelement
+        name="Password"
+        place="your password"
+        type="password"
+      ></inputelement>
       <router-link to="/">
-        <button @click="grantAccess(true)" class="main-button padding-all" type="submit">Go to login</button>
+        <button
+          @click="grantAccess(true)"
+          class="main-button padding-all"
+          type="submit"
+        >
+          Go to login
+        </button>
       </router-link>
     </form>
   </div>
@@ -29,7 +47,6 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 2rem 0;
 }
 .main-button {
   font-size: 1.4rem;
