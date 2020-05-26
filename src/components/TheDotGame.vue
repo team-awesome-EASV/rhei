@@ -15,7 +15,7 @@
 import { createShadeAccentColor } from "./mixins/createShadeAccentColor";
 
 export default {
-  name: "The Dot Game",
+  name: "the-dot-game",
   mixins: [createShadeAccentColor],
   data() {
     return {
