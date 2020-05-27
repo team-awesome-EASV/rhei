@@ -3,24 +3,24 @@
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide outer-shadow-unactive">
-          <div class="illu-container">
-             <TheConnectIllu></TheConnectIllu>
-           </div>
-      </div>
-      <div class="swiper-slide outer-shadow-unactive"> 
-          <div class="illu-container">
-             <TheChatChat></TheChatChat>
-          </div>
+        <div class="illu-container">
+          <TheConnectIllu></TheConnectIllu>
+        </div>
       </div>
       <div class="swiper-slide outer-shadow-unactive">
-          <div class="illu-container">
-            <TheCalmDown></TheCalmDown>
-          </div>
+        <div class="illu-container">
+          <TheChatChat></TheChatChat>
+        </div>
       </div>
       <div class="swiper-slide outer-shadow-unactive">
-          <div class="illu-container">
-            <TheMoodTrackerIllu></TheMoodTrackerIllu>
-          </div>
+        <div class="illu-container">
+          <TheCalmDown></TheCalmDown>
+        </div>
+      </div>
+      <div class="swiper-slide outer-shadow-unactive">
+        <div class="illu-container">
+          <TheMoodTrackerIllu></TheMoodTrackerIllu>
+        </div>
       </div>
     </div>
     <!-- Add Pagination -->
@@ -33,16 +33,15 @@ import Swiper from "swiper";
 import TheConnectIllu from "../components/illustrations/TheConnectIllu";
 import TheChatChat from "../components/illustrations/TheChatChat";
 import TheMoodTrackerIllu from "../components/illustrations/TheMoodTrackerIllu";
-import TheCalmDown from "../components/illustrations/TheCalmDown"
-
+import TheCalmDown from "../components/illustrations/TheCalmDown";
 
 export default {
-    components:{
-        TheConnectIllu,
-        TheChatChat,
-        TheMoodTrackerIllu,
-        TheCalmDown,
-    },
+  components: {
+    TheConnectIllu,
+    TheChatChat,
+    TheMoodTrackerIllu,
+    TheCalmDown
+  },
   name: "timeline",
   data() {
     return {};
@@ -82,7 +81,7 @@ export default {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  border-radius:10px;
+  border-radius: 10px;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -99,7 +98,7 @@ export default {
   align-items: center;
 }
 
-.illu-container{
-    width: 60%;
+.illu-container {
+  width: 60%;
 }
 </style>
