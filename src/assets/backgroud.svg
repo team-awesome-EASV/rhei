@@ -1,19 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 793.77 1337.2">
   <defs>
     <linearGradient id="New_Gradient_Swatch_2" data-name="New Gradient Swatch 2" x1="380.48" x2="380.48" y2="205" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fffeee"/>
-      <stop offset="1" stop-color="#ffeed0"/>
+      <stop offset="0" stop-color="#f7f7f7"/>
+      <stop offset="1" stop-color="#d3d4db"/>
     </linearGradient>
     <linearGradient id="linear-gradient" x1="376.83" y1="735.77" x2="396.94" y2="113.45" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fffeee"/>
-      <stop offset="1" stop-color="#ffeed0"/>
+      <stop offset="0" stop-color="#f7f7f7"/>
+      <stop offset="1" stop-color="#d3d4db"/>
     </linearGradient>
     <linearGradient id="New_Gradient_Swatch_2-2" x1="426.81" y1="704.67" x2="730.18" y2="704.67" xlink:href="#New_Gradient_Swatch_2"/>
     <linearGradient id="linear-gradient-2" x1="32.73" y1="1076.59" x2="508.73" y2="1076.59" xlink:href="#New_Gradient_Swatch_2"/>
   </defs>
-  <g id="Layer_2" data-name="Layer 2">
-    <rect width="793.77" height="1337.2" fill="#fffeee"/>
-  </g>
+ 
   <g id="background">
     <path id="top-ellipse" d="M761,0V187.81Q743,189.49,724.79,191q-50.84,4.22-104,7.22h0C542.13,202.65,459.9,205,375.26,205c-79.24,0-156.35-2.1-230.4-6h-.07v0q-52-2.74-101.7-6.64Q21.32,190.69,0,188.77V0Z" transform="translate(21.66 19.36)" fill="url(#New_Gradient_Swatch_2)"/>
     <path id="top-big" d="M421.49,979H704.13A485.89,485.89,0,0,0,761,919V318A482.16,482.16,0,0,0,144.85,199h-.06A484.82,484.82,0,0,0,0,325.61L-1.07,985.13m670.78-401.7c-1.4-1-2.81-2.07-4.23-3.08Q667.61,581.84,669.71,583.43Zm16.1,228.48,0,0h0" transform="translate(21.66 19.36)" fill="url(#linear-gradient)"/>
