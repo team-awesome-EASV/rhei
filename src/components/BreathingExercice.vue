@@ -288,7 +288,7 @@ export default {
     return {
       cycleCount: 2,
       breaheInDuration: 3,
-      holdDuration: 2,
+      holdDuration: 1.5,
       breatheOutDuration: 3,
       isPlaying: false,
 
@@ -330,7 +330,7 @@ export default {
     breatheIn() {
       let tl = gsap.timeline();
       tl.add(this.rotateIndicator(0, 134, this.breaheInDuration));
-      tl.add(this.scaleIndicator(1, 1.7, this.breaheInDuration), 0);
+      tl.add(this.scaleIndicator(0.5, 1.8, this.breaheInDuration), 0);
       tl.add(this.breatheInText(), 0);
       tl.to(
         ".branch",
@@ -375,7 +375,7 @@ export default {
     breatheOut() {
       let tl = gsap.timeline();
       tl.add(this.rotateIndicator(227, 360, this.breatheOutDuration));
-      tl.add(this.scaleIndicator(1.7, 1, this.breatheOutDuration), 0);
+      tl.add(this.scaleIndicator(1.8, 0.5, this.breatheOutDuration), 0);
       // tl.add(this.animatePlants(this.breaheOutDuration), 0);
       tl.add(this.breatheOutText(), 0);
       tl.to(
@@ -474,7 +474,7 @@ export default {
       tl.fromTo(
         "#circle-inner_fill",
         { scale: from },
-        { scale: to, transformOrigin: "50% 50%", duration: duration }
+        { scale: to, duration: duration }
       );
       return tl;
     },
@@ -523,6 +523,7 @@ export default {
   },
 
   mounted() {
+    gsap.set("#circle-inner_fill", { transformOrigin: "50% 50%", scale: 0.5 });
     gsap.set(["#breathe-in-text", "#hold-text", "#breathe-out-text"], {
       opacity: 0
     });

@@ -58,8 +58,8 @@ export default {
     prepCanvas() {
       var res = window.devicePixelRatio || 1;
 
-      let imgH = 0.165 * window.innerWidth * 4;
-      let imgW = 0.12 * window.innerWidth * 4;
+      let imgH = 0.165 * window.innerWidth * 4.5;
+      let imgW = 0.12 * window.innerWidth * 4.5;
       let imgCornerTL = window.innerWidth / 2 - imgW / 2; // img x
 
       this.imageHeight = Math.round(imgH);
@@ -157,6 +157,7 @@ export default {
       if (this.clickedDot === lastDot && this.dotsRelative.length > 19) {
         this.ctx.globalCompositeOperation = "destination-over";
         this.ctx.drawImage(image, imgCornerTL, 50, imgW, imgH);
+        this.$emit("showPicture");
         console.log("last man standing");
       } else console.log("not last");
     },
