@@ -15,7 +15,7 @@
 
 <script>
 import Lottie from "vue-lottie";
-import * as animationData from "@/assets/video.json";
+import * as animationData from "@/assets/transparent_video.json";
 
 export default {
   name: "juansi",
@@ -40,9 +40,14 @@ export default {
   },
 
   mounted() {
-    let videoClip = document.getElementById("videoClip");
+    this.anim.addEventListener("complete", () => {
+      // console.log("enterFrame", this.anim.currentFrame);
+      this.$router.push({ name: "Color" });
+    });
+  },
 
-    videoClip.addEventListener("complete", this.goToColors, true);
+  beforeDestroy() {
+    this.anim.removeEventListener();
   }
 };
 </script>
