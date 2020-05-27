@@ -79,6 +79,7 @@ export default {
   height: 100%;
 }
 .swiper-slide {
+  height: 90%;
   text-align: center;
   font-size: 18px;
   border-radius: 10px;
@@ -99,6 +100,14 @@ export default {
 }
 
 .illu-container {
-  width: 60%;
+  width: 50%;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 </style>
