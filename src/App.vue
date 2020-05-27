@@ -144,11 +144,13 @@ export default {
         this.$route.name == "Login" ||
         this.$route.name == "SingUp" ||
         this.$route.name == "Color" ||
-        this.$route.name == "Therapy" ||
         this.$route.path == "/connect-dots" ||
         this.$route.name == "VideoOnboard" ||
         this.$route.name == "BreathingExercice" ||
-        this.$route.name == "connectTheDots"
+        this.$route.name == "connectTheDots" ||
+        this.$route.name == "TrackMood" ||
+        this.$route.name == "TrigerPage" ||
+        this.$route.name == "ProgressPage"
       ) {
         this.show = false;
       } else this.show = true;

@@ -5,12 +5,14 @@
         
       </router-link>-->
       <i class="fas fa-arrow-circle-right arrow-size"></i>
+      <p>NEXT</p>
     </div>
     <div class="arrow-container back" @click="goToPrev()">
       <!-- <router-link to="/calm-down/connect-dots">
         
       </router-link>-->
       <i class="fas fa-arrow-circle-left arrow-size"></i>
+      <p>BACK</p>
     </div>
     <router-view></router-view>
   </div>

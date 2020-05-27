@@ -1,7 +1,8 @@
 <template>
-  <div class="main-padding padding-bottom">
-    <h1>How are you feeling, today?</h1>
-    <h3>Take your time to pin-point how you are doing today.</h3>
+  <div class="main-padding padding-bottom flex-between">
+    <h1>How are you today?</h1>
+    <p>Take your time to pin-point how you are doing today.</p>
+    <p />
     <div class="mood-parent outer-shadow-unactive">
       <chooseMood class="put-on-top"></chooseMood>
       <div class="chose-mood-background">
@@ -19,6 +20,10 @@
         </div>
       </div>
     </div>
+    <h1>
+      RAUL, PLEASE ADD A SUBMIT/REGISTER BUTTON HERE AND LINK TO NEXT COMPONENTT
+      ON IT
+    </h1>
   </div>
 </template>
 
@@ -33,12 +38,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.padding-bottom {
-  padding-bottom: 20vh;
-}
+// .padding-bottom {
+//   padding-bottom: 20vh;
+// }
 .mood-parent {
   position: relative;
-  margin-bottom: 3rem;
+  margin: 3rem 0 3rem 0;
   width: 100%;
   height: 60vh;
 }
@@ -96,5 +101,11 @@ export default {
 }
 .vertical {
   transform: rotateZ(90deg);
+}
+
+.flex-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 </style>
