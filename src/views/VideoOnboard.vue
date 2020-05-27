@@ -40,9 +40,10 @@ export default {
   },
 
   mounted() {
-    let videoClip = document.getElementById("videoClip");
-
-    videoClip.addEventListener("complete", this.goToColors, true);
+    this.anim.addEventListener("complete", () => {
+      // console.log("enterFrame", this.anim.currentFrame);
+      this.$router.push({ name: "Color" });
+    });
   }
 };
 </script>
