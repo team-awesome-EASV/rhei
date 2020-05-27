@@ -15,7 +15,7 @@
 
 <script>
 import Lottie from "vue-lottie";
-import * as animationData from "@/assets/video.json";
+import * as animationData from "@/assets/transparent_video.json";
 
 export default {
   name: "juansi",
