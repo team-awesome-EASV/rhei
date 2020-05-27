@@ -23,6 +23,49 @@ export default new Vuex.Store({
       },
       allMoodPositions: []
     },
+    feelings: [
+      "Sad",
+      "Happy",
+      "Joyfull",
+      "Desperate",
+      "Lonely",
+      "Annoyed",
+      "Agitated",
+      "Frustrated",
+      "Irritated",
+      "Disgusted",
+      "Timid",
+      "Tense",
+      "Insecure",
+      "Worried",
+      "Anxious",
+      "Uncomfortable",
+      "Lifeless",
+      "Fragile",
+      "Fascinated",
+      "Determined",
+      "Optimistic",
+      "Whimsical",
+      "Tender",
+      "Amorous",
+      "Cheerful"
+    ],
+
+    triggers: [
+      "Divorce",
+      "Loss",
+      "Work",
+      "School",
+      "Deadines",
+      "Illness",
+      "Confusion",
+      "Agresion",
+      "Abuse",
+      "Holliday",
+      "Date",
+      "Love",
+    ],
+
     accentColor: {
       hex: '#8A8BFF',
       hsl: '239'
@@ -83,7 +126,8 @@ export default new Vuex.Store({
     allColors: state => state.colors,
     accentColor: state => state.accentColor,
     userColor: state => state.user.userColor,
-    moodDotPosition: state => state.user.allMoodPositions
+    moodDotPosition: state => state.user.allMoodPositions,
+    getFeelings: state => state.feelings
   },
   mutations: {
     setAccentColor: (state, response) => (state.accentColor = response),

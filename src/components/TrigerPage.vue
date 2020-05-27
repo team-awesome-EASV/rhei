@@ -2,13 +2,22 @@
   <div class="fullscreen main-padding padding-bottom padding-all">
     <div class="main-view">
       <h1>Tell us more</h1>
-      <autocomplete></autocomplete>
-      <div class="trigger-textarea">
+      <div class="autocomplete-container">
+        <h3>Write down how you feel, or click the results that best suit your feelings:</h3>
+        <autocomplete :feelingsCheck="true"></autocomplete>
+      </div>
+      <div class="autocomplete-container">
+        <h3>Write down what made you feel like this, or click the results that best suit your situation:</h3>
+        <autocomplete :feelingsCheck="false"></autocomplete>
+      </div>
+      <!--
+     <div class="trigger-textarea">
         <label for="aboutTriger">
           <h3>Tell us more about what made you feel like this:</h3>
         </label>
         <textarea class="textarea-style inner-shadow" name="about" id="aboutTriger"></textarea>
       </div>
+      -->
     </div>
   </div>
 </template>
@@ -33,5 +42,8 @@ export default {
 }
 .trigger-textarea {
   margin-top: 2rem;
+}
+.autocomplete-container {
+  margin-bottom: 10rem;
 }
 </style>

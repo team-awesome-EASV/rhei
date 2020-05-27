@@ -1,5 +1,5 @@
 <template>
-  <section class="flex-space-around padding flex-col flex-space-between">
+  <section class="padding flex-col flex-space-between">
     <div class="flex-start">
       <input
         type="text"
@@ -13,7 +13,7 @@
     </div>
 
     <div v-if="filteredFeelings && modal" class="modal">
-      <ul class="flex-space-around padding-sides wrap">
+      <ul class="flex-start padding-sides wrap">
         <li
           class="modal-element"
           :style="{ 'background-color': createShade('50', '60') }"
@@ -24,7 +24,7 @@
       </ul>
     </div>
     <div v-if="allFeelings">
-      <ul class="flex-start padding-sides wrap">
+      <ul class="flex-start padding-sides wrap autocomplete-bottom-el">
         <li
           :style="{ 'background-color': createShade('100', '50') }"
           class="rounded-corners-button"
@@ -40,13 +40,17 @@
 import { createShadeAccentColor } from "./mixins/createShadeAccentColor";
 export default {
   mixins: [createShadeAccentColor],
+  props: {
+    feelingsCheck: Boolean
+  },
   data() {
     return {
       modal: false,
       feeling: "",
       filteredFeelings: [],
       allFeelings: [],
-      feelings: ["Sad", "Happy", "Joyfull", "Desperate", "Lonely"]
+      feelings: [],
+      feelingsChecked: this.feelingsCheck
     };
   },
   computes: {},
@@ -55,6 +59,13 @@ export default {
       this.filteredFeelings = this.feelings.filter(feeling => {
         return feeling.toLowerCase().startsWith(this.feeling.toLowerCase());
       });
+    },
+    populateArray() {
+      if (this.feelingsChecked) {
+        this.feelings = this.$store.state.feelings;
+      } else {
+        this.feelings = this.$store.state.triggers;
+      }
     },
     clearInput() {
       this.feeling = "";
@@ -76,6 +87,7 @@ export default {
 
   mounted() {
     this.filterFeelings();
+    this.populateArray();
   }
 };
 </script>
@@ -88,6 +100,7 @@ section {
   padding: 1.6rem 1.6rem;
   font-size: 1.6rem;
   margin-top: 5px;
+  margin-bottom: 1rem;
   width: 100%;
 }
 .modal {
@@ -103,15 +116,18 @@ section {
 
 .rounded-corners-button {
   margin: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   // background-color: var(--main-accent-color);
   background: var(--main-accent-color);
   color: #ffffff;
-  padding: 0.5rem 2rem;
+  padding: 1.6rem 2rem;
   border-radius: 1rem;
 }
 .flex-col {
   display: flex;
   flex-direction: column;
+}
+.autocomplete-bottom-el {
+  margin-top: 2rem;
 }
 </style>
