@@ -120,7 +120,7 @@ section {
   // background-color: var(--main-accent-color);
   background: var(--main-accent-color);
   color: #ffffff;
-  padding: 1.6rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: 1rem;
 }
 .flex-col {
