@@ -190,6 +190,9 @@ html {
   width: 100vw;
   background-color: var(--secondary-background-color);
   color: var(--text-color);
+  background-image: url("../src/assets/backgroud.svg");
+  background-position: center;
+  background-size: cover;
 }
 
 .main-padding {
