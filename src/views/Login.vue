@@ -5,14 +5,10 @@
         <logo></logo>
         <ul class="flex-space-around">
           <li>
-            <div class="margin-right switch-text" @click="userExists = true">
-              login
-            </div>
+            <div class="margin-right switch-text" @click="userExists = true">login</div>
           </li>
           <li>
-            <div class="margin-right switch-text" @click="userExists = false">
-              sign up
-            </div>
+            <div class="margin-right switch-text" @click="userExists = false">sign up</div>
           </li>
         </ul>
       </section>
@@ -155,6 +151,9 @@ export default {
   background-size: contain;
   background-position: right;
   display: flex;
+  h1 {
+    text-align: left;
+  }
 }
 
 .switch-text {

@@ -8,9 +8,7 @@
             <router-link class="margin-right" to="/login">login</router-link>
           </li>
           <li>
-            <router-link class="margin-right" to="/sign-up"
-              >sign-up</router-link
-            >
+            <router-link class="margin-right" to="/sign-up">sign-up</router-link>
             <div class="border-bottom"></div>
           </li>
         </ul>
@@ -46,6 +44,9 @@ export default {
   background-size: contain;
   background-position: right;
   display: flex;
+  h1 {
+    text-align: left;
+  }
 }
 .border-bottom {
   height: 4px;

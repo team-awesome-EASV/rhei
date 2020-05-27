@@ -88,7 +88,6 @@ section {
   padding: 1.6rem 1.6rem;
   font-size: 1.6rem;
   margin-top: 5px;
-  background: inherit;
   width: 100%;
 }
 .modal {
