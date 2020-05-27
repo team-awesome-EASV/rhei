@@ -34,10 +34,20 @@ export default {
     getDate(){
       var today = new Date();
       var dd = String(today.getDate()).padStart(2, '0');
-      var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-      var yyyy = today.getFullYear();
-      today = mm + '/' + dd + '/' + yyyy;
+      today = dd + ' ' + this.getMonthName(today.getMonth()) + ', ' + this.getDayName(today.getDay());
       return today;
+    },
+    getMonthName(mm){
+      var monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December" ];
+        const monthNumber = mm;
+       return monthNames[monthNumber];
+    },
+    getDayName(dd){
+       var dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",
+        "Sunday" ];
+        const dayNumber = dd - 1;
+       return dayNames[dayNumber];
     }
   },
   
