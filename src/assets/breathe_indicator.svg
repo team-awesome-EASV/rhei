@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 564.5 575.12">
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <circle id="circle-outer-stroke" cx="282.25" cy="292.86" r="281.75" fill="#fff" stroke="#000" stroke-miterlimit="10" opacity="0.36"/>
+      <circle id="circle-inner-stroke" cx="282.25" cy="292.86" r="252.24" fill="#fff" stroke="#000" stroke-miterlimit="10" opacity="0.17"/>
+      <circle id="circle-inner_fill" data-name="circle-inner fill" cx="282.25" cy="292.86" r="144.32" fill="#ccc"/>
+      <g id="clouds" opacity="0.15">
+        <g id="cloud-bottom">
+          <path d="M242.81,196.67c0-7.88,19.56-9.55,27.29-9.55,15.68,0,16.72-9,29.74-9,11.44,0,17.26,9.26,27.92,9.26,22.87,0,28-26.34,50.2-26.34,22.64,0,21.48,27.5,42.54,27.5,10.71,0,75.05,2,75.05,8.11Z" fill="#4d4d4d"/>
+        </g>
+        <g id="cloud-top">
+          <path d="M72.28,400.09c0-6.77,7.07-13.23,13.53-13.23,11.13,0,15.06,3.68,22.89,3.68,18.19,0,13.54-37.8,43.17-37.8,27.12,0,31.19,38.64,49,38.64,15.63,0,7.87-8.68,32.73-8.68,12.6,0,35.65,10.59,35.65,17.36Z" fill="#4d4d4d"/>
+        </g>
+      </g>
+      <g id="plant">
+        <path id="fill" d="M473.53,260.26c13.62,2.15,25.15,26.48,24.92,34.26-.63,22-11.48,35-12.36,43.74-1.95,19.51,2.49,37.93-4.48,47.64-41.18,57.46-145.78,26.8-161.89,46.26-4.23,5.59-16.65,23.36-16.65,23.36-4.18-5.74-11.37-41.7-9.28-55s26.25-46.82,66.46-67.14C381.5,322.68,428.42,253.14,473.53,260.26Z" fill="#4d4d4d" opacity="0.61"/>
+        <path id="stroke-draw" d="M286.81,487.5C293,474.4,350.36,363,456.11,324.07" fill="none" stroke="#e6e6e6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+        <path id="stroke-draw-2" data-name="stroke-draw" d="M419,341.63c1.67-5.6,7.45-16.87,5.56-35.18" fill="none" stroke="#e6e6e6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+        <path id="stroke-draw-3" data-name="stroke-draw" d="M392,359.57c2.28-9.15,3.55-22.46,1.4-30.48" fill="none" stroke="#e6e6e6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+        <path id="stroke-draw-4" data-name="stroke-draw" d="M366.22,381.21a130.65,130.65,0,0,1,48.14,10.18" fill="none" stroke="#e6e6e6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+      <g id="plant2">
+        <path id="fill-2" data-name="fill" d="M181.56,169c9.56,9.26,31.24,49.12,58.16,75.08,18.23,17.55,19.51,51.95,3.75,65.67C225.71,325.14,179,266.49,174,261.05c-11.61-12.67-42.26-25.93-54-38.59-7.35-7.93-20.34-50.68-3-69.89C133.79,133.89,169,156.8,181.56,169Z" fill="#666" opacity="0.42"/>
+        <path id="stroke-draw-5" data-name="stroke-draw" d="M159.43,200C215.91,236,269,355.43,274.66,370.72" fill="none" stroke="#e6e6e6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+        <line id="stroke-draw-6" data-name="stroke-draw" x1="176.32" y1="178.7" x2="181.52" y2="218.2" fill="none" stroke="#e6e6e6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+      </g>
+      <circle id="phase-indicator-in-out" cx="282.31" cy="11.8" r="6.66" fill="#333"/>
+      <circle id="phase-indicator" cx="282.31" cy="11.8" r="11.3" fill="none" stroke="#000" stroke-miterlimit="10"/>
+      <circle id="phase-indicator-hold-end" cx="78.36" cy="487.5" r="6.66" fill="#333"/>
+      <circle id="phase-indicator-hold-start" cx="486.85" cy="487.5" r="6.66" fill="#333"/>
+      <g id="text">
+        <text id="breathe-in-text" transform="translate(159.32 314.51)" font-size="48" font-family="Poppins-Regular, Poppins">breathe in</text>
+        <text id="hold-text" transform="translate(214.28 314.51)" font-size="48" font-family="Poppins-Regular, Poppins">hold...</text>
+        <text id="breathe-in-out" transform="translate(141.13 314.51)" font-size="48" font-family="Poppins-Regular, Poppins">breathe out</text>
+      </g>
+    </g>
+  </g>
+</svg>
