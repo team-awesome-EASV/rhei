@@ -50,7 +50,6 @@ h1 {
   width: 100%;
   height: 100%;
   position: relative;
-  border: 1px solid black;
 }
 .clickPoint {
   height: 10px;

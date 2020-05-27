@@ -3,7 +3,7 @@
     <div class="main-view">
       <h1>Your mood progress</h1>
       <h3>See how you progressed over the last months, think about what happend and talk with you friends about it:</h3>
-      <div class="mood-parent">
+      <div class="mood-parent outer-shadow">
         <moodDisplay></moodDisplay>
         <div class="chose-mood-background">
           <div class="mid-section">
