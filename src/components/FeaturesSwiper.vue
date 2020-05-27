@@ -52,7 +52,7 @@ export default {
       //pagination: '.swiper-pagination',
       spaceBetween: 10,
       centeredSlides: true,
-      slidesPerView: 1.4,
+      slidesPerView: 1.13,
 
       autoplay: {
         delay: 3500,
