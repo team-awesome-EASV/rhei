@@ -252,22 +252,36 @@
         </button>
       </div>
 
-      <div class="cycles-controls">
-        <button class="cycle-control outer-shadow">-</button>
-        <div class="cycle-view">
-          <h3>{{ isPlaying }}</h3>
-        </div>
-        <button class="cycle-control outer-shadow">+</button>
-      </div>
-
       <!-- <button class="cycle-control" @click="timelineTime()">duration</button> -->
       <div class="start-button-container">
-        <button class="start-button" @click="animStop()" v-if="isPlaying">
+        <button
+          class="start-button"
+          @click="animStop(), showInterface()"
+          v-if="isPlaying"
+        >
           STOP
         </button>
-        <button class="start-button" @click="play()" v-else>
+        <button class="start-button" @click="play(), hideInterface()" v-else>
           START
         </button>
+      </div>
+
+      <div class="cycles-controls">
+        <!-- <button class="cycle-control outer-shadow">-</button> -->
+        <div class="cycle-settings flex-space-around">
+          <button class="cycle-control outer-shadow" @click="gotoSettings()">
+            <i
+              class="fas fa-cog popup-cog"
+              :style="{ color: createShade('80', '90') }"
+            ></i>
+          </button>
+
+          <p>
+            Go to settings to adjust the time of breathe in, hold, and breathe
+            out phases.
+          </p>
+        </div>
+        <!-- <button class="cycle-control outer-shadow">+</button> -->
       </div>
     </div>
   </div>
@@ -312,10 +326,28 @@ export default {
     }
   },
 
+  watch: {
+    isPlaying(newValue) {
+      if (!newValue) this.showInterface();
+    }
+  },
+
   methods: {
+    gotoSettings() {
+      this.$router.push({ name: "Settings" });
+    },
+
     togglePlayState(state, log) {
       this.isPlaying = state;
       console.log(log);
+    },
+
+    hideInterface() {
+      gsap.to(".cycles-controls", { opacity: 0, duration: 1 });
+    },
+
+    showInterface() {
+      gsap.to(".cycles-controls", { opacity: 1, duration: 1 });
     },
 
     play() {
@@ -325,6 +357,7 @@ export default {
       this.masterTL.repeat(this.cycleCount);
       this.masterTL.play();
       this.masterTL.invalidate();
+      this.isPlaying = false;
     },
 
     breatheIn() {
@@ -481,6 +514,7 @@ export default {
 
     animStop() {
       this.masterTL.pause();
+      this.isPlaying = false;
     },
 
     incrementCycle() {
@@ -590,7 +624,18 @@ export default {
   width: 100%;
   height: 7vh;
   display: flex;
-  margin-top: 13px;
+  margin-top: 2em;
+
+  p {
+    font-weight: 100;
+    text-align: justify;
+    width: 80%;
+    margin-left: 2em;
+  }
+
+  .fas {
+    font-size: 2rem;
+  }
 }
 
 .cycle-view {
@@ -605,13 +650,13 @@ export default {
   width: 18%;
   height: 100%;
   border-radius: 10px;
-  background-color: --secondary-background-color;
+  background-color: var(--secondary-background-color);
   font-size: 20px;
 }
 
 .start-button-container {
   width: 100%;
-  height: 15vh;
+  margin-top: 2em;
   display: flex;
   align-items: center;
   justify-content: center;

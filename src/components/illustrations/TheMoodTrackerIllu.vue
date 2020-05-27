@@ -157,7 +157,7 @@
               width="307.15"
               height="426.68"
               rx="25.88"
-              fill="#fffeee"
+              fill="var(--secondary-background-color)"
               stroke="#757575"
               stroke-miterlimit="10"
               stroke-width="2"

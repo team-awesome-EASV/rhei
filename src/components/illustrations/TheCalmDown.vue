@@ -16,7 +16,7 @@
           <g id="chair">
             <polygon
               points="276.89 571.39 114.89 475.39 115.89 328.39 274.89 348.39 276.89 571.39"
-              fill="#fffeee"
+              fill="var(--secondary-background-color)"
             />
             <polygon
               points="274.89 348.39 276.89 571.39 437.89 476.39 436.89 326.39 274.89 348.39"
@@ -218,7 +218,7 @@
                 width="142.64"
                 height="307.96"
                 rx="12.86"
-                fill="#fffeee"
+                fill="var(--secondary-background-color)"
               />
               <rect
                 x="81.48"
