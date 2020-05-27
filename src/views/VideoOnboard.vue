@@ -44,6 +44,10 @@ export default {
       // console.log("enterFrame", this.anim.currentFrame);
       this.$router.push({ name: "Color" });
     });
+  },
+
+  beforeDestroy() {
+    this.anim.removeEventListener();
   }
 };
 </script>
