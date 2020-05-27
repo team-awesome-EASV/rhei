@@ -1,11 +1,11 @@
 <template>
   <div class="fullscreen main-padding padding-bottom padding-all">
     <div class="main-view">
-      <h1>Triger Page</h1>
+      <h1>Tell us more</h1>
       <autocomplete></autocomplete>
-      <div>
+      <div class="trigger-textarea">
         <label for="aboutTriger">
-          <h3>Tell us more about what mage you feel like this:</h3>
+          <h3>Tell us more about what made you feel like this:</h3>
         </label>
         <textarea class="textarea-style inner-shadow" name="about" id="aboutTriger"></textarea>
       </div>
@@ -30,5 +30,8 @@ export default {
 }
 .padding-bottom {
   padding-bottom: 20vh;
+}
+.trigger-textarea {
+  margin-top: 2rem;
 }
 </style>

@@ -1,7 +1,8 @@
 <template>
-  <div class="fullscreen main-padding padding-all">
+  <div class="fullscreen main-padding padding-all padding-bottom">
     <div class="main-view">
       <h1>Your mood progress</h1>
+      <h3>See how you progressed over the last months, think about what happend and talk with you friends about it:</h3>
       <div class="mood-parent">
         <moodDisplay></moodDisplay>
         <div class="chose-mood-background">
@@ -17,6 +18,9 @@
           </div>
         </div>
       </div>
+      <router-link to="/chat">
+        <button class="main-button padding-all">Chat with someone</button>
+      </router-link>
     </div>
   </div>
 </template>
@@ -35,9 +39,14 @@ export default {
 .mood-parent {
   position: relative;
   margin-bottom: 3rem;
+  width: 100%;
+  height: 60vh;
+}
+.padding-bottom {
+  padding-bottom: 20vh;
 }
 .line {
-  width: 60%;
+  width: 50%;
   height: 1px;
   background-color: #cdcdcd;
 }
@@ -72,5 +81,14 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+}
+.main-button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 2rem;
+  background-color: var(--main-accent-color);
+  color: #ffffff;
+  width: 100%;
 }
 </style>

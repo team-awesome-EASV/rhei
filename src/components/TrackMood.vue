@@ -1,7 +1,7 @@
 <template>
   <div class="main-padding padding-bottom">
     <h1>How are you feeling, today?</h1>
-    <p>Take your time to pin-point how you are doing today.</p>
+    <h3>Take your time to pin-point how you are doing today.</h3>
     <div class="mood-parent">
       <chooseMood class="put-on-top"></chooseMood>
       <div class="chose-mood-background">
@@ -39,6 +39,8 @@ export default {
 .mood-parent {
   position: relative;
   margin-bottom: 3rem;
+  width: 100%;
+  height: 60vh;
 }
 .put-on-top {
   z-index: 10;
@@ -55,7 +57,7 @@ export default {
   padding: 1rem;
 }
 .line {
-  width: 70%;
+  width: 50%;
   height: 1px;
   background-color: #cdcdcd;
 }

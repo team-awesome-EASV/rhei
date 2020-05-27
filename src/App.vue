@@ -198,11 +198,20 @@ html {
 
 h1 {
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 200;
   margin: 0.5em 0;
+  text-align: center;
 }
 ul {
   list-style-type: none;
+}
+p {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+h3 {
+  font-size: 1.6rem;
+  font-weight: 300;
 }
 a {
   font-size: 1.4rem;

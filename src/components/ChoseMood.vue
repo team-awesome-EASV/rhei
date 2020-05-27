@@ -116,10 +116,12 @@ h1 {
   justify-content: center;
   align-items: center;
   position: relative;
+  height: 100%;
+  width: 100%;
 }
 .clickArea {
-  width: 80vw;
-  height: 60vh;
+  width: 100%;
+  height: 100%;
   position: relative;
   border: 1px solid black;
 }
