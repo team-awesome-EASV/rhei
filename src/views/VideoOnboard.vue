@@ -54,7 +54,10 @@ export default {
 
 <style lang="scss" scoped>
 .rheiVideo {
-  width: 100vw;
+  width: 90vw;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10%;
 }
 #skipButton {
   justify-content: center;
@@ -62,4 +65,5 @@ export default {
   margin-left: 47%;
   padding-top: 50px;
 }
+
 </style>
