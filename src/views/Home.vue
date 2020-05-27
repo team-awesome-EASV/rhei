@@ -11,7 +11,7 @@
     <!-- <router-link id="videoPage" to="onboard-video">
       Watch video {{ wasHere }}
     </router-link> -->
-    <div class="user-activity-wrapper">
+    <div class="user-activity-wrapper outer-shadow-unactive">
 
     </div>
     <div class="features-swiper-wrapper">
@@ -77,12 +77,11 @@ export default {
 .user-activity-wrapper{
   width:90%;
   height:12vh;
-  background-color: darkgoldenrod ;
   margin-bottom: 1.4rem;
 }
 
 .features-swiper-wrapper{
-  width:100%;
+  width:125%;
   height:40vh;
 }
 

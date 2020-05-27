@@ -2,10 +2,10 @@
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide outer-shadow-unactive">Slide 1</div>
+      <div class="swiper-slide outer-shadow-unactive">Slide 2</div>
+      <div class="swiper-slide outer-shadow-unactive">Slide 3</div>
+      <div class="swiper-slide outer-shadow-unactive">Slide 4</div>
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
@@ -24,7 +24,7 @@ export default {
   mounted() {
     new Swiper(".swiper-container", {
       //pagination: '.swiper-pagination',
-      spaceBetween: 20,
+      spaceBetween: 15,
       centeredSlides: true,
       slidesPerView: 1.4,
 
@@ -55,7 +55,6 @@ export default {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: blue;
   border-radius:10px;
 
   /* Center slide text vertically */
