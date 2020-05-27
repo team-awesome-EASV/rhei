@@ -80,7 +80,7 @@ export default {
   height: 100%;
 }
 .swiper-slide {
-  height: 90%;
+  height: 95%;
   text-align: center;
   font-size: 18px;
   border-radius: 10px;
@@ -109,6 +109,7 @@ export default {
 .swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: 0;
   left: 0;
+  transform: translate(0rem,-2rem);
   width: 100%;
 }
 </style>

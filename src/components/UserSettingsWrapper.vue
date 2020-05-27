@@ -92,8 +92,8 @@ export default {
 <style lang="scss" scoped>
 
 .profile-controls-wrapper {
-  width: 8vh;
-  height: 8vh;
+  width: 7vh;
+  height: 7vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,25 +108,25 @@ export default {
 }
 
 .user-active-wrapper{
-  width:11px;
-  height:11px;
+  width:10px;
+  height:10px;
   z-index:99;
   position:absolute;
   border-radius:50%;
-  transform: translate(-23px, -16px);
+  transform: translate(-18px, -16px);
   background-color:#1cf292;
 }
 
 .picture-cog {
   color: white;
-  font-size: 28px;
-  margin-top: 3rem;
-  margin-left: 3.3rem;
+  font-size: 24px;
+  margin-top: 2.8rem;
+  margin-left: 2.9rem;
 }
 
 .profile-controls-popup {
-  height: 21vh;
-  width: 8.01vh;
+  height: 18vh;
+  width: 7vh;
   border-radius: 40px;
   overflow: hidden;
   position: absolute;
@@ -150,12 +150,12 @@ export default {
 }
 
 .popup-cog {
-  font-size: 30px;
+  font-size: 26px;
   color: whitesmoke;
 }
 
 .la-power-off {
-  font-size: 30px;
+  font-size: 26px;
   color: red;
 }
 </style>

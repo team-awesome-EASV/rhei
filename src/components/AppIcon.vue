@@ -32,7 +32,7 @@ export default {
 <style lang='scss' scoped>
 .app-icon {
   display: inline-block;
-  width: 3.5rem;
+  width: 3.4rem;
   fill: var(--main-accent-color);
   filter: saturate(50%);
 

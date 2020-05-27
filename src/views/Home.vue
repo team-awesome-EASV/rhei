@@ -105,7 +105,7 @@ export default {
 }
 
 .account-settings-banner {
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.2rem;
   width: 90%;
   height: 20vh;
   display: flex;
@@ -120,14 +120,14 @@ export default {
 }
 
 .user-activity-wrapper {
-  width: 90%;
-  height: 12vh;
-  margin-bottom: 1.4rem;
+  width: 88%;
+  height: 10vh;
+  margin-bottom: 0.3rem;
 }
 
 .features-swiper-wrapper {
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   box-sizing: border-box;
   padding: 1rem 0 1rem 0;
 }

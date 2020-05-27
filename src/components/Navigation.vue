@@ -97,8 +97,8 @@ nav li.router-link-exact-active {
 }
 
 .home-button {
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: var(--main-accent-color);
   position: absolute;
@@ -148,7 +148,7 @@ p {
 }
 
 .las {
-  font-size: 35px;
+  font-size: 3.4rem;
   color: #fcfbf0;
 }
 </style>
