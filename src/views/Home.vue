@@ -3,23 +3,26 @@
     <div class="account-settings-banner">
       <UserSettingsWrapper />
     </div>
-    <router-link id="videoPage" to="onboard-video">
+    <!-- <router-link id="videoPage" to="onboard-video">
       Watch video {{ wasHere }}
-    </router-link>
+    </router-link> -->
     <div class="illuWrapper">
-      <TheConnectIllu />
+      <!-- <TheConnectIllu /> -->
+       <FeaturesSwiper>   </FeaturesSwiper>  
     </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
-import TheConnectIllu from "../components/illustrations/TheConnectIllu";
+// import TheConnectIllu from "../components/illustrations/TheConnectIllu";
 import UserSettingsWrapper from "../components/UserSettingsWrapper";
+import FeaturesSwiper from "../components/FeaturesSwiper";
 export default {
   components: {
-    TheConnectIllu,
-    UserSettingsWrapper
+    // TheConnectIllu,
+    UserSettingsWrapper,
+    FeaturesSwiper
   },
   computed: {
     ...mapGetters(["allUser"]),

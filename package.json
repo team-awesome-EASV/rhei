@@ -11,6 +11,7 @@
     "@cometchat-pro/chat": "^2.0.7",
     "core-js": "^3.6.4",
     "gsap": "file:gsap-bonus.tgz",
+    "swiper": "^5.4.1",
     "vue": "^2.6.11",
     "vue-lottie": "^0.2.1",
     "vue-router": "^3.1.6",
