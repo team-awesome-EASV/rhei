@@ -12,7 +12,11 @@
     <!-- <router-link id="videoPage" to="onboard-video">
       Watch video {{ wasHere }}
     </router-link> -->
-    <div class="user-activity-wrapper outer-shadow-unactive"></div>
+    <div class="user-activity-wrapper outer-shadow-unactive">
+      <h3>Qoute of the day</h3>
+      <br>- Insert emotional quote here -
+
+    </div>
     <div class="features-swiper-wrapper">
       <FeaturesSwiper> </FeaturesSwiper>
     </div>
