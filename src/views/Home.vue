@@ -1,12 +1,20 @@
 <template>
-  <div class="main-padding" v-show="wasHere">
+  <div class="main-screen-container"  v-show="wasHere">
     <div class="account-settings-banner">
-      <UserSettingsWrapper />
+      <div class="date-wrapper">
+        <h1>Tues 11</h1>
+      </div>
+      <div class="account-settings-container">
+        <UserSettingsWrapper />
+      </div>
     </div>
     <!-- <router-link id="videoPage" to="onboard-video">
       Watch video {{ wasHere }}
     </router-link> -->
-    <div class="illuWrapper">
+    <div class="user-activity-wrapper">
+
+    </div>
+    <div class="features-swiper-wrapper">
       <!-- <TheConnectIllu /> -->
        <FeaturesSwiper>   </FeaturesSwiper>  
     </div>
@@ -33,22 +41,58 @@ export default {
 };
 </script>
 
-<style>
-.illuWrapper {
-  width: 100%;
+<style lang="scss" scoped >
+
+.main-screen-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top:2rem;
+}
+
+.date-wrapper{
+  width:50% ;
+  height:100%;
+  display: flex;
+  align-items:flex-start;
 }
 
 .account-settings-banner {
-  margin-bottom: 160px;
-  width: 100%;
-  background: red;
+  margin-bottom: 1.4rem;
+  width: 90%;
+  height:20vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content:space-between;
   position: relative;
+  
 }
-#videoPage {
-  margin-left: 30%;
-  margin-top: 15px;
+
+.account-settings-container{
+  width:10vh;
+  height:100%;
 }
+
+.user-activity-wrapper{
+  width:90%;
+  height:12vh;
+  background-color: darkgoldenrod ;
+  margin-bottom: 1.4rem;
+}
+
+.features-swiper-wrapper{
+  width:100%;
+  height:40vh;
+}
+
+// .illuWrapper {
+//   width: 100%;
+// }
+
+
+// #videoPage {
+//   margin-left: 30%;
+//   margin-top: 15px;
+// }
 </style>

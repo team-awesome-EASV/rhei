@@ -9,9 +9,6 @@
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
   </div>
 </template>
 
@@ -27,9 +24,9 @@ export default {
   mounted() {
     new Swiper(".swiper-container", {
       //pagination: '.swiper-pagination',
-      spaceBetween: 30,
+      spaceBetween: 20,
       centeredSlides: true,
-      slidesPerView: 2,
+      slidesPerView: 1.4,
 
       autoplay: {
         delay: 3500,
@@ -58,7 +55,8 @@ export default {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: blue;
+  border-radius:10px;
 
   /* Center slide text vertically */
   display: -webkit-box;
