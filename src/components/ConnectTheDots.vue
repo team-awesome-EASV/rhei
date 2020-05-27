@@ -1,14 +1,12 @@
 <template>
   <div>
-    <!-- <div class="arrow-controls">
-      <h1>Connect the Dogs dude</h1>
-      <router-link to="animals-feature">
-        <i class="fas fa-arrow-circle-right arrow-size"></i>
-      </router-link>
-    </div> -->
-    <!-- <div class="main-view"> -->
-    <TheDotGame />
-    <!-- </div> -->
+    <TheDotGame @showPicture="illuShow = true" />
+    <div class="absolute-instruction">
+      <h1>
+        Connect the dots<br />
+        as they appear and see what shape they create.
+      </h1>
+    </div>
   </div>
 </template>
 
@@ -17,12 +15,35 @@ import TheDotGame from "@/components/TheDotGame.vue";
 export default {
   components: {
     TheDotGame
+  },
+
+  data() {
+    return {
+      illuShow: false
+    };
   }
 };
 </script>
 
 <style lang="scss" scoped>
-// .arrow-controls {
-//   position: absolute;
-// }
+.absolute-instruction {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  h1 {
+    margin: 0 auto;
+    width: 80%;
+    text-align: left;
+    // font-size: 2rem;
+  }
+}
+
+.absolute-illu {
+  position: absolute;
+  width: 80vh;
+  top: 0%;
+  left: 0%;
+
+  transform: translate(10%, 10%);
+}
 </style>

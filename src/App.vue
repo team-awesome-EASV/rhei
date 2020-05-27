@@ -147,7 +147,8 @@ export default {
         this.$route.name == "Therapy" ||
         this.$route.path == "/connect-dots" ||
         this.$route.name == "VideoOnboard" ||
-        this.$route.name == "BreathingExercice"
+        this.$route.name == "BreathingExercice" ||
+        this.$route.name == "connectTheDots"
       ) {
         this.show = false;
       } else this.show = true;
