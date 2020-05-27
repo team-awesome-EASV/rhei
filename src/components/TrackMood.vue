@@ -2,7 +2,7 @@
   <div class="main-padding padding-bottom">
     <h1>How are you feeling, today?</h1>
     <h3>Take your time to pin-point how you are doing today.</h3>
-    <div class="mood-parent outer-shadow">
+    <div class="mood-parent outer-shadow-unactive">
       <chooseMood class="put-on-top"></chooseMood>
       <div class="chose-mood-background">
         <p class="top-center">High energy</p>
