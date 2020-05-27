@@ -58,6 +58,7 @@ export default {
         delay: 3500,
         disableOnInteraction: true
       },
+      loop: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true
