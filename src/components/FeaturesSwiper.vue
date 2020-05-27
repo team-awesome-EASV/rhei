@@ -2,10 +2,26 @@
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide outer-shadow-unactive">Slide 1</div>
-      <div class="swiper-slide outer-shadow-unactive">Slide 2</div>
-      <div class="swiper-slide outer-shadow-unactive">Slide 3</div>
-      <div class="swiper-slide outer-shadow-unactive">Slide 4</div>
+      <div class="swiper-slide outer-shadow-unactive">
+          <div class="illu-container">
+             <TheConnectIllu></TheConnectIllu>
+           </div>
+      </div>
+      <div class="swiper-slide outer-shadow-unactive"> 
+          <div class="illu-container">
+             <TheChatChat></TheChatChat>
+          </div>
+      </div>
+      <div class="swiper-slide outer-shadow-unactive">
+          <div class="illu-container">
+            <TheCalmDown></TheCalmDown>
+          </div>
+      </div>
+      <div class="swiper-slide outer-shadow-unactive">
+          <div class="illu-container">
+            <TheMoodTrackerIllu></TheMoodTrackerIllu>
+          </div>
+      </div>
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
@@ -14,8 +30,19 @@
 
 <script>
 import Swiper from "swiper";
+import TheConnectIllu from "../components/illustrations/TheConnectIllu";
+import TheChatChat from "../components/illustrations/TheChatChat";
+import TheMoodTrackerIllu from "../components/illustrations/TheMoodTrackerIllu";
+import TheCalmDown from "../components/illustrations/TheCalmDown"
+
 
 export default {
+    components:{
+        TheConnectIllu,
+        TheChatChat,
+        TheMoodTrackerIllu,
+        TheCalmDown,
+    },
   name: "timeline",
   data() {
     return {};
@@ -24,7 +51,7 @@ export default {
   mounted() {
     new Swiper(".swiper-container", {
       //pagination: '.swiper-pagination',
-      spaceBetween: 15,
+      spaceBetween: 10,
       centeredSlides: true,
       slidesPerView: 1.4,
 
@@ -70,5 +97,9 @@ export default {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+
+.illu-container{
+    width: 60%;
 }
 </style>

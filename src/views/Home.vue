@@ -2,7 +2,8 @@
   <div class="main-screen-container"  v-show="wasHere">
     <div class="account-settings-banner">
       <div class="date-wrapper">
-        <h1>Tues 11</h1>
+        <h1>Welcome back Rick!</h1>
+        <h2> {{getDate()}} </h2>
       </div>
       <div class="account-settings-container">
         <UserSettingsWrapper />
@@ -11,11 +12,10 @@
     <!-- <router-link id="videoPage" to="onboard-video">
       Watch video {{ wasHere }}
     </router-link> -->
-    <div class="user-activity-wrapper outer-shadow-unactive">
+    <div class="user-activity-wrapper outer-shadow-unactive" >
 
     </div>
     <div class="features-swiper-wrapper">
-      <!-- <TheConnectIllu /> -->
        <FeaturesSwiper>   </FeaturesSwiper>  
     </div>
   </div>
@@ -23,20 +23,30 @@
 
 <script>
 import { mapGetters } from "vuex";
-// import TheConnectIllu from "../components/illustrations/TheConnectIllu";
 import UserSettingsWrapper from "../components/UserSettingsWrapper";
 import FeaturesSwiper from "../components/FeaturesSwiper";
 export default {
   components: {
-    // TheConnectIllu,
     UserSettingsWrapper,
     FeaturesSwiper
   },
+  methods:{
+    getDate(){
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      var yyyy = today.getFullYear();
+      today = mm + '/' + dd + '/' + yyyy;
+      return today;
+    }
+  },
+  
+  
   computed: {
     ...mapGetters(["allUser"]),
     wasHere() {
       return this.allUser.access;
-    }
+    },
   }
 };
 </script>
@@ -52,10 +62,12 @@ export default {
 }
 
 .date-wrapper{
-  width:50% ;
+  width:90% ;
   height:100%;
   display: flex;
+  flex-direction: column;
   align-items:flex-start;
+  justify-items:flex-start;
 }
 
 .account-settings-banner {

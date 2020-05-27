@@ -121,7 +121,7 @@ export default {
   color: white;
   font-size: 28px;
   margin-top: 3rem;
-  margin-left: 3.5rem;
+  margin-left: 3.3rem;
 }
 
 .profile-controls-popup {
