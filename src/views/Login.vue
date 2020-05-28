@@ -21,6 +21,9 @@
           Hello,
           <br />how are you?
         </h1>
+        <div class="thelogin-wrapper">
+          <TheLogin />
+        </div>
       </section>
       <transition mode="out-in" @enter="enter" @leave="leave" :css="false">
         <keep-alive>
@@ -36,6 +39,10 @@
       >
         <div class="bottom-login-section" v-show="userExists">
           <a href="#">Forgot Password?</a>
+
+          <div class="the-password-wrapper">
+            <ThePassword />
+          </div>
         </div>
       </transition>
     </div>
@@ -43,6 +50,8 @@
 </template>
 
 <script>
+import TheLogin from "../components/illustrations/TheLogin";
+import ThePassword from "../components/illustrations/ThePassword";
 import logo from "@/components/Logo";
 import loginform from "@/components/LoginForm";
 import signupform from "../components/SignUpForm";
@@ -52,7 +61,9 @@ export default {
     logo: logo,
     loginform: loginform,
     signupform: signupform,
-    positionHelper: null
+    positionHelper: null,
+    TheLogin,
+    ThePassword
   },
 
   data() {
@@ -140,7 +151,8 @@ export default {
 
 <style lang="scss">
 .top-nav {
-  align-items: center;
+  position: relative;
+  z-index: 6;
 }
 .border-bottom {
   height: 4px;
@@ -148,16 +160,30 @@ export default {
   width: 80%;
   border-radius: 2px;
 }
+
 .top-login-section {
   height: 18vh;
-  // background: url("../assets/welcome illustration.png");
-  // background-repeat: no-repeat;
-  // background-size: contain;
-  // background-position: right;
+  position: relative;
   display: flex;
   h1 {
     text-align: left;
   }
+}
+
+.thelogin-wrapper {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  bottom: -2rem;
+  z-index: 0;
+}
+
+.the-password-wrapper {
+  position: absolute;
+  width: 50%;
+  left: -2rem;
+  bottom: -2rem;
+  z-index: 0;
 }
 
 .switch-text {
@@ -193,5 +219,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 </style>
