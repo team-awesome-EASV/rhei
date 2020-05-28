@@ -8,6 +8,7 @@
           left: positionElement.left + '%'
         }"
       ></div>
+
     </div>
     <div v-show="showModal" class="click-modal">
       <button

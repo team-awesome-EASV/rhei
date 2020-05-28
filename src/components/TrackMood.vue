@@ -6,18 +6,7 @@
     <div class="mood-parent outer-shadow-unactive">
       <chooseMood class="put-on-top"></chooseMood>
       <div class="chose-mood-background">
-        <p class="top-center">High energy</p>
-        <p class="bottom-center">Low energy</p>
-        <div class="mid-section">
-          <p>Negative</p>
-          <div class="line-container">
-            <div class="line"></div>
-          </div>
-          <div class="line-container vertical">
-            <div class="line"></div>
-          </div>
-          <p>Positive</p>
-        </div>
+          <TrackMoodIllu></TrackMoodIllu>
       </div>
     </div>
     <button v-on:click="goToNext" class="main-button padding-all">Go to next page</button>
@@ -26,10 +15,12 @@
 
 <script>
 import chooseMood from "../components/ChoseMood";
+import TrackMoodIllu from "../components/illustrations/TrackMoodIllu.vue"
 
 export default {
   components: {
-    chooseMood: chooseMood
+    chooseMood: chooseMood,
+    TrackMoodIllu
   },
   methods: {
     goToNext() {
