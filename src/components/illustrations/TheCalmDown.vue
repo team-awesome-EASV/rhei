@@ -29,33 +29,35 @@
           </g>
           <g id="chart">
             <g id="chart-circle" opacity="0.5">
-              <path
-                id="chart3"
-                d="M336.63,115.87a113.32,113.32,0,0,1,98.23-95"
-                fill="none"
-                :stroke="createShade('45', '25')"
-                stroke-linecap="round"
-                stroke-miterlimit="10"
-                stroke-width="40"
-              />
-              <path
-                id="chart2"
-                d="M374.33,47.73A113.3,113.3,0,1,1,363,207.57"
-                fill="none"
-                :stroke="createShade('46', '50')"
-                stroke-linecap="round"
-                stroke-miterlimit="10"
-                stroke-width="40"
-              />
-              <path
-                id="chart1"
-                d="M374.33,47.73a113.31,113.31,0,0,1,186.86,98.2"
-                fill="none"
-                :stroke="createShade('45', '90')"
-                stroke-linecap="round"
-                stroke-miterlimit="10"
-                stroke-width="40"
-              />
+              <g id="chart-outside">
+                <path
+                  id="chart3"
+                  d="M336.63,115.87a113.32,113.32,0,0,1,98.23-95"
+                  fill="none"
+                  :stroke="createShade('45', '25')"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="40"
+                />
+                <path
+                  id="chart2"
+                  d="M374.33,47.73A113.3,113.3,0,1,1,363,207.57"
+                  fill="none"
+                  :stroke="createShade('46', '50')"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="40"
+                />
+                <path
+                  id="chart1"
+                  d="M374.33,47.73a113.31,113.31,0,0,1,186.86,98.2"
+                  fill="none"
+                  :stroke="createShade('45', '90')"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="40"
+                />
+              </g>
               <circle
                 id="chart-center"
                 cx="448.58"
@@ -68,25 +70,28 @@
           <g id="character">
             <g id="legs">
               <path
-                id="shoe2"
-                d="M454.19,422.6c.59,1.35,3.73,9.47,5.47,10.3,3.15,1.49,19.46-7.06,19.9-8.19s.19-3-.73-3.16-8.2,1.44-9.38,1.21-3.91-3-4.23-5"
-                fill="#1f161e"
-              />
-              <path
                 id="shoe1"
                 d="M383.45,477.36c-.26,1.45-2.22,9.94-1.24,11.6,1.76,3,20.07,5.07,21.07,4.38s1.83-2.38,1.17-3-7.6-3.4-8.45-4.26-1.56-4.68-.69-6.52"
                 fill="#1f161e"
               />
+
               <path
                 id="leg-back"
                 d="M249.91,299.65c0,54,17.18,65.34,34.27,65.34,43.29,0,99.61-34.72,102.79-36.06-1,5.68-7.31,149.66-7.31,150.49,1.5,1.17,13,2.18,16.87,1.17,1-3.5,31.41-174.75,31.41-179.26S425.32,290,415.41,289c-4.19-.42-62.48-2.84-62.48-2.84"
                 :fill="createShade('20', '30')"
               />
-              <path
-                id="leg-front"
-                d="M396.84,261.36C410,280.36,468.6,413,468.08,416.09s-14,9.67-16.85,7.9c-12.09-7.45-86.32-132.63-89.21-134.52s-7.22-1.16-9.8-.64C345.51,277.68,360.53,264.44,396.84,261.36Z"
-                :fill="createShade('100', '30')"
-              />
+
+              <g id="leg-front">
+                <path
+                  id="shoe2"
+                  d="M454.19,422.6c.59,1.35,3.73,9.47,5.47,10.3,3.15,1.49,19.46-7.06,19.9-8.19s.19-3-.73-3.16-8.2,1.44-9.38,1.21-3.91-3-4.23-5"
+                  fill="#1f161e"
+                />
+                <path
+                  d="M396.84,261.36C410,280.36,468.6,413,468.08,416.09s-14,9.67-16.85,7.9c-12.09-7.45-86.32-132.63-89.21-134.52s-7.22-1.16-9.8-.64C345.51,277.68,360.53,264.44,396.84,261.36Z"
+                  :fill="createShade('100', '30')"
+                />
+              </g>
             </g>
             <path
               id="torso"
@@ -299,12 +304,43 @@
 
 <script>
 import { createShadeAccentColor } from "../mixins/createShadeAccentColor";
-
+import { gsap } from "gsap";
 export default {
   name: "TheCalmDownIllu",
   mixins: [createShadeAccentColor],
   data() {
-    return {};
+    return {
+      masterTL: gsap.timeline({ paused: true })
+    };
+  },
+
+  methods: {
+    rotateChart() {
+      let tl = gsap.timeline();
+
+      tl.to("#chart-outside", {
+        rotation: 360,
+        duration: 2
+      });
+
+      return tl;
+    }
+  },
+
+  animPlay() {
+    this.masterTL.add(this.rotateChart());
+    this.masterTL.play();
+  },
+
+  mounted() {
+    gsap.to("#chart-outside", {
+      rotation: 360,
+      duration: 5,
+      repeat: -1,
+      yoyo: true,
+      ease: "back.inOut(1.7)",
+      transformOrigin: "50% 50%"
+    });
   }
 };
 </script>
