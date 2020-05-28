@@ -78,52 +78,52 @@ export default new Vuex.Store({
     },
     colors: [
       {
-        hex: '#FFEA8D',
-        hsl: '48'
+        hex: '#fed891',
+        hsl: '38'
       },
       {
-        hex: '#FED891',
-        hsl: '39'
+        hex: '#f4c06e',
+        hsl: '36'
       },
       {
-        hex: '#FEB18D',
-        hsl: '19'
+        hex: '#Feb18d',
+        hsl: '18'
       },
       {
-        hex: '#FC9390',
+        hex: '#ea8181',
         hsl: '1'
       },
       {
-        hex: '#FF88F3',
-        hsl: '306'
+        hex: '#ff88f3',
+        hsl: '304'
       },
       {
-        hex: '#DE8DFF',
+        hex: '#de8dff',
         hsl: '282'
       },
       {
-        hex: '#8A8BFF',
-        hsl: '239'
+        hex: '#8a8bff',
+        hsl: '238'
       },
       {
-        hex: '#6CCCFF',
+        hex: '#6187e5',
+        hsl: '221'
+      },
+      {
+        hex: '#6cccff',
         hsl: '200'
       },
       {
-        hex: '#21F8FD',
-        hsl: '181'
+        hex: '#75eadc',
+        hsl: '172'
       },
       {
-        hex: '#00FFAF',
-        hsl: '161'
+        hex: '#45af7c',
+        hsl: '151'
       },
       {
-        hex: '#00FF65',
-        hsl: '143'
-      },
-      {
-        hex: '#F7C544',
-        hsl: '43'
+        hex: '#67e867',
+        hsl: '120'
       }
     ]
   },
