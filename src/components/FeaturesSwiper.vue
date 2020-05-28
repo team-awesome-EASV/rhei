@@ -3,21 +3,37 @@
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide outer-shadow-unactive">
+         <div class="text-container">
+            <h1>Connect</h1>
+              <p>
+                Take a deep breath with 3 steeps
+                mindfulness routine and get back to reality. 
+               </p>
+          </div>
         <div class="illu-container">
           <TheConnectIllu></TheConnectIllu>
         </div>
       </div>
       <div class="swiper-slide outer-shadow-unactive">
-        <div class="illu-container">
-          <TheChatChat></TheChatChat>
-        </div>
-      </div>
-      <div class="swiper-slide outer-shadow-unactive">
+        <div class="text-container">
+            <h1>Calm down</h1>
+              <p>
+                Take a deep breath with 3 steeps
+                mindfulness routine and get back to reality. 
+               </p>
+          </div>
         <div class="illu-container">
           <TheCalmDown></TheCalmDown>
         </div>
       </div>
       <div class="swiper-slide outer-shadow-unactive">
+         <div class="text-container">
+            <h1>Moodtracker</h1>
+              <p>
+                Take a deep breath with 3 steeps
+                mindfulness routine and get back to reality. 
+               </p>
+          </div>
         <div class="illu-container">
           <TheMoodTrackerIllu></TheMoodTrackerIllu>
         </div>
@@ -31,14 +47,12 @@
 <script>
 import Swiper from "swiper";
 import TheConnectIllu from "../components/illustrations/TheConnectIllu";
-import TheChatChat from "../components/illustrations/TheChatChat";
 import TheMoodTrackerIllu from "../components/illustrations/TheMoodTrackerIllu";
 import TheCalmDown from "../components/illustrations/TheCalmDown";
 
 export default {
   components: {
     TheConnectIllu,
-    TheChatChat,
     TheMoodTrackerIllu,
     TheCalmDown
   },
@@ -84,7 +98,7 @@ export default {
   text-align: center;
   font-size: 18px;
   border-radius: 10px;
-
+  flex-direction: column;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,7 +115,37 @@ export default {
 }
 
 .illu-container {
-  width: 50%;
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  transform: translate(5.2rem,-1.8rem);
+}
+
+.change-position{
+  transform: translate(10rem,0);
+}
+
+.text-container{
+  z-index: 99;
+  width:75%;
+  height:15vh;
+  display: flex;
+  align-items:flex-start;
+  flex-direction: column;
+  justify-content:center;
+  transform: translate(-3rem,7.2rem);
+}
+
+h1{
+  margin:0.3rem;
+  padding: 0;
+}
+
+p{
+  margin:0;
+  padding: 0;
 }
 
 .swiper-pagination-fraction,
