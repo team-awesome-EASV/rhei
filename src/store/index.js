@@ -21,7 +21,13 @@ export default new Vuex.Store({
         hex: '#8A8BFF',
         hsl: '239'
       },
-      allMoodPositions: []
+      allMoodPositions: [],
+      breathingTimes: {
+        in: 4,
+        hold: 1.5,
+        out: 4,
+
+      }
     },
     feelings: [
       "Sad",
@@ -127,8 +133,10 @@ export default new Vuex.Store({
     accentColor: state => state.accentColor,
     userColor: state => state.user.userColor,
     moodDotPosition: state => state.user.allMoodPositions,
-    getFeelings: state => state.feelings
+    getFeelings: state => state.feelings,
+    getBreathingTimes: state => state.user.breathingTimes
   },
+
   mutations: {
     setAccentColor: (state, response) => (state.accentColor = response),
     setUserColor: (state, response) => (state.user.userColor = response),
@@ -136,6 +144,7 @@ export default new Vuex.Store({
     populateMood(state, element) {
       state.user.allMoodPositions.push(element);
     },
+    setBreathingTimes: (state, response) => (state.user.breathingTimes = response)
     // saveUser: (state) => sessionStorage.setItem(state, JSON.stringify(state)),
     // initaliseStore: (state) => sessionStorage.getItem(state, JSON.parse.state)
 
@@ -161,6 +170,10 @@ export default new Vuex.Store({
     },
     saveUser({ commit }, state) {
       commit('saveUser', state)
+    },
+    setBreathingTimes({ commit }, breathingTimes) {
+      const response = breathingTimes
+      commit('setBreathingTimes', response)
     }
 
 
