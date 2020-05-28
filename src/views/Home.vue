@@ -188,7 +188,7 @@ export default {
 
 .quoteDay {
   margin-left: 2rem;
-  margin-top: 1.5rem;
+  margin-top: 1.1rem;
   margin-right: 1rem;
   font-style: italic;
 }
