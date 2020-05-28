@@ -3,37 +3,37 @@
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide outer-shadow-unactive">
-         <div class="text-container">
-            <h1>Connect</h1>
-              <p>
-                Take a deep breath with 3 steeps
-                mindfulness routine and get back to reality. 
-               </p>
-          </div>
-        <div class="illu-container">
+        <div class="text-container">
+          <h1>Connect</h1>
+          <p>
+            Take a deep breath with 3 steeps mindfulness routine and get back to
+            reality.
+          </p>
+        </div>
+        <div class="illu-container connect-scale">
           <TheConnectIllu></TheConnectIllu>
         </div>
       </div>
       <div class="swiper-slide outer-shadow-unactive">
         <div class="text-container">
-            <h1>Calm down</h1>
-              <p>
-                Take a deep breath with 3 steeps
-                mindfulness routine and get back to reality. 
-               </p>
-          </div>
+          <h1>Calm down</h1>
+          <p>
+            Take a deep breath with 3 steeps mindfulness routine and get back to
+            reality.
+          </p>
+        </div>
         <div class="illu-container">
           <TheCalmDown></TheCalmDown>
         </div>
       </div>
       <div class="swiper-slide outer-shadow-unactive">
-         <div class="text-container">
-            <h1>Moodtracker</h1>
-              <p>
-                Take a deep breath with 3 steeps
-                mindfulness routine and get back to reality. 
-               </p>
-          </div>
+        <div class="text-container">
+          <h1>Moodtracker</h1>
+          <p>
+            Take a deep breath with 3 steeps mindfulness routine and get back to
+            reality.
+          </p>
+        </div>
         <div class="illu-container">
           <TheMoodTrackerIllu></TheMoodTrackerIllu>
         </div>
@@ -119,32 +119,36 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  position:absolute;
-  transform: translate(5.2rem,-2.5rem);
+  position: absolute;
+  transform: translate(5.2rem, -2.5rem);
 }
 
-.change-position{
-  transform: translate(10rem,0);
+.connect-scale {
+  width: 55%;
 }
 
-.text-container{
+.change-position {
+  transform: translate(10rem, 0);
+}
+
+.text-container {
   z-index: 99;
-  width:75%;
-  height:15vh;
+  width: 75%;
+  height: 15vh;
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   flex-direction: column;
-  justify-content:center;
-  transform: translate(-3rem,7.2rem);
+  justify-content: center;
+  transform: translate(-3rem, 7.2rem);
 }
 
-h1{
-  margin:0.3rem;
+h1 {
+  margin: 0.3rem;
   padding: 0;
 }
 
-p{
-  margin:0;
+p {
+  margin: 0;
   padding: 0;
 }
 
@@ -153,7 +157,7 @@ p{
 .swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: 0;
   left: 0;
-  transform: translate(0rem,-2rem);
+  transform: translate(0rem, -2rem);
   width: 100%;
 }
 </style>
