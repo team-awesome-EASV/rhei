@@ -256,12 +256,18 @@
       <div class="start-button-container">
         <button
           class="start-button"
-          @click="animStop(), showInterface()"
+          @click="
+            animStop(), showInterface(), togglePlayState(false, 'buttonlog')
+          "
           v-if="isPlaying"
         >
           STOP
         </button>
-        <button class="start-button" @click="play(), hideInterface()" v-else>
+        <button
+          class="start-button"
+          @click="play(), hideInterface(), togglePlayState(true, 'buttonlog')"
+          v-else
+        >
           START
         </button>
       </div>
@@ -288,6 +294,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import { createShadeAccentColor } from "./mixins/createShadeAccentColor";
 import { gsap } from "gsap";
 
@@ -323,6 +330,10 @@ export default {
     cycleLabel() {
       if (this.cycleCount === 0) return " cycle";
       else return " cycles";
+    },
+    ...mapGetters(["getBreathingTimes"]),
+    sendTimes() {
+      return this.getBreathingTimes;
     }
   },
 
@@ -514,7 +525,6 @@ export default {
 
     animStop() {
       this.masterTL.pause();
-      this.isPlaying = false;
     },
 
     incrementCycle() {
@@ -553,10 +563,18 @@ export default {
       );
       tl.play();
       return tl;
+    },
+
+    asignValue() {
+      // this.breathingTime = this.sendTimes;
+      this.breaheInDuration = this.sendTimes.in;
+      this.holdDuration = this.sendTimes.hold;
+      this.breatheOutDuration = this.sendTimes.out;
     }
   },
 
   mounted() {
+    this.asignValue();
     gsap.set("#circle-inner_fill", { transformOrigin: "50% 50%", scale: 0.5 });
     gsap.set(["#breathe-in-text", "#hold-text", "#breathe-out-text"], {
       opacity: 0

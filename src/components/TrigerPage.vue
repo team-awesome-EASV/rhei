@@ -28,6 +28,7 @@
       </div>
       -->
     </div>
+    <button v-on:click="goToNext" class="main-button padding-all">See your progress</button>
   </div>
 </template>
 <script>
@@ -36,6 +37,15 @@ import autocomplete from "../components/Autocomplete";
 export default {
   components: {
     autocomplete: autocomplete
+  },
+  methods: {
+    goToNext() {
+      if (this.$route.name === "TrigerPage")
+        this.$router.push({ name: "ProgressPage" });
+      else if (this.$route.name === "ProgressPage")
+        this.$router.push({ name: "Home" });
+      else this.$router.push({ name: "TrigerPage" });
+    }
   }
 };
 </script>
@@ -60,5 +70,14 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+.main-button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  background-color: var(--main-accent-color);
+  color: #ffffff;
+  width: 100%;
 }
 </style>
