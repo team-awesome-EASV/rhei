@@ -300,6 +300,7 @@ export default {
 
   mounted() {
     Draggable.create(".draggable", {
+      bounds: ".animal-game-svg-parent",
       onDrag: function() {
         if (this.hitTest("#box")) {
           gsap.to(this.target, {
