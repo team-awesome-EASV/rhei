@@ -1,12 +1,22 @@
 <template>
-  <div class="main-padding">
-    This is sorting animals page
+  <div class="fullscreen main-padding">
+    <div class="main-view">
+      <Therapy></Therapy>
+    </div>
+    <TheCalmDown />
   </div>
 </template>
 
 <script>
-export default {};
+import TheCalmDown from "../components/illustrations/TheCalmDown";
+import Therapy from "../components/TherapyPermiumUser";
+export default {
+  components: {
+    TheCalmDown,
+    Therapy
+  }
+};
 </script>
 
-<style lang="scss" scoped>
+<style>
 </style>

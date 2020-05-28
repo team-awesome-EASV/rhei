@@ -1,17 +1,22 @@
-
 <template>
   <div class="fullscreen main-padding">
-    <!-- <div class="arrow-controls">
-      <router-link to="connect-dots"> 
-         <i class="fas fa-arrow-circle-left arrow-size"></i>
-      </router-link>
-    </div>-->
+    <div class="main-view">
+      <Therapy></Therapy>
+    </div>
+    <TheCalmDown />
   </div>
 </template>
 
 <script>
-export default {};
+import TheCalmDown from "../components/illustrations/TheCalmDown";
+import Therapy from "../components/TherapyPermiumUser";
+export default {
+  components: {
+    TheCalmDown,
+    Therapy
+  }
+};
 </script>
 
-<style lang="scss" scoped>
+<style>
 </style>
