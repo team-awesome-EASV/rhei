@@ -39,7 +39,7 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/MoodTrackerOK.vue'),
+      import(/* webpackChunkName: "moodtracker" */ '../views/MoodTrackerOK.vue'),
     children: [
       { path: '/', component: TrackMood, name: 'TrackMood' },
       { path: '/triger-page', component: TrigerPage, name: 'TrigerPage' },
@@ -53,7 +53,7 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/VideoOnboard.vue')
+      import(/* webpackChunkName: "onboardvideo" */ '../views/VideoOnboard.vue')
   },
   {
     path: '/chat',
@@ -62,7 +62,7 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/Chat.vue'),
+      import(/* webpackChunkName: "chat" */ '../views/Chat.vue'),
     children: [
       { path: '/', component: AppHomeComponent },
 
@@ -84,7 +84,7 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/CalmDown.vue'),
+      import(/* webpackChunkName: "calm" */ '../views/CalmDown.vue'),
     children: [
       { path: '', component: BreathingExercice, name: 'BreathingExercice' },
       { path: 'connect-dots', component: ConnectTheDots, name: 'connectTheDots' },
@@ -98,7 +98,7 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/Login.vue')
+      import(/* webpackChunkName: "login" */ '../views/Login.vue')
   },
   {
     path: '/sign-up',
@@ -107,7 +107,7 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/SignUp.vue')
+      import(/* webpackChunkName: "signup" */ '../views/SignUp.vue')
   },
   {
     path: '/sorting',
@@ -116,7 +116,7 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/SortingPage.vue')
+      import(/* webpackChunkName: "sorting" */ '../views/SortingPage.vue')
   },
   {
     path: '/therapy',
@@ -125,7 +125,7 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/Therapy.vue')
+      import(/* webpackChunkName: "therapy" */ '../views/Therapy.vue')
   },
   {
     path: '/color',
@@ -134,7 +134,7 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/ColorPicker.vue')
+      import(/* webpackChunkName: "color" */ '../views/ColorPicker.vue')
   },
   {
     path: '/settings',
@@ -143,7 +143,7 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/UserSettings.vue')
+      import(/* webpackChunkName: "settings" */ '../views/UserSettings.vue')
   }
 ];
 
