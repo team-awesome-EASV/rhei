@@ -254,10 +254,12 @@
             />
             <g id="ui-group1">
               <polyline
+                class="ui-line"
                 points="67.05 175.46 67.05 158.14 213.61 158.14 213.61 175.46 67.05 175.46"
                 :fill="createShade('90', '39')"
               />
               <polyline
+                class="ui-line"
                 points="141.83 205.14 67.05 205.14 67.05 196.48"
                 fill="none"
                 stroke="#000"
@@ -265,6 +267,7 @@
                 stroke-width="1.31"
               />
               <polyline
+                class="ui-line"
                 points="67.05 187.82 213.61 187.82 213.61 196.48"
                 fill="none"
                 stroke="#000"
@@ -274,6 +277,7 @@
             </g>
             <g id="ui-group2">
               <polyline
+                class="ui-line"
                 points="141.83 255.84 67.05 255.84 67.05 247.19"
                 fill="none"
                 stroke="#000"
@@ -281,6 +285,7 @@
                 stroke-width="1.31"
               />
               <polyline
+                class="ui-line"
                 points="67.05 268.21 213.61 268.21 213.61 276.87"
                 fill="none"
                 stroke="#000"
@@ -288,6 +293,7 @@
                 stroke-width="1.31"
               />
               <rect
+                class="ui-line"
                 x="67.05"
                 y="217.5"
                 width="146.56"
@@ -320,27 +326,76 @@ export default {
 
       tl.to("#chart-outside", {
         rotation: 360,
-        duration: 2
+        duration: 5,
+        repeat: -1,
+        yoyo: true,
+        ease: "back.inOut(1.7)",
+        transformOrigin: "50% 50%"
       });
 
+      return tl;
+    },
+
+    legSwing() {
+      let tl = gsap.timeline();
+      tl.to("#leg-front", {
+        rotation: -10,
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: "back.inOut(1.7)",
+        transformOrigin: "0% 0%"
+      });
+      return tl;
+    },
+
+    interfaceDance() {
+      let tl = gsap.timeline();
+      tl.to(".ui-line", {
+        scaleX: 0.1,
+        duration: 1,
+        repeat: -1,
+        yoyo: true,
+        ease: "back.inOut(1.7)",
+        transformOrigin: "0% 0%",
+        stagger: {
+          from: "random",
+          each: 0.3,
+          amount: 1
+        }
+      });
+      return tl;
+    },
+
+    scaleBackground() {
+      let tl = gsap.timeline();
+      tl.to("Background-2", {
+        scale: 10,
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: "back.inOut(1.7)",
+        transformOrigin: "50% 50%"
+      });
       return tl;
     }
   },
 
-  animPlay() {
-    this.masterTL.add(this.rotateChart());
-    this.masterTL.play();
-  },
-
   mounted() {
-    gsap.to("#chart-outside", {
-      rotation: 360,
-      duration: 5,
-      repeat: -1,
-      yoyo: true,
-      ease: "back.inOut(1.7)",
-      transformOrigin: "50% 50%"
-    });
+    this.masterTL.add(this.rotateChart());
+    this.masterTL.add(this.legSwing(), 0);
+    this.masterTL.add(this.interfaceDance(), 0);
+    this.masterTL.add(this.scaleBackground(), 0);
+    this.masterTL.play();
+    // this.animPlay;
+    // gsap.to("#chart-outside", {
+    //   rotation: 360,
+    //   duration: 5,
+    //   repeat: -1,
+    //   yoyo: true,
+    //   ease: "back.inOut(1.7)",
+    //   transformOrigin: "50% 50%"
+    // });
   }
 };
 </script>
