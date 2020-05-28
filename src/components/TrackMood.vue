@@ -1,15 +1,20 @@
 <template>
-  <div class="main-padding padding-bottom flex-between">
-    <h1>How are you today?</h1>
-    <p>Take your time to pin-point how you are doing today.</p>
-    <p />
-    <div class="mood-parent outer-shadow-unactive">
-      <chooseMood class="put-on-top"></chooseMood>
+  <div class="mood-tracker-container">
+    <div class="text-container">
+        <h1>How are you today?</h1>
+        <p>Take your time to pin-point how you are doing today.</p>
+    </div>
+    <div class="mood-parent">
+        <chooseMood class="put-on-top"></chooseMood>
       <div class="chose-mood-background">
+        <div class="illu-container">
           <TrackMoodIllu></TrackMoodIllu>
+        </div>
       </div>
     </div>
-    <button v-on:click="goToNext" class="main-button padding-all">Go to next page</button>
+    <div class="controls-wrapper">
+         <button v-on:click="goToNext" class="main-button padding-all">Go to next page</button>
+    </div>
   </div>
 </template>
 
@@ -35,15 +40,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .padding-bottom {
-//   padding-bottom: 20vh;
-// }
+
+
+.text-container{
+  width:100%;
+  height:12%;
+  margin-bottom:0.5rem;
+}
+
+h1{
+  margin:0.2rem;
+}
+
+p{
+  margin:0.5rem;
+}
 .mood-parent {
   position: relative;
-  margin: 3rem 0 3rem 0;
   width: 100%;
-  height: 33vh;
+  height: 52vh;
 }
+
+
 .put-on-top {
   z-index: 10;
 }
@@ -58,53 +76,12 @@ export default {
   align-items: center;
   padding: 1rem;
 }
-.line {
-  width: 50%;
-  height: 1px;
-  background-color: #cdcdcd;
-}
-.top-center {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  text-align: center;
-}
 
-.bottom-center {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-}
-.mid-section {
-  flex-grow: 1;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.line-container {
-  position: absolute;
-  left: 0;
-  top: 0;
+.illu-container{
+  width:100%;
   height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.vertical {
-  transform: rotateZ(90deg);
 }
 
-.flex-between {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
 .main-button {
   font-size: 1.4rem;
   font-weight: bold;
@@ -112,6 +89,14 @@ export default {
   margin-top: 1.5rem;
   background-color: var(--main-accent-color);
   color: #ffffff;
-  width: 100%;
+  width: 70%;
+}
+
+.controls-wrapper{
+  width:100%;
+  height:26vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

@@ -1,20 +1,24 @@
 <template>
   <div class="mood-tracker-wrapper">
-    <div class="arrow-container next" @click="goToNext()">
-      <!-- <router-link to="/calm-down/connect-dots">
-        
-      </router-link>-->
-      <i class="fas fa-chevron-right arrow-size"></i>
-      <p>NEXT</p>
+    <div class="arrows-wrapper">
+      <div class="arrow-container next" @click="goToNext()">
+        <!-- <router-link to="/calm-down/connect-dots">
+          
+        </router-link>-->
+        <i class="fas fa-chevron-right arrow-size"></i>
+        <p>NEXT</p>
+      </div>
+      <div class="arrow-container back" @click="goToPrev()">
+        <!-- <router-link to="/calm-down/connect-dots">
+          
+        </router-link>-->
+        <i class="fas fa-chevron-left arrow-size"></i>
+        <p>BACK</p>
+      </div>
     </div>
-    <div class="arrow-container back" @click="goToPrev()">
-      <!-- <router-link to="/calm-down/connect-dots">
-        
-      </router-link>-->
-      <i class="fas fa-chevron-left arrow-size"></i>
-      <p>BACK</p>
+    <div class="router-wrapper">
+      <router-view></router-view>
     </div>
-    <router-view></router-view>
   </div>
 </template>
 
@@ -37,6 +41,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.arrows-wrapper{
+  width: 100%;
+  height:11vh;
+}
+
+.router-wrapper{
+   width: 100%;
+  height:90%;
+}
 .calm-down-wrapper {
   position: relative;
 }
