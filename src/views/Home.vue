@@ -9,18 +9,13 @@
         <UserSettingsWrapper />
       </div>
     </div>
-    <!-- <router-link id="videoPage" to="onboard-video">
-      Watch video {{ wasHere }}
-    </router-link>-->
+
     <div class="quote-day-wrapper outer-shadow-unactive">
-      <div class="quoteDay">
-        <component :is="view" :data-quote1="quote1" :data-quote2="quote2"></component>
-      </div>
-      <!--       <div class="panel-footer social">
-        <ul>
-           <button @click="newQuote">REFRESH</button>
-        </ul>
-      </div>-->
+      <component
+        :is="view"
+        :data-quote1="quote1"
+        :data-quote2="quote2"
+      ></component>
     </div>
     <div class="features-swiper-wrapper">
       <FeaturesSwiper></FeaturesSwiper>
@@ -161,13 +156,23 @@ export default {
 }
 
 .account-settings-banner {
-  margin-bottom: 0.2rem;
-  width: 90%;
-  height: 17vh;
+  width: 86%;
+  // height: 17vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   position: relative;
+  text-align: left;
+
+  h1 {
+    margin: 0 0 0.2em 0;
+    font-weight: 200;
+  }
+
+  h2 {
+    font-weight: 100;
+    font-style: italic;
+  }
 }
 
 .account-settings-container {
@@ -177,34 +182,23 @@ export default {
 
 .quote-day-wrapper {
   width: 88%;
-  height: 12vh;
-  margin-bottom: 0.3rem;
-  margin-top: 1.1rem;
-}
-
-.quoteDay {
+  padding: 4em;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 2rem;
-  margin-top: 1rem;
-  margin-right: 1rem;
+  font-size: 0.4rem;
+  font-weight: 100;
   font-style: italic;
+  text-align: justify;
 }
 
 .features-swiper-wrapper {
   width: 100%;
   height: 50vh;
-  box-sizing: border-box;
-  padding: 1rem 0 1rem 0;
+  position: relative;
+  z-index: 1;
+  // padding: 1rem 0 1rem 0;
 }
-
-// .illuWrapper {
-//   width: 100%;
-// }
-
-// #videoPage {
-//   margin-left: 30%;
-//   margin-top: 15px;
-// }
 </style>

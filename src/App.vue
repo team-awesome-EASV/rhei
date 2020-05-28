@@ -38,6 +38,7 @@ export default {
     changeVariableColor() {
       let root = document.documentElement;
       root.style.setProperty("--main-accent-color", this.colorGet.hex);
+      root.style.setProperty("--swiper-theme-color", this.colorGet.hex);
     },
     // checkAccess() {
     //   return this.access;

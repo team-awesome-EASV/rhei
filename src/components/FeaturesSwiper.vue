@@ -22,7 +22,7 @@
             reality.
           </p>
         </div>
-        <div class="illu-container">
+        <div class="illu-container calm">
           <TheCalmDown></TheCalmDown>
         </div>
       </div>
@@ -68,10 +68,10 @@ export default {
       centeredSlides: true,
       slidesPerView: 1.13,
 
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: true
-      },
+      // autoplay: {
+      //   delay: 3500,
+      //   disableOnInteraction: true
+      // },
       loop: true,
       pagination: {
         el: ".swiper-pagination",
@@ -97,7 +97,7 @@ export default {
   height: 95%;
   text-align: center;
   font-size: 18px;
-  border-radius: 10px;
+  border-radius: 22px;
   flex-direction: column;
   /* Center slide text vertically */
   display: -webkit-box;
@@ -120,7 +120,11 @@ export default {
   align-items: center;
   justify-content: center;
   position: absolute;
-  transform: translate(5.2rem, -2.5rem);
+  transform: translate(5.2rem, -3rem);
+}
+
+.calm {
+  transform: translate(4rem, -2.5rem);
 }
 
 .connect-scale {
@@ -138,18 +142,22 @@ export default {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  justify-content: center;
-  transform: translate(-3rem, 7.2rem);
-}
+  // justify-content: center;
+  transform: translate(-2rem, 7.2rem);
 
-h1 {
-  margin: 0.3rem;
-  padding: 0;
-}
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    text-align: left;
+  }
 
-p {
-  margin: 0;
-  padding: 0;
+  p {
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+    text-align: justify;
+  }
 }
 
 .swiper-pagination-fraction,
@@ -159,5 +167,10 @@ p {
   left: 0;
   transform: translate(0rem, -2rem);
   width: 100%;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--main-accent-color);
 }
 </style>

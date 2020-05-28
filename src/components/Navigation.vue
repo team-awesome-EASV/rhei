@@ -7,7 +7,11 @@
     </div>
     <div class="nav-wrapper">
       <div class="icons-row">
-        <li class="shuffle" v-for="(link, index) in navLinksLeft" v-bind:key="index">
+        <li
+          class="shuffle"
+          v-for="(link, index) in navLinksLeft"
+          v-bind:key="index"
+        >
           <router-link :to="link.path">
             <div class="links-center">
               <app-icon class="actiwes" :icon="link.icon"></app-icon>
@@ -18,7 +22,11 @@
         <!--          <app-icon icon="chat"></app-icon>-->
       </div>
       <div class="icons-row">
-        <li class="shuffle" v-for="(link, index) in navLinksRight" v-bind:key="index">
+        <li
+          class="shuffle"
+          v-for="(link, index) in navLinksRight"
+          v-bind:key="index"
+        >
           <router-link :to="link.path">
             <div class="links-center">
               <app-icon :icon="link.icon"></app-icon>
@@ -27,7 +35,12 @@
         </li>
       </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 747.82 180.36">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="0"
+      height="0"
+      viewBox="0 0 747.82 180.36"
+    >
       <defs>
         <clipPath
           id="clipped"
@@ -94,6 +107,7 @@ nav li.router-link-exact-active {
   -moz-filter: drop-shadow(5px -4px 15px #c2c1b9);
   position: fixed;
   bottom: 0;
+  z-index: 4;
 }
 
 .home-button {
