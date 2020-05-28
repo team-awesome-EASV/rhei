@@ -192,8 +192,9 @@ export default {
   padding: 1rem 0 1rem 0;
 }
 .quoteDay {
-  margin-left: 1rem;
-  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
   font-style: italic;
 }
 // .illuWrapper {
