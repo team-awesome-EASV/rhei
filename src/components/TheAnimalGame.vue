@@ -299,7 +299,18 @@ export default {
   },
 
   mounted() {
-    Draggable.create(".draggable");
+    Draggable.create(".draggable", {
+      onDrag: function() {
+        if (this.hitTest("#box")) {
+          gsap.to(this.target, {
+            duration: 0.6,
+            opacity: 0,
+            scale: 0,
+            svgOrigin: "290 250"
+          });
+        }
+      }
+    });
   }
 };
 </script>
