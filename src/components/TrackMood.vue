@@ -51,7 +51,7 @@ export default {
   position: relative;
   margin: 3rem 0 3rem 0;
   width: 100%;
-  height: 60vh;
+  height: 33vh;
 }
 .put-on-top {
   z-index: 10;
