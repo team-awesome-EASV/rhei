@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template>
   <div class="fullscreen main-padding">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 578.96 595.72">
@@ -277,3 +278,5 @@ export default {};
 
 <style>
 </style>
+=======
+>>>>>>> 1f967764401e9b98a6ac63e3e4175e47b0c3e21e
