@@ -187,8 +187,11 @@ export default {
 }
 
 .quoteDay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 2rem;
-  margin-top: 1.1rem;
+  margin-top: 1rem;
   margin-right: 1rem;
   font-style: italic;
 }
