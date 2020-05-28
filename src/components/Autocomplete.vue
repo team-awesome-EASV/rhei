@@ -9,9 +9,7 @@
         @focus="modal = true"
         @input="filterFeelings"
       />
-      <button @click="updateFelings(feeling)" class="rounded-corners-button">
-        Add
-      </button>
+      <button @click="updateFelings(feeling)" class="rounded-corners-button">Add</button>
     </div>
 
     <div v-if="filteredFeelings && modal" class="modal">
@@ -22,20 +20,35 @@
           v-for="(feel, index) in filteredFeelings"
           :key="index"
           @click="setFeeling(feel)"
-        >
-          {{ feel }}
-        </li>
+        >{{ feel }}</li>
       </ul>
     </div>
     <div v-if="allFeelings">
       <ul class="flex-start padding-sides wrap autocomplete-bottom-el">
         <li
           :style="{ 'background-color': createShade('100', '50') }"
-          class="rounded-corners-button"
+          class="rounded-corners-button flex-space-around align-center"
           v-for="(feeling, index) in allFeelings"
           :key="index"
         >
           {{ feeling }}
+          <div v-on:click="deleteElement(index)" class="svg-container">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="minus-circle"
+              class="svg-inline--fa fa-minus-circle fa-w-16"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="currentColor"
+                d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zM124 296c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6 0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H124z"
+              />
+            </svg>
+          </div>
         </li>
       </ul>
     </div>
@@ -62,9 +75,11 @@ export default {
 
   methods: {
     filterFeelings() {
-      this.filteredFeelings = this.feelings.filter(feeling => {
-        return feeling.toLowerCase().startsWith(this.feeling.toLowerCase());
-      });
+      if (this.feeling) {
+        this.filteredFeelings = this.feelings.filter(feeling => {
+          return feeling.toLowerCase().startsWith(this.feeling.toLowerCase());
+        });
+      }
     },
     populateArray() {
       if (this.feelingsChecked) {
@@ -88,11 +103,13 @@ export default {
       // let newFeeling = feel[0].toUpperCase() + feel.slice(1).toLowerCase();
       // this.feelings.push(newFeeling);
       // this.clearInput();
+    },
+    deleteElement(index) {
+      this.allFeelings.splice(index, 1);
     }
   },
 
   mounted() {
-    this.filterFeelings();
     this.populateArray();
   }
 };
@@ -135,5 +152,16 @@ section {
 }
 .autocomplete-bottom-el {
   margin-top: 2rem;
+}
+.svg-container {
+  height: 2rem;
+  width: 2rem;
+  margin-left: 1rem;
+  svg {
+    height: 100%;
+  }
+}
+.align-center {
+  align-items: center;
 }
 </style>
