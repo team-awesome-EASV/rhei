@@ -2,8 +2,8 @@
   <div class="fullscreen main-padding">
     <div class="main-view">
       <Therapy></Therapy>
+      <TheCalmDown />
     </div>
-    <TheCalmDown />
   </div>
 </template>
 
