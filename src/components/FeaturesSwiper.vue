@@ -120,7 +120,7 @@ export default {
   align-items: center;
   justify-content: center;
   position:absolute;
-  transform: translate(5.2rem,-1.8rem);
+  transform: translate(5.2rem,-2.5rem);
 }
 
 .change-position{

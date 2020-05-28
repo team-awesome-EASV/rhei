@@ -12,7 +12,7 @@
     <!-- <router-link id="videoPage" to="onboard-video">
       Watch video {{ wasHere }}
     </router-link> -->
-    <div class="user-activity-wrapper outer-shadow-unactive">
+    <div class="quote-day-wrapper outer-shadow-unactive">
       <div class="quoteDay">
         <component
           :is="view"
@@ -179,10 +179,18 @@ export default {
   height: 100%;
 }
 
-.user-activity-wrapper {
+.quote-day-wrapper {
   width: 88%;
-  height: 13vh;
+  height: 12vh;
   margin-bottom: 0.3rem;
+  margin-top:1.1rem;
+}
+
+.quoteDay {
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+  font-style: italic;
 }
 
 .features-swiper-wrapper {
@@ -191,12 +199,7 @@ export default {
   box-sizing: border-box;
   padding: 1rem 0 1rem 0;
 }
-.quoteDay {
-  margin-left: 2rem;
-  margin-top: 1.5rem;
-  margin-right: 1rem;
-  font-style: italic;
-}
+
 // .illuWrapper {
 //   width: 100%;
 // }
