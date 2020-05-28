@@ -1,11 +1,29 @@
 <template>
-  <div>
+  <div class="LogonForm-component">
     <form class="form-style padding-all outer-shadow-unactive">
-      <inputelement name="Full name" place="your full name" type="text"></inputelement>
-      <inputelement name="Username" place="your username" type="text"></inputelement>
-      <inputelement name="Password" place="your password" type="password"></inputelement>
+      <inputelement
+        name="Full name"
+        place="your full name"
+        type="text"
+      ></inputelement>
+      <inputelement
+        name="Username"
+        place="your username"
+        type="text"
+      ></inputelement>
+      <inputelement
+        name="Password"
+        place="your password"
+        type="password"
+      ></inputelement>
       <router-link to="/">
-        <button @click="grantAccess(true)" class="main-button padding-all" type="submit">Sign up</button>
+        <button
+          @click="grantAccess(true)"
+          class="main-button padding-all"
+          type="submit"
+        >
+          Sign up
+        </button>
       </router-link>
     </form>
   </div>
@@ -38,5 +56,10 @@ export default {
   background-color: var(--main-accent-color);
   color: #ffffff;
   width: 100%;
+}
+
+.LogonForm-component {
+  position: relative;
+  z-index: 8;
 }
 </style>
