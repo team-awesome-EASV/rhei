@@ -219,14 +219,22 @@
             </g>
             <g id="woman-bubble-shapes" fill="#fff">
               <polygon
+                class="woman-bubble"
                 id="triangle-L"
                 points="364.44 59.62 343.99 95 384.89 95 364.44 59.62"
               />
               <polygon
+                class="woman-bubble"
                 id="triangle-R"
                 points="461.09 95 481.54 59.62 440.68 59.62 461.09 95"
               />
-              <circle id="circle-mid" cx="412.78" cy="77.29" r="15.35" />
+              <circle
+                class="woman-bubble"
+                id="circle-mid"
+                cx="412.78"
+                cy="77.29"
+                r="15.35"
+              />
             </g>
           </g>
           <g id="connect-man">
@@ -373,9 +381,27 @@
               />
             </g>
             <g id="man-chat-dots">
-              <circle cx="120.91" cy="131.2" r="4.07" fill="#fff" />
-              <circle cx="106.88" cy="131.2" r="4.07" fill="#fff" />
-              <circle cx="92.85" cy="131.2" r="4.07" fill="#fff" />
+              <circle
+                class="man-bubble"
+                cx="120.91"
+                cy="131.2"
+                r="4.07"
+                fill="#fff"
+              />
+              <circle
+                class="man-bubble"
+                cx="106.88"
+                cy="131.2"
+                r="4.07"
+                fill="#fff"
+              />
+              <circle
+                class="man-bubble"
+                cx="92.85"
+                cy="131.2"
+                r="4.07"
+                fill="#fff"
+              />
             </g>
           </g>
         </g>
@@ -391,28 +417,100 @@ export default {
   name: "TheConnectIllu",
   mixins: [createShadeAccentColor],
   data() {
-    return {};
+    return {
+      masterTL: gsap.timeline({ paused: true, repeat: -1, yoyo: true })
+    };
+  },
+
+  methods: {
+    waveHair() {
+      let tl = gsap.timeline();
+      tl.to("#connect-woman-hair-from", {
+        attr: {
+          d:
+            "M416.2,202.66c20.9,0,35.9-8.56,45.68-8.56,15.05,0,19.93,5.25,36.81,5.25,7.69,0,27.37,6.53,27.37,28.65,0,12.53-7,37.43-36.92,37.43-25.63,0-23.1-22.84-33.49-22.84-10.95,0-31.32,17.16-34.75,3.19-.75-3.71-1.59-8.26-3.65-12-11.43-4-15.14-3.64-20.55-6.83C388.88,223.23,388.51,202.66,416.2,202.66Z"
+        },
+        repeat: -1,
+        yoyo: true,
+        duration: 0.8,
+        ease: "power2.inOut",
+        transformOrigin: "50% 50%"
+      });
+      tl.to(
+        "#connect-woman-hand-bag",
+
+        {
+          rotation: 30,
+          repeat: -1,
+          yoyo: true,
+          transformOrigin: "10 10",
+          duration: 2,
+          ease: "power2.inOut"
+        },
+        0
+      );
+
+      return tl;
+    },
+
+    animateMan() {
+      let tl = gsap.timeline();
+
+      tl.to("#connect-man-arm-phone", {
+        rotation: 30,
+        repeat: -1,
+        yoyo: true,
+        transformOrigin: "0 30",
+        duration: 5,
+        ease: "power4.inOut"
+      });
+      return tl;
+    },
+
+    womanBubble() {
+      let tl = gsap.timeline();
+      tl.to(".woman-bubble", {
+        scale: 0,
+        opacity: 1,
+        rotate: 600,
+        repeat: -1,
+        yoyo: true,
+        transformOrigin: "50% 50%",
+        duration: 1,
+        ease: "power4.inOut",
+        stagger: {
+          from: "random",
+          each: 0.5,
+          amount: 0.5
+        }
+      });
+      return tl;
+    },
+
+    manBubble() {
+      let tl = gsap.timeline();
+      tl.to(".man-bubble", {
+        opacity: 0,
+
+        repeat: -1,
+        yoyo: true,
+        transformOrigin: "50% 50%",
+        duration: 2,
+        ease: "power4.inOut",
+        stagger: {
+          amount: 0.5
+        }
+      });
+      return tl;
+    }
   },
 
   mounted() {
-    gsap.to("#connect-woman-hair-from", {
-      attr: {
-        d:
-          "M416.2,202.66c20.9,0,35.9-8.56,45.68-8.56,15.05,0,19.93,5.25,36.81,5.25,7.69,0,27.37,6.53,27.37,28.65,0,12.53-7,37.43-36.92,37.43-25.63,0-23.1-22.84-33.49-22.84-10.95,0-31.32,17.16-34.75,3.19-.75-3.71-1.59-8.26-3.65-12-11.43-4-15.14-3.64-20.55-6.83C388.88,223.23,388.51,202.66,416.2,202.66Z"
-      },
-      repeat: -1,
-      yoyo: true,
-      duration: 1,
-      ease: "power2.inOut"
-    });
-
-    gsap.to("#connect-woman-hand-bag", 2, {
-      rotation: 30,
-      transformOrigin: "10 10",
-      repeat: -1,
-      yoyo: true,
-      ease: "power2.inOut"
-    });
+    this.masterTL.add(this.waveHair());
+    this.masterTL.add(this.animateMan(), 0);
+    this.masterTL.add(this.womanBubble(), 0);
+    this.masterTL.add(this.manBubble(), 0);
+    this.masterTL.play();
   }
 };
 </script>

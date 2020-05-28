@@ -369,9 +369,9 @@ export default {
 
     scaleBackground() {
       let tl = gsap.timeline();
-      tl.to("Background-2", {
-        scale: 10,
-        duration: 2,
+      tl.to("#Background-2", {
+        scale: 0.8,
+        duration: 6,
         repeat: -1,
         yoyo: true,
         ease: "back.inOut(1.7)",
