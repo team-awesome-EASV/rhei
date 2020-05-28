@@ -170,6 +170,6 @@ h1 {
   align-items: center;
   position: absolute;
   width: 100%;
-  bottom: 40px;
+  transform: translate(0rem,22rem);
 }
 </style>

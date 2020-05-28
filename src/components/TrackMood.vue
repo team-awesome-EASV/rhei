@@ -46,6 +46,10 @@ export default {
   width:100%;
   height:12%;
   margin-bottom:0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 h1{
@@ -54,6 +58,7 @@ h1{
 
 p{
   margin:0.5rem;
+  font-size:1.2rem;
 }
 .mood-parent {
   position: relative;
@@ -63,7 +68,7 @@ p{
 
 
 .put-on-top {
-  z-index: 10;
+  z-index: 1;
 }
 .chose-mood-background {
   display: flex;
