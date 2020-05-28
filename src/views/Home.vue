@@ -13,18 +13,18 @@
       Watch video {{ wasHere }}
     </router-link> -->
     <div class="user-activity-wrapper outer-shadow-unactive">
-      <div class="panel-body">
+      <div class="quoteDay">
         <component
           :is="view"
           :data-quote1="quote1"
           :data-quote2="quote2"
         ></component>
       </div>
-      <div class="panel-footer social">
+<!--       <div class="panel-footer social">
         <ul>
-          <button @click="newQuote">REFRESH</button>
+           <button @click="newQuote">REFRESH</button>
         </ul>
-      </div>
+      </div> -->
     </div>
     <div class="features-swiper-wrapper">
       <FeaturesSwiper> </FeaturesSwiper>
@@ -167,7 +167,7 @@ export default {
 .account-settings-banner {
   margin-bottom: 0.2rem;
   width: 90%;
-  height: 20vh;
+  height: 17vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -181,7 +181,7 @@ export default {
 
 .user-activity-wrapper {
   width: 88%;
-  height: 10vh;
+  height: 13vh;
   margin-bottom: 0.3rem;
 }
 
@@ -191,7 +191,11 @@ export default {
   box-sizing: border-box;
   padding: 1rem 0 1rem 0;
 }
-
+.quoteDay {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-style: italic;
+}
 // .illuWrapper {
 //   width: 100%;
 // }
