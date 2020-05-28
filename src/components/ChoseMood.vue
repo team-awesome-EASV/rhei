@@ -1,6 +1,6 @@
 <template>
   <div class="clickContainer">
-    <div class="clickArea" ref="moodArea" @click="this.clickRecorder">
+    <div class="clickArea" ref="moodArea" @click="clickRecorder">
       <div
         class="clickPoint"
         v-bind:style="{
@@ -8,6 +8,16 @@
           left: positionElement.left + '%'
         }"
       ></div>
+    </div>
+    <div v-show="showModal" class="click-modal">
+      <button
+        class="main-button"
+        @click="registerSelections(), showModal = false "
+      >Resister selection</button>
+      <button
+        @click="deleteSelection(), showModal = false"
+        class="main-button delete"
+      >Delete selection</button>
     </div>
   </div>
 </template>
@@ -21,6 +31,7 @@ export default {
     return {
       coordX: 0,
       coordY: 0,
+      showModal: false,
       boxLocation: {
         left: 0,
         top: 0,
@@ -84,9 +95,16 @@ export default {
       // clientX/Y gives the coordinates relative to the viewport in CSS pixels.
       this.coordX = event.offsetX; // x coordinate
       this.coordY = event.offsetY; // y coordinate
+      this.positionStyle();
+      this.showModal = true;
+    },
+    deleteSelection() {
+      this.positionElement.left = 0;
+      this.positionElement.top = 0;
+    },
+    registerSelections() {
       this.createPositionElement();
       this.populateArray();
-      this.positionStyle();
     }
   },
 
@@ -130,5 +148,27 @@ h1 {
   border-radius: 50%;
   background-color: var(--main-accent-color);
   position: absolute;
+}
+.main-button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  background-color: var(--main-accent-color);
+  color: #ffffff;
+  width: 60%;
+  padding: 1rem 1rem;
+}
+.delete {
+  background-color: #681c1c;
+}
+.click-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 40px;
 }
 </style>

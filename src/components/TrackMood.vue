@@ -20,10 +20,7 @@
         </div>
       </div>
     </div>
-    <h1>
-      RAUL, PLEASE ADD A SUBMIT/REGISTER BUTTON HERE AND LINK TO NEXT COMPONENTT
-      ON IT
-    </h1>
+    <button v-on:click="goToNext" class="main-button padding-all">Go to next page</button>
   </div>
 </template>
 
@@ -33,6 +30,15 @@ import chooseMood from "../components/ChoseMood";
 export default {
   components: {
     chooseMood: chooseMood
+  },
+  methods: {
+    goToNext() {
+      if (this.$route.name === "TrigerPage")
+        this.$router.push({ name: "ProgressPage" });
+      else if (this.$route.name === "ProgressPage")
+        this.$router.push({ name: "Home" });
+      else this.$router.push({ name: "TrigerPage" });
+    }
   }
 };
 </script>
@@ -107,5 +113,14 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+.main-button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  background-color: var(--main-accent-color);
+  color: #ffffff;
+  width: 100%;
 }
 </style>
