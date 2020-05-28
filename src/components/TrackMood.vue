@@ -34,7 +34,7 @@ export default {
       else if (this.$route.name === "ProgressPage")
         this.$router.push({ name: "Home" });
       else this.$router.push({ name: "TrigerPage" });
-    }
+    },
   }
 };
 </script>
@@ -91,7 +91,7 @@ p{
   font-size: 1.4rem;
   font-weight: bold;
   border-radius: 10px;
-  margin-top: 1.5rem;
+  margin-top: 3rem;
   background-color: var(--main-accent-color);
   color: #ffffff;
   width: 70%;
@@ -99,7 +99,6 @@ p{
 
 .controls-wrapper{
   width:100%;
-  height:26vh;
   display: flex;
   align-items: center;
   justify-content: center;
