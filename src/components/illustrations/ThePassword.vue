@@ -1,0 +1,141 @@
+<template>
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270.31 222.42">
+      <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_3" data-name="Layer 3">
+          <g id="character-password">
+            <g id="legs">
+              <path
+                d="M257.62,208.2c1.88.56,5.4-.68,6.1-1.6s2.29-7.92,2.81-8.66,2.24-.18,3.05.67,1.5,18.56-1.1,20.67c-1.44,1.17-9.79.54-11.2.51"
+                fill="#1f161e"
+              />
+              <path
+                d="M147,194.42c4.85-3,21.06-21.82,23-24.67,5,10.78,25.15,32.1,28,34.52s23.09,6.8,23.81,4.14-37.44-81.87-50.48-82.12-79.22,48.79-81.16,51.07C90.23,177.36,142.16,197.45,147,194.42Z"
+                :fill="createShade('46', '50')"
+              />
+              <path
+                d="M258,206.83s-54.14-6.07-73.83-9.29c-49.33-18.21-111.55-23.13-117.59-23.13-3.95,0-34.67,23.48-34.88,32.69s3.95,8.77,19.74,13.16,206.87.87,208,0C260.46,216,258.87,210.05,258,206.83Z"
+                :fill="createShade('46', '60')"
+              />
+            </g>
+            <g id="torso">
+              <path
+                d="M78.27,102c2.84,4.47.64,52,.35,54.57,8.25,5.94,18.79,15.08,18.79,15.08A10.85,10.85,0,0,0,95,173.46c-1.5,1.74-21-3-21,3.19s-15.78,29-41.43,36.28c-3.65-1.5-15.81-35.87-16.1-50.23,0,0-14.6-6.65-16.32-8.58s11-60.91,21.25-65.47C34.25,83,72.6,93.1,78.27,102Z"
+                :fill="createShade('46', '30')"
+              />
+              <path
+                d="M55.93,177.36C44.75,175,19.21,164,16.39,162.69"
+                fill="none"
+                stroke="#1f161e"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="0.55"
+              />
+              <path
+                d="M75.55,170c-4.1-1.33-50.66-23-51.65-24.68s7.17-17.88,8.5-20.69"
+                fill="none"
+                stroke="#1f161e"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="0.55"
+              />
+              <path
+                d="M70.11,166.69c1-10.84,1.17-40.2.91-46.21"
+                fill="none"
+                stroke="#1f161e"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="0.55"
+              />
+            </g>
+            <path
+              id="hand"
+              d="M97.08,176.6c0,4.6-5.11,8.49-9.3,8.69s-16.21-2.22-15.9-4.07A111,111,0,0,1,75.55,170C90.79,168.75,97.08,172,97.08,176.6Z"
+              fill="#f8cdba"
+            />
+            <g id="head">
+              <path
+                d="M61.4,81.61l-11-2.3L47.58,92.69c-.45,2.15,10.61,4.3,11,2.3Z"
+                fill="#f8cdba"
+              />
+              <path
+                d="M50.37,79.29c1.09-.45,1.73,2.94,4.12,4.4-2-1.13-5.54,2.41-5.78,3.6Z"
+              />
+              <circle cx="62.83" cy="71.66" r="14.63" fill="#f8cdba" />
+              <ellipse
+                cx="76.9"
+                cy="76.61"
+                rx="1.27"
+                ry="2.44"
+                transform="translate(-13.81 136.24) rotate(-78.21)"
+                fill="#fa9e9f"
+              />
+              <ellipse
+                cx="61.88"
+                cy="73.48"
+                rx="1.27"
+                ry="2.44"
+                transform="translate(-22.69 119.04) rotate(-78.21)"
+                fill="#fa9e9f"
+              />
+              <path
+                d="M71,77.27c2.64-.58.9-3.76.6-4.46"
+                fill="none"
+                stroke="#1f161e"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="0.69"
+              />
+              <path
+                d="M63.49,77.19a4.25,4.25,0,0,0,2.06,2.2"
+                fill="none"
+                stroke="#1f161e"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="0.69"
+              />
+              <path
+                d="M50.61,63a7.48,7.48,0,0,0-4,5.44c-.52,3.4,1.77,10.56,3.76,10.86.1-3.37,3.68-10.66,4.84-11.73,6.72,1.4,16.7-1,17.86-1.13a5.55,5.55,0,0,1,3.7.83,13.77,13.77,0,0,1,.7,4.22c4.39.28,6.3-1.83,7.11-5.7.19-.93.36-3.77-2-5.22a83.12,83.12,0,0,0-18.08-6.33c-4.82-1-12.53,1.26-13.57,6.23C50.8,60.85,50.71,62.26,50.61,63Z"
+              />
+              <circle cx="53.95" cy="70.52" r="3.22" fill="#f8cdba" />
+            </g>
+          </g>
+          <g id="speech_modal" data-name="speech modal">
+            <path
+              id="bubble"
+              d="M198.22,1c5.07,0,9.18,3.8,9.18,8.48V52.37c0,4.68-4.11,8.48-9.18,8.48H134L117,80.74l.1-19.93h-4c-5.07,0-9.17-3.79-9.17-8.47V9.46C103.88,4.79,108,1,113,1Z"
+              fill="none"
+              :stroke="createShade('100', '50')"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <text
+              transform="translate(143.16 47.46)"
+              font-size="47.59"
+              :fill="createShade('100', '50')"
+              font-family="Poppins-Regular, Poppins"
+            >
+              ?
+            </text>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+</template>
+
+<script>
+import { createShadeAccentColor } from "../mixins/createShadeAccentColor";
+
+export default {
+  name: "TheCalmDownIllu",
+  mixins: [createShadeAccentColor],
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+</style>
