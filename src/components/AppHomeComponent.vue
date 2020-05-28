@@ -7,7 +7,7 @@
         <p
           style="margin:auto; font-size: 42px; color: #2da7ff; font-weight: 500;line-height: 54px;"
         >
-          Kitchen Sink App
+          Rhei community
         </p>
 
         <p style="margin:auto; padding: 10px;">
