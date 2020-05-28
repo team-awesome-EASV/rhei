@@ -1,75 +1,81 @@
 <template>
   <div>
-    <div style="text-align: center; display: flex;" v-if="!showloader">
+    <div
+      style="text-align: center; display: flex;"
+      v-if="!showloader"
+      class="padding-all"
+    >
       <div style="margin: auto;">
         <div style=" width: 150px; margin: auto;"></div>
 
         <p
-          style="margin:auto; font-size: 42px; color: #2da7ff; font-weight: 500;line-height: 54px;"
+          style="margin:auto; font-size: 42px; font-weight: 500;line-height: 54px;"
         >
           Rhei community
         </p>
 
-        <p style="margin:auto; padding: 10px;">
-          Login with one of our sample users
+        <p style="margin:auto; padding: 10px; text-align: justify;">
+          Rhei prototype utilizes the trial version of
+          <a href="https://www.cometchat.com/" target="_blank">Cometchat Pro</a>
+          . Login with one of our sample users.
         </p>
-        <div style="display: flex; width: 100%;flex-wrap: wrap; margin: auto;">
+        <div class="grid-container">
           <div class="userSelector">
             <img
-              src="https://data-us.cometchat.io/assets/images/avatars/ironman.png"
+              :src="require('../assets/avatars/rick-min.png')"
               style="margin: 5px; max-width: 41px;"
             />
             <p style="margin: auto;">
               <a href="javascript:;" v-on:click="login($event, 'superhero1')">
-                superhero1</a
-              >
+                Rick
+              </a>
             </p>
           </div>
           <div class="userSelector">
             <img
-              src="https://data-us.cometchat.io/assets/images/avatars/captainamerica.png"
+              :src="require('../assets/avatars/morty-min.png')"
               style="margin: 5px; max-width: 41px;"
             />
             <p style="margin: auto;">
               <a href="javascript:;" v-on:click="login($event, 'superhero2')"
-                >superhero2</a
+                >Morty</a
               >
             </p>
           </div>
           <div class="userSelector">
             <img
-              src="https://data-us.cometchat.io/assets/images/avatars/spiderman.png"
+              :src="require('../assets/avatars/head-min.png')"
               style="margin: 5px; max-width: 41px;"
             />
             <p style="margin: auto;">
               <a href="javascript:;" v-on:click="login($event, 'superhero3')"
-                >superhero3</a
+                >Head</a
               >
             </p>
           </div>
           <div class="userSelector">
             <img
-              src="https://data-us.cometchat.io/assets/images/avatars/wolverine.png"
+              :src="require('../assets/avatars/meeseks-min.png')"
               style="margin: 5px; max-width: 41px;"
             />
             <p style="margin: auto;">
               <a href="javascript:;" v-on:click="login($event, 'superhero4')"
-                >superhero4</a
+                >Mr Meeseeks</a
               >
             </p>
           </div>
         </div>
 
-        <p style="margin: auto; padding: 10px;">Login continue with UID</p>
+        <!-- <p style="margin: auto; padding: 10px;">Login continue with UID</p> -->
 
-        <input
+        <!-- <input
           style="margin: auto; padding: 10px;"
           v-model="uid"
           type="text"
           placeholder="Enter your UID here"
-        />
+        /> -->
 
-        <div class="loginButton" v-on:click="login($event, uid)">Login</div>
+        <!-- <div class="loginButton" v-on:click="login($event, uid)">Login</div> -->
       </div>
     </div>
     <Loader v-else-if="showloader" />
@@ -147,25 +153,35 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .userSelector {
   display: flex;
-  width: 150px;
-  height: 50px;
-  margin: auto;
-  margin-right: 12.5px;
-  margin-left: 12.5px;
-  background: #333;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  color: white;
-  font-weight: 550;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  font-weight: 600;
+
+  border-radius: 22px;
+  background: linear-gradient(
+    145deg,
+    var(--button-color-first),
+    var(--button-color-second)
+  );
+  box-shadow: 8px 8px 16px #d3d4db, -8.8px -8.8px 30px -35px #d3d4db;
 }
 
 .userSelector:hover {
   cursor: pointer;
   /* color: darken($color: white, $amount: 5%);
   background: darken($color: #333, $amount: 20%); */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  gap: 2rem;
 }
 
 input {
