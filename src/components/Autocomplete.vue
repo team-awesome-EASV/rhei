@@ -33,6 +33,7 @@
         >
           {{ feeling }}
           <div v-on:click="deleteElement(index)" class="svg-container">
+<<<<<<< HEAD
             <svg
               aria-hidden="true"
               focusable="false"
@@ -48,6 +49,9 @@
                 d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zM124 296c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6 0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H124z"
               />
             </svg>
+=======
+            <i class="fas fa-backspace" fill="#e43f5a"></i>
+>>>>>>> d28e20e074ae8fd05718f036d25d51586a3c3cb9
           </div>
         </li>
       </ul>
@@ -157,11 +161,18 @@ section {
   height: 2rem;
   width: 2rem;
   margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   svg {
     height: 100%;
   }
 }
 .align-center {
   align-items: center;
+}
+
+.fa-backspace{
+  color:#ffffff;
 }
 </style>

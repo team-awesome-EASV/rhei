@@ -1,0 +1,305 @@
+<template>
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416.63 412">
+      <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_2-2" data-name="Layer 2">
+          <circle
+            id="login-ladypbcg"
+            cx="210.63"
+            cy="206"
+            r="206"
+            :fill="createShade('80', '30')"
+            opacity="0.14"
+          />
+          <g id="Layer_2-3" data-name="Layer 2" opacity="0.51">
+            <g>
+              <g id="dots-dow">
+                <circle
+                  cx="372.26"
+                  cy="293.93"
+                  r="13.12"
+                  :fill="createShade('46', '50')"
+                  stroke="#f7f7f7"
+                  stroke-miterlimit="10"
+                  stroke-width="3"
+                />
+                <circle
+                  cx="372.26"
+                  cy="248.77"
+                  r="13.12"
+                  :fill="createShade('46', '50')"
+                  stroke="#f7f7f7"
+                  stroke-miterlimit="10"
+                  stroke-width="3"
+                />
+              </g>
+              <g id="dots-right">
+                <circle
+                  cx="372.26"
+                  cy="203.62"
+                  r="13.12"
+                  :fill="createShade('46', '50')"
+                  stroke="#f7f7f7"
+                  stroke-miterlimit="10"
+                  stroke-width="3"
+                  opacity="0.36"
+                />
+                <circle
+                  cx="372.26"
+                  cy="158.47"
+                  r="13.12"
+                  :fill="createShade('46', '50')"
+                  stroke="#f7f7f7"
+                  stroke-miterlimit="10"
+                  stroke-width="3"
+                  opacity="0.36"
+                />
+                <circle
+                  cx="372.26"
+                  cy="113.32"
+                  r="13.12"
+                  :fill="createShade('46', '50')"
+                  stroke="#f7f7f7"
+                  stroke-miterlimit="10"
+                  stroke-width="3"
+                  opacity="0.36"
+                />
+              </g>
+              <rect
+                id="sitting"
+                x="229.93"
+                y="336.99"
+                width="155.46"
+                height="15.39"
+                :fill="createShade('30', '50')"
+              />
+              <g id="stripes" opacity="0.3">
+                <rect
+                  x="171.47"
+                  y="295.35"
+                  width="178.42"
+                  height="4.16"
+                  :fill="createShade('46', '50')"
+                />
+                <rect
+                  x="171.47"
+                  y="250.2"
+                  width="178.42"
+                  height="4.16"
+                  :fill="createShade('46', '50')"
+                />
+                <rect
+                  x="171.47"
+                  y="205.04"
+                  width="178.42"
+                  height="4.16"
+                  :fill="createShade('46', '50')"
+                />
+              </g>
+              <g id="lines">
+                <line
+                  x1="349.34"
+                  y1="288.33"
+                  x2="217.05"
+                  y2="288.33"
+                  fill="none"
+                  stroke="#000"
+                  stroke-miterlimit="10"
+                />
+                <line
+                  x1="349.34"
+                  y1="243.19"
+                  x2="217.05"
+                  y2="243.19"
+                  fill="none"
+                  stroke="#000"
+                  stroke-miterlimit="10"
+                />
+                <line
+                  x1="349.34"
+                  y1="198.03"
+                  x2="217.05"
+                  y2="198.03"
+                  fill="none"
+                  stroke="#000"
+                  stroke-miterlimit="10"
+                />
+              </g>
+              <circle
+                id="dot_up_big"
+                data-name="dot up big"
+                cx="239.22"
+                cy="74.83"
+                r="24.44"
+                :fill="createShade('100', '50')"
+                opacity="0.6"
+              />
+            </g>
+          </g>
+          <g id="speech_modal" data-name="speech modal">
+            <path
+              d="M70.84,92.43a9.61,9.61,0,1,1,9.6,9.6h0A9.6,9.6,0,0,1,70.84,92.43Z"
+              fill="none"
+              :stroke="createShade('100', '50')"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <path
+              d="M99.3,92.43h67.51"
+              fill="none"
+              :stroke="createShade('100', '50')"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <path
+              d="M79.76,116.5h100"
+              fill="none"
+              :stroke="createShade('100', '50')"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <path
+              d="M53.76,131.39c0,6.88,6,12.45,13.35,12.47h115.7c7.39,0,13.38-5.58,13.38-12.47v-5.45l31.44.14-31.38-23.15V70.46c0-6.88-6-12.46-13.38-12.46H67.14c-7.39,0-13.38,5.58-13.38,12.46Z"
+              fill="none"
+              :stroke="createShade('100', '50')"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </g>
+          <g id="character-login">
+            <g id="legs">
+              <path
+                d="M16.46,223.24c-1.86.32-9-2-9.58-2.93s-1.29-7.92-1.71-8.62-2.14-.42-3,.3S-1.37,229.6.88,231.92c1.24,1.28,9.31,1.63,10.68,1.76"
+                fill="#1f161e"
+              />
+              <path
+                d="M36.51,237.13c-1.34,1.33-8.51,3.59-9.52,3.11s-5.58-5.7-6.36-6.05-2,1-2.28,2,7.24,16.39,10.41,17c1.74.33,8.56-4,9.74-4.72"
+                fill="#1f161e"
+              />
+              <path
+                d="M251.83,284.43,90.83,237S44,250.86,40.58,250.86s-12.74-18.76-10.42-21.3S161.63,187,180.21,192.74C202.17,199.6,245.5,275.17,251.83,284.43Z"
+                :fill="createShade('46', '30')"
+              />
+              <path
+                d="M133.84,231c-5.21-1-116.13-9.34-118.29-8.51s-5.51,11-4.67,12.34,118.47,34.2,129.47,36.87c11.51,9.3,92.74,70.78,131.13,64.3,12.91-2.56,20.53-17.4,25.66-41.32C262.91,258.32,152.11,233.49,133.84,231Z"
+                :fill="createShade('46', '40')"
+              />
+            </g>
+            <g id="head">
+              <path
+                d="M313.48,133.36l-14.34-1.57-2,17.9c-.19,1.77,14.19,3.35,14.38,1.58Z"
+                fill="#f8cdba"
+              />
+              <path
+                d="M313.48,133.36,312.2,145c.3-2.21-8.3-7.16-9.7-7.32C302.5,137.71,311.25,133.12,313.48,133.36Z"
+                fill="#1f161e"
+              />
+              <circle cx="302.44" cy="118.56" r="20.29" fill="#f8cdba" />
+              <ellipse
+                cx="283.15"
+                cy="120.65"
+                rx="1.85"
+                ry="3.56"
+                transform="translate(132.44 389.01) rotate(-83.76)"
+                fill="#fa9e9f"
+              />
+              <ellipse
+                cx="305.36"
+                cy="123.09"
+                rx="1.85"
+                ry="3.56"
+                transform="translate(149.81 413.26) rotate(-83.76)"
+                fill="#fa9e9f"
+              />
+              <path
+                d="M291,124.23c-3.39-2,.44-5.58,1.2-6.44"
+                fill="none"
+                stroke="#1f161e"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="1.2"
+              />
+              <path
+                d="M301.47,127.52c-1,1.12-2.78,2.2-3.84,2.12"
+                fill="none"
+                stroke="#1f161e"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="1.2"
+              />
+              <path
+                d="M286.45,105.86c10.65,5.2,22.47,1.67,28.58,7.67,3.6,3.49,1.08,18.29,10.12,20.95,1.43.41,9.54,1,14.43-4.08a38.88,38.88,0,0,0,.69-14.26l-10.45.21,9.9-3.91c-1.69-9.35-5.31-17.29-6.49-18.76-4.51,1.53-20.6-.45-25.77-2C295.08,88,286.23,99.91,286.45,105.86Z"
+                fill="#1f161e"
+              />
+              <circle
+                id="ear"
+                cx="320.84"
+                cy="122.92"
+                r="4.69"
+                fill="#f8cdba"
+              />
+            </g>
+            <g id="torso">
+              <path
+                id="hand2"
+                d="M315.93,332.56c.7,18.24-11.43,33.31-6.81,35.5s14.83-.38,19.7-15.56c2.26-11.37-1.46-18.48-2.19-21.16"
+                fill="#f8cdba"
+              />
+              <ellipse
+                id="hand1"
+                cx="164.77"
+                cy="184.23"
+                rx="11.98"
+                ry="9.83"
+                fill="#f8cdba"
+              />
+              <path
+                id="torso-fill"
+                d="M330.89,335.41c-1.57,1.79-18.63-.46-20.21-1.13s-4.05-60.87-4.05-66.26c0,0-5.58,27.09-9.52,26.72-23.3-2.47-61.3-32.81-62.84-36.62s6.32-26.5,7-30.1c-2.25-.26-71.39-27.89-72.33-30.36s4.49-20.44,6.06-21.34,61.09,24.71,64.24,23.81,23.37-49.87,31.68-52.79,54.6-2.32,63.57,25.84C335.63,176.71,332.46,333.62,330.89,335.41Z"
+                :fill="createShade('70', '70')"
+              />
+              <path
+                d="M250.48,194.16c-1.18,4.17-14.18,46.85-16.18,63.92"
+                fill="none"
+                stroke="#1f161e"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="0.55"
+              />
+              <line
+                x1="295.63"
+                y1="180.14"
+                x2="306.41"
+                y2="268.42"
+                fill="none"
+                stroke="#1f161e"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="0.55"
+              />
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+</template>
+
+<script>
+import { createShadeAccentColor } from "../mixins/createShadeAccentColor";
+
+export default {
+  name: "TheCalmDownIllu",
+  mixins: [createShadeAccentColor],
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+</style>

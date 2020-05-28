@@ -5,10 +5,14 @@
         <logo></logo>
         <ul class="flex-space-around">
           <li>
-            <div class="margin-right switch-text" @click="userExists = true">login</div>
+            <div class="margin-right switch-text" @click="userExists = true">
+              login
+            </div>
           </li>
           <li>
-            <div class="margin-right switch-text" @click="userExists = false">sign up</div>
+            <div class="margin-right switch-text" @click="userExists = false">
+              sign up
+            </div>
           </li>
         </ul>
       </section>
@@ -146,10 +150,10 @@ export default {
 }
 .top-login-section {
   height: 18vh;
-  background: url("../assets/welcome illustration.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
+  // background: url("../assets/welcome illustration.png");
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  // background-position: right;
   display: flex;
   h1 {
     text-align: left;
@@ -182,10 +186,10 @@ export default {
 .bottom-login-section {
   height: 18vh;
   margin-top: 0.5rem;
-  background: url("../assets/forgot pasword illustration.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left;
+  // background: url("../assets/forgot pasword illustration.png");
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  // background-position: left;
   display: flex;
   justify-content: center;
   align-items: center;
