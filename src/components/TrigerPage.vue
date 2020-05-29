@@ -1,23 +1,22 @@
 <template>
-  <div class="fullscreen main-padding padding-bottom padding-all">
-    <div class="main-view flex-between">
-      <h1>Tell us more</h1>
-      <div class="autocomplete-container">
-        <h3>
-          Write down how you feel, or click the results that best suit your
-          feelings:
-        </h3>
+  <div class="trigger-wrapper flex-between">
+    <h1>Tell us more</h1>
+    <div class="autocomplete-container">
+      <h3>
+        Write down how you feel, or click the results that best suit your
+        feelings:
+      </h3>
 
-        <autocomplete :feelingsCheck="true"></autocomplete>
-      </div>
-      <div class="autocomplete-container">
-        <h3>
-          Write down what made you feel like this, or click the results that
-          best suit your situation:
-        </h3>
-        <autocomplete :feelingsCheck="false"></autocomplete>
-      </div>
+      <autocomplete :feelingsCheck="true"></autocomplete>
     </div>
+    <div class="autocomplete-container">
+      <h3>
+        Write down what made you feel like this, or click the results that best
+        suit your situation:
+      </h3>
+      <autocomplete :feelingsCheck="false"></autocomplete>
+    </div>
+
     <button v-on:click="goToNext" class="main-button padding-all">
       See your progress
     </button>
@@ -42,6 +41,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.trigger-wrapper {
+  padding: 0 3.3em;
+  height: 80vh;
+}
 .textarea-style {
   width: 100%;
   min-height: 25vh;
@@ -59,7 +62,7 @@ export default {
 .flex-between {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .main-button {
   font-size: 1.4rem;

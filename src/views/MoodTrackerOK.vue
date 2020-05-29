@@ -2,20 +2,15 @@
   <div class="mood-tracker-wrapper">
     <div class="arrows-wrapper">
       <div class="arrow-container next" @click="goToNext()">
-        <!-- <router-link to="/calm-down/connect-dots">
-          
-        </router-link>-->
         <i class="fas fa-chevron-right arrow-size"></i>
         <p>NEXT</p>
       </div>
       <div class="arrow-container back" @click="goToPrev()">
-        <!-- <router-link to="/calm-down/connect-dots">
-          
-        </router-link>-->
         <i class="fas fa-chevron-left arrow-size"></i>
         <p>BACK</p>
       </div>
     </div>
+
     <div class="router-wrapper">
       <router-view></router-view>
     </div>
@@ -47,9 +42,10 @@ export default {
 
 .router-wrapper {
   width: 100%;
-  height: 90%;
+
+  padding-top: 15%;
 }
-.calm-down-wrapper {
+.mood-tracker-wrapper {
   position: relative;
 }
 .next {
