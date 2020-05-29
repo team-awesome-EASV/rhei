@@ -19,9 +19,6 @@
   </div>
       <div class="chose-mood-background">
         <div class="illu-container">
-            <transition @enter="repulseAnim" >
-              <div class="mood-chosen-repulse"></div>
-            </transition>
           <TrackMoodIllu></TrackMoodIllu>
         </div>
       </div>
@@ -39,7 +36,7 @@
           </button>
         </div>
       </transition>
-      <button v-on:click="goToNext" class="proceed-button">Proceed</button>
+      <button v-on:click="goToNext" class="proceed-button">Go to next page</button>
     </div>
     <div class="map-key-wrapper">
       <div class="icons-wrapper">

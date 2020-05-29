@@ -1,24 +1,15 @@
 <template>
-  <div class="fullscreen main-padding padding-all padding-bottom">
+  <div class=" main-padding padding-all">
     <div class="main-view">
       <h1>Your mood progress</h1>
       <p class="progress-lead">
         See how your feelings were changing over the last months. Think about
         what happend and talk with others about it.
       </p>
-      <div class="mood-parent outer-shadow-unactive">
+      <div class="mood-parent">
         <moodDisplay></moodDisplay>
-        <div class="chose-mood-background">
-          <div class="mid-section">
-            <p>Negative</p>
-            <div class="line-container">
-              <div class="line"></div>
-            </div>
-            <div class="line-container vertical">
-              <div class="line"></div>
-            </div>
-            <p>Positive</p>
-          </div>
+        <div class="choose-mood-background">
+            <TrackMoodIllu></TrackMoodIllu>
         </div>
       </div>
       <router-link to="/chat">
@@ -30,10 +21,12 @@
 
 <script>
 import moodDisplay from "../components/TheMoodDislpay";
+import TrackMoodIllu from "../components/illustrations/TrackMoodIllu"
 
 export default {
   components: {
-    moodDisplay: moodDisplay
+    moodDisplay: moodDisplay,
+    TrackMoodIllu
   }
 };
 </script>
@@ -43,7 +36,7 @@ export default {
   position: relative;
   margin-top: 2rem;
   width: 100%;
-  height: 60vh;
+  height: 50vh;
 }
 
 .progress-lead {
@@ -75,7 +68,7 @@ export default {
 .vertical {
   transform: rotateZ(90deg);
 }
-.chose-mood-background {
+.choose-mood-background {
   display: flex;
   position: absolute;
   top: 0;
