@@ -41,14 +41,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.arrows-wrapper{
+.arrows-wrapper {
   width: 100%;
-  height:7.5vh;
 }
 
-.router-wrapper{
-   width: 100%;
-  height:90%;
+.router-wrapper {
+  width: 100%;
+  height: 90%;
 }
 .calm-down-wrapper {
   position: relative;
