@@ -15,7 +15,7 @@
             Go to login
           </button>
         </router-link>
-        <p>You can change the chosen color later in teh settings</p>
+        <p>You can change the chosen color later in the settings</p>
       </div>
     </div>
   </div>

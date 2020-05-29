@@ -212,10 +212,6 @@ export default {
 .bottom-login-section {
   height: 18vh;
   margin-top: 0.5rem;
-  // background: url("../assets/forgot pasword illustration.png");
-  // background-repeat: no-repeat;
-  // background-size: contain;
-  // background-position: left;
   display: flex;
   justify-content: center;
   align-items: center;

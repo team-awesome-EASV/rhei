@@ -1,5 +1,11 @@
 <template>
-  <button class="main-button padding-all" @submit.prevent="grantAccess(true)" :type="type">{{text}}</button>
+  <button
+    class="main-button padding-all"
+    @submit.prevent="grantAccess(true)"
+    :type="type"
+  >
+    {{ text }}
+  </button>
 </template>
 
 <script>
@@ -19,7 +25,7 @@ export default {
 </script>
 
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped lang="scss">
 .main-button {
   font-size: 1.4rem;

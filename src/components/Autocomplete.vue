@@ -90,9 +90,6 @@ export default {
     },
     updateFelings(feel) {
       this.setFeeling(feel);
-      // let newFeeling = feel[0].toUpperCase() + feel.slice(1).toLowerCase();
-      // this.feelings.push(newFeeling);
-      // this.clearInput();
     },
     deleteElement(index) {
       this.allFeelings.splice(index, 1);
@@ -122,7 +119,7 @@ section {
 .modal-element {
   margin: 0.5rem;
   font-size: 1.2rem;
-  // background-color: var(--background-element-color);
+
   color: var(--secondary-background-color);
   padding: 0.5rem 1rem;
 }
@@ -130,7 +127,7 @@ section {
 .rounded-corners-button {
   margin: 0.5rem;
   font-size: 1.6rem;
-  // background-color: var(--main-accent-color);
+
   background: var(--main-accent-color);
   color: #ffffff;
   padding: 0.5rem 1rem;

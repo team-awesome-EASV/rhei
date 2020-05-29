@@ -20,7 +20,9 @@
         </div>
       </div>
     </div>
-    <button v-on:click="goToNext" class="main-button padding-all">Go to next page</button>
+    <button v-on:click="goToNext" class="main-button padding-all">
+      Go to next page
+    </button>
   </div>
 </template>
 
@@ -44,9 +46,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .padding-bottom {
-//   padding-bottom: 20vh;
-// }
 .mood-parent {
   position: relative;
   margin: 3rem 0 3rem 0;

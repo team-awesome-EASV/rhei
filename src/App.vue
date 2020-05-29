@@ -82,7 +82,6 @@ export default {
     },
 
     enter(el, done) {
-      console.log("enter");
       gsap.fromTo(
         el,
         { x: "-150%", opacity: 0 },
@@ -97,7 +96,6 @@ export default {
     },
 
     leave(el, done) {
-      console.log("leave");
       gsap.to(el, {
         x: "150%",
         opacity: 1,

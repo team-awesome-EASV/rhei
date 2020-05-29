@@ -18,8 +18,6 @@
             </div>
           </router-link>
         </li>
-        <!--          <app-icon icon="moodtracker"></app-icon>-->
-        <!--          <app-icon icon="chat"></app-icon>-->
       </div>
       <div class="icons-row">
         <li
@@ -53,13 +51,6 @@
           />
         </clipPath>
       </defs>
-      <!-- <g id="b8ec6711-bca7-48a6-94ad-687dd3b4dc70" data-name="Layer 2">
-        <g id="a168547a-6da8-495a-87b3-35e558a4b4f5" data-name="Layer 1">
-          <g clip-path="url(#bb3e86a6-e069-48a6-9cf1-6756cd92ebb8)">
-            <rect width="750" height="184" fill="blue" />
-          </g>
-        </g>
-      </g>-->
     </svg>
   </div>
 </template>
@@ -83,8 +74,6 @@ export default {
       ]
     };
   }
-
-  // ... rest of component
 };
 </script>
 

@@ -41,7 +41,6 @@ export default {
 
   mounted() {
     this.anim.addEventListener("complete", () => {
-      // console.log("enterFrame", this.anim.currentFrame);
       this.$router.push({ name: "Color" });
     });
   },
@@ -65,5 +64,4 @@ export default {
   margin-left: 47%;
   padding-top: 50px;
 }
-
 </style>

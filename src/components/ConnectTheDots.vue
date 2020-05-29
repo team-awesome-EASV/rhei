@@ -34,7 +34,6 @@ export default {
     margin: 0 auto;
     width: 80%;
     text-align: left;
-    // font-size: 2rem;
   }
 }
 

@@ -8,8 +8,6 @@
           feelings:
         </h3>
 
-        <!-- WOULD BE NICE IF IT WAS POSSIBLE TO REMOVE A FEELING THAT WE ONCE ADDED IF WE MADE A MISTAKE, also full array of feelings pops out at some point, and its weird. lets talk about that tomorrow. JUlia -->
-
         <autocomplete :feelingsCheck="true"></autocomplete>
       </div>
       <div class="autocomplete-container">
@@ -19,16 +17,10 @@
         </h3>
         <autocomplete :feelingsCheck="false"></autocomplete>
       </div>
-      <!--
-     <div class="trigger-textarea">
-        <label for="aboutTriger">
-          <h3>Tell us more about what made you feel like this:</h3>
-        </label>
-        <textarea class="textarea-style inner-shadow" name="about" id="aboutTriger"></textarea>
-      </div>
-      -->
     </div>
-    <button v-on:click="goToNext" class="main-button padding-all">See your progress</button>
+    <button v-on:click="goToNext" class="main-button padding-all">
+      See your progress
+    </button>
   </div>
 </template>
 <script>
@@ -56,9 +48,7 @@ export default {
   font-size: 1.4rem;
   padding: 1rem;
 }
-// .padding-bottom {
-//   padding-bottom: 20vh;
-// }
+
 .trigger-textarea {
   margin-top: 2rem;
 }

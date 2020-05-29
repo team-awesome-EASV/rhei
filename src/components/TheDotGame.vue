@@ -86,7 +86,6 @@ export default {
       for (let i = 0; i < this.dots.length; i++) {
         this.timeDots(i);
       }
-      console.log("drawdots");
     },
 
     timeDots(i) {
@@ -135,9 +134,7 @@ export default {
 
         if (this.circleCollision(c1, c2)) {
           col = d;
-
-          console.log(col, i, "COLLISION");
-        } else console.log(col, i, "no collision");
+        }
       }
 
       if (col !== null) {
@@ -158,8 +155,7 @@ export default {
         this.ctx.globalCompositeOperation = "destination-over";
         this.ctx.drawImage(image, imgCornerTL, 50, imgW, imgH);
         this.$emit("showPicture");
-        console.log("last man standing");
-      } else console.log("not last");
+      }
     },
 
     drawLine: function(toDot) {

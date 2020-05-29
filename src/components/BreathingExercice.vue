@@ -238,7 +238,6 @@
       </svg>
     </div>
 
-    <!-- <h3>{{ animIteration }}</h3> -->
     <div class="controls-wrapper">
       <div class="cycles-controls">
         <button class="cycle-control outer-shadow" @click="decrementCycle()">
@@ -252,7 +251,6 @@
         </button>
       </div>
 
-      <!-- <button class="cycle-control" @click="timelineTime()">duration</button> -->
       <div class="start-button-container">
         <button
           class="start-button"
@@ -529,12 +527,10 @@ export default {
 
     incrementCycle() {
       ++this.cycleCount;
-      console.log("increment");
     },
 
     decrementCycle() {
       if (this.cycleCount >= 1) --this.cycleCount;
-      console.log("decrement");
     },
 
     cloudsAnim() {

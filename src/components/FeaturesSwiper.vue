@@ -63,7 +63,6 @@ export default {
 
   mounted() {
     new Swiper(".swiper-container", {
-      //pagination: '.swiper-pagination',
       spaceBetween: 10,
       centeredSlides: true,
       slidesPerView: 1.13,

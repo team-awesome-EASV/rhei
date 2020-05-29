@@ -65,17 +65,6 @@
             </p>
           </div>
         </div>
-
-        <!-- <p style="margin: auto; padding: 10px;">Login continue with UID</p> -->
-
-        <!-- <input
-          style="margin: auto; padding: 10px;"
-          v-model="uid"
-          type="text"
-          placeholder="Enter your UID here"
-        /> -->
-
-        <!-- <div class="loginButton" v-on:click="login($event, uid)">Login</div> -->
       </div>
     </div>
     <Loader v-else-if="showloader" />
@@ -173,8 +162,6 @@ export default {
 
 .userSelector:hover {
   cursor: pointer;
-  /* color: darken($color: white, $amount: 5%);
-  background: darken($color: #333, $amount: 20%); */
 }
 
 .grid-container {
@@ -208,7 +195,5 @@ input {
 
 .loginButton:hover {
   cursor: pointer;
-  /* color: darken($color: white, $amount: 5%);
-  background: darken($color: #333, $amount: 20%); */
 }
 </style>

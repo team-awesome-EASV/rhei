@@ -322,7 +322,4 @@ export default {
   position: relative;
   z-index: 6;
 }
-
-#animal-game {
-}
 </style>

@@ -1,10 +1,11 @@
 <template>
   <div class="container">
     <div @click="closeControls()" class="profile-controls-wrapper">
-      <div class="user-active-wrapper"> 
-         <!-- is green when user active or red when he is offline ---->
-      </div>
-       <i class="fas fa-cog picture-cog" :style="{ color: createShade('80', '40') }" ></i>
+      <div class="user-active-wrapper"></div>
+      <i
+        class="fas fa-cog picture-cog"
+        :style="{ color: createShade('80', '40') }"
+      ></i>
     </div>
 
     <div
@@ -12,11 +13,14 @@
       class="profile-controls-popup"
     >
       <div class="controls-container">
-       <router-link to="/settings">
-         <i class="fas fa-cog popup-cog" :style="{ color: createShade('80', '40') }" ></i>
-       </router-link>
+        <router-link to="/settings">
+          <i
+            class="fas fa-cog popup-cog"
+            :style="{ color: createShade('80', '40') }"
+          ></i>
+        </router-link>
         <router-link to="/login">
-        <i class="las la-power-off"></i>
+          <i class="las la-power-off"></i>
         </router-link>
       </div>
     </div>
@@ -66,7 +70,7 @@ export default {
           scale: 1,
           rotation: 360,
           opacity: 1,
-          duration:0.5,
+          duration: 0.5,
           transformOrigin: "50% 50%",
           ease: "back.out(3)"
         }
@@ -76,7 +80,7 @@ export default {
         { scale: 0 },
         {
           scale: 1,
-          delay:0.25,
+          delay: 0.25,
           ease: "back.out(3)"
         },
         "<"
@@ -90,7 +94,6 @@ export default {
 
 
 <style lang="scss" scoped>
-
 .profile-controls-wrapper {
   width: 7vh;
   height: 7vh;
@@ -107,14 +110,14 @@ export default {
   z-index: 2;
 }
 
-.user-active-wrapper{
-  width:10px;
-  height:10px;
-  z-index:99;
-  position:absolute;
-  border-radius:50%;
+.user-active-wrapper {
+  width: 10px;
+  height: 10px;
+  z-index: 99;
+  position: absolute;
+  border-radius: 50%;
   transform: translate(-18px, -16px);
-  background-color:#1cf292;
+  background-color: #1cf292;
 }
 
 .picture-cog {

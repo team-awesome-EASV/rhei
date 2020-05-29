@@ -4,7 +4,7 @@
       <h1>Your mood progress</h1>
       <p class="progress-lead">
         See how your feelings were changing over the last months. Think about
-        what happend and talk with others friends about it.
+        what happend and talk with others about it.
       </p>
       <div class="mood-parent outer-shadow-unactive">
         <moodDisplay></moodDisplay>
@@ -45,9 +45,6 @@ export default {
   width: 100%;
   height: 60vh;
 }
-// .padding-bottom {
-//   padding-bottom: 20vh;
-// }
 
 .progress-lead {
   text-align: justify;
