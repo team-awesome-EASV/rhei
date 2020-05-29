@@ -35,9 +35,7 @@ const routes = [
   },
   {
     path: '/moodtracker',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+
     component: () =>
       import(/* webpackChunkName: "moodtracker" */ '../views/MoodTrackerOK.vue'),
     children: [
@@ -49,18 +47,14 @@ const routes = [
   {
     path: '/onboard-video',
     name: 'VideoOnboard',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+
     component: () =>
       import(/* webpackChunkName: "onboardvideo" */ '../views/VideoOnboard.vue')
   },
   {
     path: '/chat',
     name: 'Chat',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+
     component: () =>
       import(/* webpackChunkName: "chat" */ '../views/Chat.vue'),
     children: [
@@ -79,10 +73,6 @@ const routes = [
   },
   {
     path: '/calm-down',
-    // name: 'Calm-down',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "calm" */ '../views/CalmDown.vue'),
     children: [
