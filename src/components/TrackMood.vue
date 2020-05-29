@@ -24,31 +24,55 @@
       </div>
     </div>
     <div class="controls-wrapper">
-      <div v-show="showModal" class="click-modal">
-        <button
-          class="main-button outer-shadow"
-          @click="registerSelections(), showModal = false ">
-            <i class="fas fa-check"></i>
-        </button>
-        <button @click="deleteSelection(), showModal = false" class="main-button outer-shadow">
-          <i class="fas fa-backspace"></i>
-        </button>
-      </div>
-         <button v-on:click="goToNext" class="proceed-button">Go to next page</button>
+      <transition @enter="showButtons" @leave="hideButtons">
+        <div v-show="showModal" class="click-modal">
+          <button
+            class="main-button outer-shadow"
+            @click="registerSelections(), showModal = false ">
+              <i class="fas fa-check"></i>
+          </button>
+          <button @click="deleteSelection(), showModal = false" class="main-button outer-shadow">
+            <i class="fas fa-backspace"></i>
+          </button>
+        </div>
+      </transition>
+      <button v-on:click="goToNext" class="proceed-button">Proceed</button>
     </div>
     <div class="map-key-wrapper">
-
+      <div class="icons-wrapper">
+        <div class="icon-container">
+          <app-icon icon="happiness"></app-icon>
+          <p>Feeling happy </p>
+        </div>
+        <div class="icon-container">
+          <app-icon icon="sad"></app-icon>
+          <p>Feeling sad</p>
+        </div>
+      </div>
+       <div class="icons-wrapper">
+        <div class="icon-container">
+           <app-icon icon="HIenergy"></app-icon>
+          <p>High Energy</p>
+        </div>
+        <div class="icon-container">
+           <app-icon icon="LOenergy"></app-icon>
+          <p>Low Energy</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import TrackMoodIllu from "../components/illustrations/TrackMoodIllu.vue"
+import AppIcon from "../components/AppIcon.vue";
+import { gsap } from "gsap";
 import { mapActions } from "vuex";
 
 export default {
   components: {
-    TrackMoodIllu
+    TrackMoodIllu,
+     AppIcon
   },
     data() {
     return {
@@ -137,7 +161,39 @@ export default {
     registerSelections() {
       this.createPositionElement();
       this.populateArray();
-    }
+    },
+    showButtons: function(el, done) {
+      let modalAnim = gsap.timeline({ paused: true, onComplete: done });
+      modalAnim
+        .set(el, {
+          scale:0,
+          opacity:0
+        })
+        .to(el, {
+          scale:1,
+          opacity:1,
+          duration:0.5,
+          ease: "bounce.out",
+        });
+      modalAnim.play();
+    },
+    hideButtons: function(el, done) {
+      let modalAnim = gsap.timeline({ paused: true, onComplete: done });
+      modalAnim
+        .set(el, {
+          scale: 1,
+          opacity: 1,
+          duration: 0.5,
+          ease: "power4.out"
+        })
+        .to(el, {
+          scale: 0,
+          opacity: 0,
+          duration: 1,
+          ease: "power4.out"
+        });
+      modalAnim.play();
+    },
   },
 
   computed: {
@@ -222,6 +278,7 @@ h1 {
 
 h1{
   margin:0.4rem;
+  color:var(--text-color);
 }
 
 p{
@@ -280,7 +337,27 @@ p{
 
 .map-key-wrapper{
   width:100%;
-  height:12vh;
-  background-color: red;
+  height:15vh;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+}
+
+.icons-wrapper{
+  display: flex;
+  width:75%;
+  height:100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container{
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  width:50%;
+  margin-left:1.3rem;
+  margin-bottom:1rem;
 }
 </style>

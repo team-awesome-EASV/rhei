@@ -43,7 +43,7 @@ export default {
 <style lang="scss" scoped>
 .arrows-wrapper{
   width: 100%;
-  height:11vh;
+  height:7.5vh;
 }
 
 .router-wrapper{
