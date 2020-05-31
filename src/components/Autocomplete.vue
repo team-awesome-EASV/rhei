@@ -18,7 +18,7 @@
       <ul class="flex-start padding-sides wrap">
         <li
           class="modal-element"
-          :style="{ 'background-color': createShade('50', '60') }"
+          :style="{ 'background-color': createShade('80', '80') }"
           v-for="(feel, index) in filteredFeelings"
           :key="index"
           @click="setFeeling(feel)"
@@ -30,7 +30,7 @@
     <div v-if="allFeelings">
       <ul class="flex-start padding-sides wrap autocomplete-bottom-el">
         <li
-          :style="{ 'background-color': createShade('100', '50') }"
+          :style="{ 'background-color': createShade('100', '70') }"
           class="rounded-corners-button flex-space-around align-center"
           v-for="(feeling, index) in allFeelings"
           :key="index"
