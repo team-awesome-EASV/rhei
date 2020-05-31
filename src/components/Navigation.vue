@@ -15,6 +15,7 @@
           <router-link :to="link.path">
             <div class="links-center">
               <app-icon class="actiwes" :icon="link.icon"></app-icon>
+              <label class="nav-label">{{link.name}}</label>
             </div>
           </router-link>
         </li>
@@ -28,6 +29,7 @@
           <router-link :to="link.path">
             <div class="links-center">
               <app-icon :icon="link.icon"></app-icon>
+               <label class="nav-label">{{link.name}}</label>
             </div>
           </router-link>
         </li>
@@ -65,12 +67,12 @@ export default {
   data() {
     return {
       navLinksLeft: [
-        { name: "MOODTRACKER", path: "/moodtracker", icon: "moodtracker" },
-        { name: "CHAT", path: "/chat", icon: "chat" }
+        { name: "track mood", path: "/moodtracker", icon: "moodtracker" },
+        { name: "chat", path: "/chat", icon: "chat" }
       ],
       navLinksRight: [
-        { name: "CALM DOWN", path: "/calm-down", icon: "calm" },
-        { name: "PREMIUM", path: "/therapy", icon: "premium" }
+        { name: "calm down", path: "/calm-down", icon: "calm" },
+        { name: "therapy", path: "/therapy", icon: "premium" }
       ]
     };
   }
@@ -144,6 +146,11 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.nav-label{
+  font-size:1.3rem;
+  color:var( --main-accent-color);
 }
 
 p {

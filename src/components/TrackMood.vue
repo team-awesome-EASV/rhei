@@ -189,26 +189,11 @@ export default {
         .to(el, {
           scale: 0,
           opacity: 0,
-          duration: 1,
+          duration: 0.4,
           ease: "power4.out"
         });
       modalAnim.play();
-    },
-     repulseAnim: function(el, done) {
-      let repulseAnim = gsap.timeline({ paused: true, onComplete: done });
-      repulseAnim
-        .set(el, {
-          scale:0,
-          opacity:0
-        })
-        .to(el, {
-          scale:3,
-          opacity:1,
-          duration:3,
-          ease: "bounce.out",
-        });
-      repulseAnim.play();
-    },
+    }
   },
 
   computed: {
