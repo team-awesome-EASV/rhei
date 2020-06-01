@@ -9,7 +9,10 @@
       />
     </div>
 
-    <router-link id="skipButton" to="/color">Skip</router-link>
+    >
+    <div id="skipButton" @click="animStop()">
+      Skip
+    </div>
   </div>
 </template>
 
@@ -26,7 +29,8 @@ export default {
   data() {
     return {
       name: "juansi",
-      defaultOptions: { animationData: animationData.default, loop: false }
+      defaultOptions: { animationData: animationData.default, loop: false },
+      destroyed: false
     };
   },
   methods: {
@@ -36,6 +40,13 @@ export default {
 
     goToColors() {
       console.log("hello");
+    },
+
+    animStop() {
+      this.destroyed = true;
+      console.log("animstop called");
+      this.anim.destroy();
+      this.$router.push({ name: "Color" });
     }
   },
 
@@ -46,7 +57,7 @@ export default {
   },
 
   beforeDestroy() {
-    this.anim.removeEventListener();
+    if (this.destroyed) this.anim.removeEventListener();
   }
 };
 </script>
