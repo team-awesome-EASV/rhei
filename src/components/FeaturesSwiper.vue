@@ -2,38 +2,41 @@
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide outer-shadow-unactive">
-          <div class="text-container">
-            <h1>Connect</h1>
-            <p>
-              Take a deep breath with 3 steeps mindfulness routine and get back to
-              reality.
-            </p>
-          </div>
-          <!-- <router-view to="/chat"> -->
-            <div class="illu-container connect-scale">
-              <TheConnectIllu></TheConnectIllu>
-            </div>
-          <!-- </router-view> -->
-        </div>
-      
-        <div class="swiper-slide outer-shadow-unactive">
-          <div class="text-container">
-            <h1>Calm down</h1>
-            <p>
-              Take a deep breath with 3 steeps mindfulness routine and get back to
-              reality.
-            </p>
-          </div>
-          <!-- <router-view to="/calm-down"> -->
-            <div class="illu-container calm">
-              <TheCalmDown></TheCalmDown>
-            </div>
-          <!-- </router-view> -->
-        </div>
-      
       <div class="swiper-slide outer-shadow-unactive">
+        <div class="text-container" @click="goToFeature('chatMain')">
+          <h1>Connect</h1>
+          <p>
+            Take a deep breath with 3 steeps mindfulness routine and get back to
+            reality.
+          </p>
+        </div>
+        <!-- <router-view to="/chat"> -->
+        <div class="illu-container connect-scale">
+          <TheConnectIllu></TheConnectIllu>
+        </div>
+        <!-- </router-view> -->
+      </div>
+
+      <div
+        class="swiper-slide outer-shadow-unactive"
+        @click="goToFeature('BreathingExercice')"
+      >
         <div class="text-container">
+          <h1>Calm down</h1>
+          <p>
+            Take a deep breath with 3 steeps mindfulness routine and get back to
+            reality.
+          </p>
+        </div>
+        <!-- <router-view to="/calm-down"> -->
+        <div class="illu-container calm">
+          <TheCalmDown></TheCalmDown>
+        </div>
+        <!-- </router-view> -->
+      </div>
+
+      <div class="swiper-slide outer-shadow-unactive">
+        <div class="text-container" @click="goToFeature('TrackMood')">
           <h1>Moodtracker</h1>
           <p>
             Take a deep breath with 3 steeps mindfulness routine and get back to
@@ -41,9 +44,9 @@
           </p>
         </div>
         <!-- <router-view to="/moodtracker"> -->
-          <div class="illu-container">
-            <TheMoodTrackerIllu></TheMoodTrackerIllu>
-          </div>
+        <div class="illu-container">
+          <TheMoodTrackerIllu></TheMoodTrackerIllu>
+        </div>
         <!-- </router-view> -->
       </div>
     </div>
@@ -67,6 +70,12 @@ export default {
   name: "timeline",
   data() {
     return {};
+  },
+
+  methods: {
+    goToFeature(destination) {
+      this.$router.push({ name: destination });
+    }
   },
 
   mounted() {

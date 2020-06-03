@@ -9,7 +9,6 @@
       />
     </div>
 
-    >
     <div id="skipButton" @click="animStop()">
       Skip
     </div>

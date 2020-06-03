@@ -58,7 +58,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "chat" */ '../views/Chat.vue'),
     children: [
-      { path: '/', component: AppHomeComponent },
+      { path: '/', component: AppHomeComponent, name: 'chatMain' },
 
       { path: '/embeded-app', component: ChatContainer },
 
